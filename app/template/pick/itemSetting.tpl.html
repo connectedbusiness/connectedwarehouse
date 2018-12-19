@@ -1,0 +1,20 @@
+﻿<div id="itemSettings<%= SkippedListItemID %>" class="pick-item">
+    <ul class="pick-item-header clear-list">
+        <li><i class="icon-inbox"></i></li>
+        <li class="pick-item-colbin"><span class="text-ellipsis" id="textbinLocationDetail<%= ItemCode %>"><%= BinLocationName %></span></li>
+        <li class="pick-item-colqty">x<span id="textQtyDetail<%= SkippedListItemID %>"><%= RemainingQuantity %></span></li>
+    </ul>
+    <div id="itemSettingBody<%= SkippedListItemID %>" class="iscroll-pick-card-itemdetail itemSettingCardBody">
+        <ul id="itemSettingList" class="list-group">
+            <li class="list-group-item"><a><span class="pull-right"><%= ItemCode %></span>Item Code</a></li>
+            <li class="list-group-item"><a><span class="pull-right"><%= ItemName %></span>Name</a></li>
+            <li id = "rowDescription<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= ItemDescription %></span>Description</a></li>
+            <!-- <li class="list-group-item"><a>Description <br><span style="white-space:normal;"><%= ItemDescription %></span></a></li> -->
+            <li class="list-group-item"><a><span class="pull-right"><%= UPCCode %></span>UPC Code</a></li>
+            <li id="rowFreeStock<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= FreeStock %></span>Free Stock</a></li>
+            <li class="list-group-item"><a><span class="pull-right"><%= UnitMeasureCode %></span>Unit Measure</a></li>
+            <li id="rowTransactionCode<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= TransactionCode %></span>SO Code</a></li> 
+            <li id = "rowShipNotes<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= ShippingNotes %></span>Notes</a></li> 
+        </ul>
+    </div>
+</div>

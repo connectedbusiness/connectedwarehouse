@@ -1,0 +1,105 @@
+<section id="containerAdjustmentSection" class="container">
+    <div class="transition-container">
+        <div id="itemMainSlider" class="slider page3">
+            <!--ADJUSTMENT SECTION-->
+            <section id="adjustmentSection" class="container">
+                <nav id="adjustmentNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="adjustmentNavTitle" class="navbar-title">adjustment</span>
+                        <button id="buttonMenu" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                    </div>
+                </nav>
+                <header id="adjustmentHeader" class="container-header">
+                    <div class="input-group">
+                        <input id="textboxSearch" class="input-counter form-control" placeholder="scan or enter item" type="text">
+                        <div class="input-group-btn">
+                            <button id="buttonSearch" class="btn btn-default" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </header>
+                <div id="adjustmentBody" class="container-body-2">
+                    <div id="containerTableAdjustment" class="iscroll-cartitem-3">
+                        <table id="cartListAdjustment">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="adjustmentFooter" class="container-footer sliderFooter">
+                    <div id="slideFooter">
+                        <div id="adjustmentFooterTotal" class="footerTotal">
+                            <div>total in: <span id="textTotalItemsIn">0</span></div>
+                            <div id="totalItemsOut">total out: <span id="textTotalItemsOut">0</span></div>
+                        </div>
+                        <button id="buttonComplete" class="btn btn-belize btn-lg btn-footer" type="button">complete</button>
+                        <div>
+                            <button id="buttonCancelRemoveItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                            <button id="buttonRemoveItems" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--ITEMSETTING SECTION-->
+            <section id="itemSettingSection" class="container">
+                <nav id="itemSettingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="itemSettingNavTitle" class="navbar-title">item detail</span>
+                        <button id="buttonBackItemSetting" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="itemSettingBody" class="container-body setting-body">
+                    <ul id="itemSettingList" class="list-group">
+                        <li id="rowItemCode" class="list-group-item"><a><span id="textItemCode" class="pull-right"></span>Item Code</a></li>
+                        <li id="rowItemName" class="list-group-item"><a><span id="textItemName" class="pull-right"></span>Name</a></li>
+                        <li id="rowItemDesc" class="list-group-item"><a><span id="textItemDesc" class="pull-right"></span>Description</a></li>
+                        <li id="rowUPCCode" class="list-group-item"><a><span id="textUPCCode" class="pull-right"></span>UPC Code</a></li>
+                        <li id="rowQty" class="list-group-item"><a><span id="textQuantity" class="pull-right"></span>Quantity</a></li>
+                        <li id="rowFreeStock" class="list-group-item"><a><span id="textFreeStock" class="pull-right"></span>Free Stock</a></li>
+                        <li id="rowUnitMeasure" class="list-group-item"><a><span class="pull-right"><i class="icon-chevron-right"></i></span><span id="textUnitMeasure" class="pull-right"></span>Unit Measure</a></li>
+                        <li id="rowZone" class="list-group-item"><a><span class="pull-right"><i class="icon-chevron-right"></i><span id="textZone"></span></span>Zone</a></li>
+                    </ul>
+                </div>
+                <footer id="itemSettingFooter" class="container-footer">
+                    <button id="buttonDelete" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--CHECKLIST SECTION-->
+            <section id="checkListSection" class="container">
+                <nav id="checkListNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="checkListNavTitle" class="navbar-title"></span>
+                        <button id="buttonBackCheckList" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="checkListBody" class="container-body-2">
+                    <div id="containerTableCheckList" class="iscroll-cartitem">
+                        <table id="cartCheckList" class="bordered-list">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!--END-->
+        </div>
+        <!--COMPLETED SECTION-->
+            <section id="completedSection" class="container container-completed section-close">
+                <nav id="completedNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="completedNavTitle" class="navbar-title"></span>                            
+                            <button id="buttonMenuCompleted" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                    </div>
+                </nav>
+                <div id="completedBody" class="container-body">
+                    <i class="icon-ok-sign icon-17"></i>
+                    <h2>Adjustment Completed!</h2>                    
+                </div>
+                <footer id="completedFooter" class="container-footer">
+                    <button id="buttonMore" class="btn btn-info btn-lg btn-footer" type="button">adjust more</button>                    
+                </footer>
+            </section>
+            <!--END SECTION-->                   
+        <div id="itemLookupContainer" />
+        <div id="numericPadContainer" />
+    </div>
+</section>

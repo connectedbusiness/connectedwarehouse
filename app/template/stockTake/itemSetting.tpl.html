@@ -1,0 +1,18 @@
+﻿<div id="itemSettings<%= SkippedListItemID %>" class="stocktake-item">
+    <ul class="pick-item-header clear-list">
+        <li><i class="icon-inbox"></i></li>
+        <li class="pick-item-colbin"><span class="text-ellipsis" id="textbinLocation<%= ItemCode %>">No Bin</span></li>
+        <li class="pick-item-colqty">x<span id="cardDetailQty<%= TapeItemID %>"><%= Quantity %></span></li>
+    </ul>
+    <div id="itemSettingBody<%= SkippedListItemID %>" class="iscroll-stocktake-card-itemdetail itemSettingCardBody">
+        <ul id="itemSettingList" class="list-group">
+            <li class="list-group-item"><a><span class="pull-right"><%= ItemCode %></span>Item Code</a></li>
+            <li class="list-group-item"><a><span class="pull-right"><%= ItemName %></span>Name</a></li>
+            <li id="rowDescription<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= ItemDescription %></span>Description</a></li>
+            <li class="list-group-item"><a><span class="pull-right"><%= UPCCode %></span>UPC Code</a></li>
+            <li id="rowFreeStock<%= SkippedListItemID %>" class="list-group-item"><a><span class="pull-right"><%= FreeStock %></span>Free Stock</a></li>
+            <li class="list-group-item"><a><span class="pull-right"><%= UnitMeasureCode %></span>Unit Measure</a></li>
+            <li class="list-group-item"><a><span class="pull-right">Normal</span>Zone</a></li>
+        </ul>
+    </div>
+</div>
