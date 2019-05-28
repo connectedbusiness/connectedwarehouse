@@ -57,7 +57,8 @@ define([
 		},
 
 		initialize : function(){
-		    this.$el.html(this._template);
+		    this.$el.html(this._template);	 
+
 		},
 
 		AddUrl: function (urlModel) {
