@@ -185,8 +185,7 @@ define([
 			        Width: width,
 			        WeightInPounds: this.IsNull(currentBox.get("WeightInPounds"), 0),
 			        UnitMeasureSystem: Global.CurrentUser.UnitMeasureSystem,
-			        Hide: false,
-			        IsEuro: this.model.get("IsEuro")
+			        Hide: false
 			    });
 			    this.model.set({
 			    Box: currentBox.get("PackagingCode")
@@ -653,7 +652,6 @@ define([
         		ServiceCode: pack.ServiceCode,
         		TransactionType: Preference.PackSourceTransaction,
                 FreightRate: pack.FreightRate,
-                IsEuro: pack.IsEuro,
 			});
 		},
 

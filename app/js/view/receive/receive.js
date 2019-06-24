@@ -808,14 +808,10 @@ define([
         },
 
         ReceivePurchaseOrder: function () {
-
-           
-
             var receiveModel = new ReceiveModel();
             var self = this;
 
             receiveModel.url = Global.ServiceUrl + Service.PRODUCT + Method.CREATERECEIVEORDER;
-          //  receiveModel.url = Global.ServiceUrl + Service.PRODUCT + 'loadreceiveorder';
 
             this.itemsForReceive.each(function (item) {
                 item.set({ QuantityReceived: item.get('QuantityScanned') });

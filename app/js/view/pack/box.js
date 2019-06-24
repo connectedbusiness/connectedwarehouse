@@ -1883,18 +1883,13 @@ define([
             $('#textManualTrackingNumber').parent().css('color', '#2c3e50');
         }
 
-        // remove validation in freight rate when manual carrier
-        // if (!this.model.get('FreightRate') || this.model.get('FreightRate') == "" || this.model.get('FreightRate') == 0) {
-        //     $('#textFreightRate').parent().css('color', '#d2322d');
-        //     result = false;
-        // }
-        // else {
-        //     $('#textFreightRate').parent().css('color', '#2c3e50');
-        // }
-
-        $('#textFreightRate').parent().css('color', '#2c3e50');
-
-        $("#textFreightRate").prop("disabled", true);
+        if (!this.model.get('FreightRate') || this.model.get('FreightRate') == "" || this.model.get('FreightRate') == 0) {
+            $('#textFreightRate').parent().css('color', '#d2322d');
+            result = false;
+        }
+        else {
+            $('#textFreightRate').parent().css('color', '#2c3e50');
+        }
 
         return result;
     },
@@ -1930,14 +1925,8 @@ define([
         //}
 
         if (!$('#textState').val()) {
-            if (!this.model.get("IsEuro") == 1) {
             $('#textState').parent().addClass('has-error');
             return false;
-            }
-            else  {
-              $('#textState').parent().removeClass('has-error');
-            }
-           
         } else {
             $('#textState').parent().removeClass('has-error');
         }

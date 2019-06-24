@@ -53,14 +53,8 @@ define([
             //}
 
             if (this.get("ShipToState") == "" || this.get("ShipToState") == null) {
-                if(!this.get("IsEuro") == 1) {
                 $('#textState').parent().addClass('has-error');
-                return false;     
-                }
-                else {
-                 $('#textState').parent().removeClass('has-error');
-                }
-               
+                return false;
             } else {
                 $('#textState').parent().removeClass('has-error');
             }
@@ -99,11 +93,10 @@ define([
                     $('#textManualTrackingNumber').parent().addClass('has-error');
                     return false;
                 }
-                // allow zero freight for manual carrier
-                // if (this.get("FreightRate") == "" || this.get("FreightRate") == 0) {
-                //     $('#textFreightRate').parent().addClass('has-error');
-                //     return false;
-                // }
+                if (this.get("FreightRate") == "" || this.get("FreightRate") == 0) {
+                    $('#textFreightRate').parent().addClass('has-error');
+                    return false;
+                }
             }
 
             if (this.get("CarrierDescription") != "Manual") {

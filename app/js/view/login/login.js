@@ -102,8 +102,8 @@ define([
 	        connectionView.InitializeDefaultConnection();
 
 	        if (Global.ServiceUrl == Global.DemoServiceUrl) {
-	            $("#textUsername").val("admin");
-	            $("#textPassword").val("admin");
+	            $("#textUsername").val("warehouse1");
+	            $("#textPassword").val("warehouse1");
 	        }
 	    },        
 	    
@@ -146,20 +146,10 @@ define([
 	                var self = this;
 
 	                if (userAccount.IsPromptForceSignOut) {
-	         //        	if (navigator.userAgent.match(/(iPad)/)) {
- 									// self.ForceSignOut();
- 									// self.ContinueLogin();
-	         //        	}
-	         //        	else {
-	         //        		navigator.notification.confirm(userAccount.Message, function (button) {
-	         //                if (button == 1) self.ForceSignOut();
-		        //                 self.ContinueLogin();
-		        //             }, "Force Sign Out?", "Yes,No");
-	         //        	}
-
-	                    self.ForceSignOut();
- 						self.ContinueLogin();
-	                    
+	                    navigator.notification.confirm(userAccount.Message, function (button) {
+	                        if (button == 1) self.ForceSignOut();
+	                        self.ContinueLogin();
+	                    }, "Force Sign Out?", "Yes,No");
 	                    return;
 	                }
 	                else if (!userAccount.Message && !userAccount.Message == "") {	                    
