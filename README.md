@@ -43,7 +43,7 @@ org.apache.c…k-information
 
 8. In terminal under Documents > CW > Build > mobile > cordova run cordova build iOS
 
-9. If there is an error using building of app using cordova just open the Xcode and build using Xcode. Open the Documents > CW > Build > mobile > cordova > platforms > iOS > ConnectedWarehouse.xcodeproj
+9. If there is an error when building of app using cordova just open the Xcode and build using Xcode. Open the Documents > CW > Build > mobile > cordova > platforms > iOS > ConnectedWarehouse.xcodeproj
 
 10. Under General setting of ConnectedWarehouse.xcodeproj set the following:
 
