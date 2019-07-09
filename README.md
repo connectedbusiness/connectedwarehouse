@@ -66,12 +66,13 @@ Provisioning Profile : Connected Warehouse 19 Distribution
 
 Deployment Info
 Deployment Target: 10.0
-Devices: iPhone
+Devices: iPad
 Device Orientation: Portrait (Check)
-                    Upside Down (Check)
+                    Upside Down (UnCheck)
                     Landscape Left (UnCheck)
-				  Landscape Right (uncheck)
+		    Landscape Right (Uncheck)
                     Hide status bar (Check)
+		    Require Full Screen (Check)
 
 9 Connect your device in MAC then set the Active Scheme to your device.
 
