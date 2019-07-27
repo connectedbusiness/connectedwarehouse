@@ -217,7 +217,7 @@ define([
 
 		                model.destroy();
 		                self.urlcollection.remove(model);
-		                self.CurrentConnectionView.remove();/Users/kaur/warehouse/platforms/ios/www/js/view/login/connection/cartItem.js
+		                self.CurrentConnectionView.remove();
 
 		                self.SwitchDisplay(false);
 		            }
@@ -301,10 +301,14 @@ define([
                                 }
                             }
                         }
+                            
+                           
 		            if (!/\/$/.test(url))
                         {
-                                 url = url + "/";
+                      url = url + "/";
                         }
+                       
+
 		            $("#textUrl").val(url);
 
 		            if (this.CurrentConnectionView == null) {
