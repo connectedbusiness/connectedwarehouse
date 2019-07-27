@@ -199,7 +199,7 @@ define([
 
 		    if (this.urlcollection.length > 0) {
 		        var self = this;
-                //this.ClearConnections();
+                //this.Clea/Users/kaur/warehouse/platforms/ios/www/js/model/prepack.jsrConnections();
 		        
 		        this.urlcollection.each(function (url) {
 		            self.AddUrl(url);
@@ -217,7 +217,7 @@ define([
 
 		                model.destroy();
 		                self.urlcollection.remove(model);
-		                self.CurrentConnectionView.remove();
+		                self.CurrentConnectionView.remove();/Users/kaur/warehouse/platforms/ios/www/js/view/login/connection/cartItem.js
 
 		                self.SwitchDisplay(false);
 		            }
@@ -288,9 +288,23 @@ define([
 		            var serverName = $("#textServerName").val().trim();
 		            var url = $("#textUrl").val().trim();
 
-		            if (!/^http:\/\//.test(url)) url = "http://" + url;
-		            if (!/\/$/.test(url)) url = url + "/";
-
+		            if (!/^http:\/\//.test(url))
+                        {
+                        if (!/^Http:\/\//.test(url))
+                            {
+                            if (!/^https:\/\//.test(url))
+                                {   
+                                if (!/^Https:\/\//.test(url))
+                                    {
+                                    url = "http://" + url;
+                                    }
+                                }
+                            }
+                        }
+		            if (!/\/$/.test(url))
+                        {
+                                 url = url + "/";
+                        }
 		            $("#textUrl").val(url);
 
 		            if (this.CurrentConnectionView == null) {
