@@ -720,7 +720,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             /*#region Transition*/        
             .transition-container {
                 overflow: hidden;
-                position: fixed;
+             /* position: fixed; */
             }        
             .slider { -webkit-transition:all 0.3s ease-in-out 0.1s; }        
             .slider > section {
@@ -1870,11 +1870,6 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         bottom: 0;
     }
 
-    .container-footer, #numericpadFooter {
-        position: absolute;
-        width: 767px;
-        bottom: 0;
-    }
     #containerConnectionSection .container-footer {
         position: relative !important;
     }
@@ -1895,7 +1890,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         position: relative;
         bottom: 10px;
     }
-    #boxFooter, #receiveFooter {
+    #boxFooter, #receiveFooter, .container-footer, #numericpadFooter {
         position: relative;
         bottom: 55px;
     }
@@ -1907,7 +1902,11 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     #containerTableFullScreenBody #pictureItemList { width: inherit; display: block; height:auto; }
     #containerTableFullScreenBody #pictureItemList li { list-style: none; display:inline-block; width:100%; text-align:center; }
     
-    /*#endregion*/       
+    /*#endregion*/    
+
+    #containerAdjustmentSection, #containerStockTakeSection {
+    position: fixed;
+    }   
 }
 /*#endregion*/
 
