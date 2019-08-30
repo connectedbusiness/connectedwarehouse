@@ -1871,7 +1871,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }
 
     #containerConnectionSection .container-footer {
-        position: relative !important;
+        bottom: 0;
+    }
+    #boxDetailsFooter {
+    bottom: 10px;
     }
     ul.numericpad-button-group button {
         width: 254px;
@@ -1890,7 +1893,15 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         position: relative;
         bottom: 10px;
     }
-    #boxFooter, #receiveFooter, .container-footer, #numericpadFooter {
+    #boxFooter, #receiveFooter, .container-footer{
+        position: relative;
+        bottom: 55px;
+    }
+    #numericpadFooter {
+        position: absolute;
+        bottom: 0;
+    }
+    #miscPhysicalFooter {
         position: relative;
         bottom: 55px;
     }
