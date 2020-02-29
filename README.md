@@ -9,15 +9,15 @@ Note: Make sure to create a provisioning profile to be use when compiling your a
    ex. Name:CW19
        Prefix:5GKC59E3V4
        ID:com.connectedbusiness.connectedwarehouse19-1
- 
+
 2. Create new provisioning profile for both Development and Distribution
 
-     Development: ConnectedWarehouse19 Development 
+     Development: ConnectedWarehouse19 Development
      App ID: CW19 (com.connectedbusiness.connected-warehouse-19-1)
 
      Distribution: ConnectedWarehouse19 Distribution
      App ID: CW19 (com.connectedbusiness.connected-warehouse-19-1)
-     
+
 
 How to build connected warehouse and deploy it to your device.
 
@@ -76,8 +76,8 @@ Device Orientation: Portrait (Check)
 
 9 Connect your device in MAC then set the Active Scheme to your device.
 
-10. Product Clean 
-11. Product Build 
+10. Product Clean
+11. Product Build
 12. If there is an error regarding ARC semantic Issue (CDVPlugin)
 
 Go to build phases
@@ -85,13 +85,13 @@ Expand the compiled resources tap
 select “CDVConnection.m”
 add the compiler flag ( -fno-objc-arc )
 
-13. Product Clean 
-14. Product Build 
+13. Product Clean
+14. Product Build
 
 
 15. if you encountered an errorabout 2 duplicate symbols for architecture armv7 remove the CDVLogger in the Build Phrases > Complied Resources
 
-16. Product Clean 
-17. Product Build 
+16. Product Clean
+17. Product Build
 
-18. If there are no errors. Product > Run. The app will be installed to your device.
+18. If there are no errors. Product > Run. The app will be installed to your device.  
