@@ -2065,15 +2065,14 @@ define([
         },
 
 
-        PickedScanItem: function (e) {
+     PickedScanItem: function (e) {
 
-            
-            var upcCode = "";
-            var itemCode = "";
-            var itemName = e; 
            
+            var upcCode = this.CurrentItem.get("UPCCode");
+            var itemCode = this.CurrentItem.get("ItemCode");
+            var itemName = this.CurrentItem.get("ItemName");
             var valueToCheck = e;
-            var qtySkipped = "";
+            var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
             if (upcCode != null) upcCode = upcCode.toLowerCase();
             if (itemCode != null) itemCode = itemCode.toLowerCase();
@@ -2103,7 +2102,7 @@ define([
                 Shared.NotifyError("You are scanning the wrong item.");
                 Shared.BeepError();
             }
-        },
+        
 
 
 
