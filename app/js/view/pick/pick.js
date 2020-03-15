@@ -1212,17 +1212,33 @@ define([
             }
         },
 
-        ProcessCurrentPickItem: function (item) { 
+        ProcessCurrentPickItem: function (item) {
 
-             
+          
 
             var maxQty = item.get("QuantityToPick");
             var quantityToScan = this.QuantityToScan;
 
             //counter remaining 
+
+
+
+ 
+
             var remainingQty = item.get("RemainingQuantity");
             remainingQty -= quantityToScan;
+
+
+           // alert(remainingQty);
+
+            remainingQty = 0;
+
+
+
             item.set({ RemainingQuantity: remainingQty });
+
+
+
 
             //qty picked
             var qtyPicked = item.get("QuantityPicked");
@@ -1230,12 +1246,13 @@ define([
             item.set({ QuantityPicked: qtyPicked });
             item.set({ QuantityToPick: maxQty - quantityToScan });
 
-           
+ 
             if (remainingQty <= 0) {
                 //
                 //Move to next card or complete pick
-                this.itemsPicked.add(item);
-                this.itemCollection.remove(item);
+
+               this.itemsPicked.add(item);
+               this.itemCollection.remove(item);
 
                 if (this.itemCollection && this.itemCollection.length > 0) {
                     item = this.itemCollection.models[0];
@@ -1971,7 +1988,7 @@ define([
  
         RotateContainerCard: function (skippedListItemID) {
             
-
+           
             if (isRotateCard) {
                 if (isOnItemSettingSection) {
                     Shared.FlipY(('#flipper' + skippedListItemID), 0);
@@ -2067,13 +2084,12 @@ define([
 
         PickedScanItem: function (e) {
 
-            
-            var upcCode = "";
-            var itemCode = "";
-            var itemName = e; 
            
+            var upcCode = this.CurrentItem.get("UPCCode");
+            var itemCode = this.CurrentItem.get("ItemCode");
+            var itemName = this.CurrentItem.get("ItemName");
             var valueToCheck = e;
-            var qtySkipped = "";
+            var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
             if (upcCode != null) upcCode = upcCode.toLowerCase();
             if (itemCode != null) itemCode = itemCode.toLowerCase();
@@ -2902,7 +2918,6 @@ define([
 
         WireCardEvents: function (skippedItemID, isSkippedItem) {
             var self = this; 
-            
             if (isSkippedItem) {
                 //Bin Manager
                 if (Preference.PickIsPromptBinManager) {
@@ -2915,6 +2930,7 @@ define([
 
                 //Rotate Card
                 Shared.AddRemoveHandler('#' + skippedItemID, 'tap', function () { self.RotateContainerCard(skippedItemID); });
+              
             }
             else {
                 //Bin Manager
@@ -2946,7 +2962,8 @@ define([
                 $('.btn-picked').show();
                 Shared.AddRemoveHandler('#buttonPicked' + skippedItemID, 'tap', function () {
                     self.PickedScanItem($(this).attr('name'));
-                    Shared.FlipY('.flipper', 0);
+                    //Shared.FlipY('.flipper', 0);
+                    self.RotateContainerCard(skippedItemID);
                 });
             }
             else {
