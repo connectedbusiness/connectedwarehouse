@@ -427,7 +427,7 @@ define([
                     Items: this.itemsPicked,
                     Serials: this.serialCollection
                 });
-
+                console.log("Picked Model",pickModel);
                 this.AnimatePick(true, true);
                 pickModel.save(null, {
                     success: function (model, response, options) {
@@ -1324,6 +1324,17 @@ define([
                 var self = this;
               //  var item = this.itemCollection.models[0];
                 var item = this.CurrentItem;
+                var itemName = this.CurrentItem.get("ItemName");
+                var itemModel = this.ItemSettingView.model;
+               
+                if (itemModel != undefined) {
+                    var itemNameModelName = this.ItemSettingView.model.get("ItemName");;
+                    if (itemName != itemNameModelName) {
+                        item = itemModel;
+                    }
+                    
+                }
+
                 this.UpdateCounter(item.get("RemainingQuantity") * -1);
 
                 var remainingQuantity = item.get("RemainingQuantity");
@@ -1656,6 +1667,15 @@ define([
 
         RenderItem: function (item, isAnimate) {
             this.CurrentItem = item;
+
+            //this.CurrentItem.get("UPCCode"); 
+            //console.log("UPCCode", upcCode);
+            //this.CurrentItem.set(item.get("ItemCode"));
+            //this.CurrentItem.set(item.get("ItemName"));
+
+            console.log("itemCollection", this.itemCollection);
+            console.log("itemsSkipped", this.itemsSkipped);
+            console.log("itemsPicked", this.itemsPicked);
 
             if (isAnimate) {
                 this.$("#containerTransition").show();
@@ -2084,11 +2104,14 @@ define([
 
         PickedScanItem: function (e) {
 
-           
             var upcCode = this.CurrentItem.get("UPCCode");
+            console.log("UPCCode", upcCode );
             var itemCode = this.CurrentItem.get("ItemCode");
+            console.log("ItemCode", itemCode);
             var itemName = this.CurrentItem.get("ItemName");
+            console.log("itemName", itemName);
             var valueToCheck = e;
+            console.log(valueToCheck);
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
             if (upcCode != null) upcCode = upcCode.toLowerCase();
@@ -2097,8 +2120,20 @@ define([
             if (valueToCheck != null) valueToCheck = valueToCheck.toLowerCase();
 
             this.$("#textScanItem").val("");
+            // added by sandeep for skiping remaining item
+            if (itemName != valueToCheck) {
 
-            if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
+                var unitMeasureCode = this.ItemSettingView.model.get('UnitMeasureCode');
+              
+                var selectedItem = Shared.FindItem(this.itemCollection, e, unitMeasureCode);
+                this.CurrentItem = selectedItem;
+                
+                //this.$("#textScanItem").val(itemCode);
+                this.$("#textScanItem").val('');
+                this.PickNextItem(selectedItem, 1);
+                this.ShowRemainingItems(true);
+            }
+            else if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
                 if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
 
                     if (isOnItemSettingSection) {
@@ -2126,8 +2161,12 @@ define([
         ScanItem: function () {
              
             var upcCode = this.CurrentItem.get("UPCCode");
+            console.log("UPCCode", upcCode);
             var itemCode = this.CurrentItem.get("ItemCode");
+            console.log("ItemCode", itemCode);
             var itemName = this.CurrentItem.get("ItemName");
+            console.log("itemName", itemName);
+
             var valueToCheck = $("#textScanItem").val();
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
@@ -2717,11 +2756,31 @@ define([
                 if (overallCounter == counter) {
                     var self = this;
 
-                    navigator.notification.confirm("Do you want to cancel Pick?", function (button) {
+                    navigator.notification.confirm("Do you want to cancel Pick ?", function (button) {
                         if (button == 1) {
+                          if(!Preference.PickIsAutoComplete)
+                          {
+                            navigator.notification.confirm("Do you want to save Picked Items?", function (button) {
+                                if (button == 1) {
+
+                                    self.CompletePick();
+
+                                }
+                                else {
+                                      self.GoToLookup(); 
+                                     isOnItemSettingSection = false;
+                                }
+                            }, "Save Pick", "Yes,No");
+
+                          }
+                          else{
+
                             self.GoToLookup(); 
-                            isOnItemSettingSection = false;
-                           }
+                                     isOnItemSettingSection = false;
+
+                          }
+                            
+                        }
                     }, "Cancel Pick", "Yes,No");
                     return false;
                 }
@@ -2730,8 +2789,27 @@ define([
 
                     navigator.notification.confirm("Some items have been picked. Do you want to cancel Pick?", function (button) {
                         if (button == 1) {
-                          self.GoToLookup();
-                          isOnItemSettingSection = false;
+                            if(!Preference.PickIsAutoComplete)
+                            {
+                                navigator.notification.confirm("Do you want to save Picked Items?", function (button) {
+                                if (button == 1) {
+
+                                    self.CompletePick();
+
+                                }
+                                else {
+                                      self.GoToLookup(); 
+                                     isOnItemSettingSection = false;
+                                }
+                            }, "Save Pick", "Yes,No");
+
+                            }
+                            else{
+
+                            self.GoToLookup(); 
+                                     isOnItemSettingSection = false;
+
+                            } 
                         } 
                     }, "Cancel Pick", "Yes,No");
                     return false;
