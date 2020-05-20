@@ -9,8 +9,9 @@ define(
 	            Password: '',
 	            UnitMeasureSystem: ''
 	        },
-	        CurrentTransactions: null,
-		    DemoServiceUrl: "http://96.253.18.150:90/DEMO/POS_V19.1.7031/",
+			CurrentTransactions: null,
+			DemoServiceUrl:"http://detiserver2.westus2.cloudapp.azure.com/CBPOSSVC_19_0/",
+            //DemoServiceUrl: "Https://store.mothersnc.com/cbpossvc_19_0/",
 	        // DemoServiceUrl: "http://data.connectedbusiness.com/demo/pos17/",
 	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CBPOS_14_0_1/",
 	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CW/",

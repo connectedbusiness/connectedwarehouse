@@ -103,7 +103,7 @@ define([
 
 	        if (Global.ServiceUrl == Global.DemoServiceUrl) {
 	            $("#textUsername").val("admin");
-	            $("#textPassword").val("admin");
+                $("#textPassword").val("admin");
 	        }
 	    },        
 	    
