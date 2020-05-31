@@ -288,8 +288,26 @@ define([
 		            var serverName = $("#textServerName").val().trim();
 		            var url = $("#textUrl").val().trim();
 
-		            if (!/^http:\/\//.test(url)) url = "http://" + url;
-		            if (!/\/$/.test(url)) url = url + "/";
+		            if (!/^http:\/\//.test(url))
+                        {
+                        if (!/^Http:\/\//.test(url))
+                            {
+                            if (!/^https:\/\//.test(url))
+                                {   
+                                if (!/^Https:\/\//.test(url))
+                                    {
+                                    url = "http://" + url;
+                                    }
+                                }
+                            }
+                        }
+                            
+                           
+		            if (!/\/$/.test(url))
+                        {
+                      url = url + "/";
+                        }
+                       
 
 		            $("#textUrl").val(url);
 
