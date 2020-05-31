@@ -252,6 +252,8 @@ define([
                         BinLocationCode: item.BinLocationCode,
                         ItemCode: item.ItemCode,
                         ItemName: item.ItemName,
+                        ItemDescription: item.ItemDescription, //-- Added items description for bin manager By Surinder Kaur-----
+                        UnitsInStock: item.UnitsInStock, //---  Added items unit in stock for bin manager By Surinder Kaur-----
                         RowNumber: counter,
                         TapeItemID: "ITEM" + counter,
                         UPCCode: item.UPCCode,
