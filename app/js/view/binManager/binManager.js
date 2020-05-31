@@ -172,6 +172,10 @@ define([
             this.binCollection.add(binModel);
 
             var binView = new CartItemView({ model: binModel });
+
+			// $! DAVID this seems to be debug code
+            alert(binView);
+
             this.$("#cartListContainer tbody").append(binView.render());
 
             Shared.AddRemoveHandler("." + binView.model.get('BinItemID') + "-itemcol-3", 'tap', function (e) {
@@ -205,6 +209,8 @@ define([
             var cartModel = new CartItemModel();
             
             cartModel.url = Global.ServiceUrl + Service.PRODUCT + Method.ASSIGNITEMBINLOCATION;
+
+             
 
             if (!isExisting) {
                 cartModel.set({
@@ -243,6 +249,10 @@ define([
             this.$("#cartListItemsContainer tbody").html("");
 
             if (items && items.length > 0) {
+
+                console.log(items);
+
+
                 _.each(items, function (item) {
                     counter += 1;
                     var itemModel = new CartItemModel();
@@ -252,6 +262,8 @@ define([
                         BinLocationCode: item.BinLocationCode,
                         ItemCode: item.ItemCode,
                         ItemName: item.ItemName,
+                        ItemDescription: item.ItemDescription, //-- Added items description for bin manager By Surinder Kaur-----
+                        UnitsInStock: item.UnitsInStock, //---  Added items unit in stock for bin manager By Surinder Kaur-----
                         RowNumber: counter,
                         TapeItemID: "ITEM" + counter,
                         UPCCode: item.UPCCode,
@@ -358,6 +370,9 @@ define([
         IsUpdate: false,
                               
         LoadAllBin: function (binName) {
+
+
+           
             var binModel = new BinManagerModel();
             var self = this;
 
@@ -383,6 +398,7 @@ define([
         },
 
         LoadBinLocationLookup: function () {
+         
             var binModel = new BinManagerModel();            
             var self = this;
             

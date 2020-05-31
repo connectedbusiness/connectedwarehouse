@@ -199,7 +199,7 @@ define([
 
 		    if (this.urlcollection.length > 0) {
 		        var self = this;
-                //this.Clea/Users/kaur/warehouse/platforms/ios/www/js/model/prepack.jsrConnections();
+                //this.ClearConnections();
 		        
 		        this.urlcollection.each(function (url) {
 		            self.AddUrl(url);
