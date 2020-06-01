@@ -10,21 +10,27 @@
              <div class="pick-card-caption">
                 <ul class="clear-list">
                     <li>UPC: <%= BarCode %></li>
-                    <li><span class="text-ellipsis">Name: <%= ItemName %></li>                
-                    <li><span class="text-ellipsis"><%= ItemDescription %></span></li>
-                    <li ><span class="text-ellipsis">Notes: <%= ShippingNotes %></span></li>    
+                    <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></li>                
+                    <li><span class="text-ellipsis" style="color: white!important;"><%= ItemDescription %></span></li>
+                    <!--<li ><span class="text-ellipsis" style="color: white!important;">Notes: <%= ShippingNotes %></span></li>-->    
                 </ul>
             </div>
             <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes">skip</div>
+             <div  id="buttonPicked<%= SkippedListItemID %>" name="<%= ItemName %>" class ="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes btn-picked">pick</div>
+
+
           <% }  else { %>
-              <div class="pick-card-caption no-shipping-notes">
+              <div class="pick-card-caption no-shipping-notes"> 
                 <ul class="clear-list">
-                    <li>UPC: <%= BarCode %></li>
-                    <li><span class="text-ellipsis">Name: <%= ItemName %></li>
-                    <li><span class="text-ellipsis"><%= ItemDescription %></span></li>  
+                    <li>UPC: <%= UPCCode %></li>
+                    <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></span></li>
+                    <li><span class="text-ellipsis" style="color: white!important;" id="itemsdesval"><%= ItemDescription %></span></li>  
                 </ul>
             </div>
             <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip">skip</div>
+         <div id="buttonPicked<%= SkippedListItemID %>"  name="<%= ItemName %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes  btn-picked">pick</div>
         <% } %>  
     </div>
 </div>
+
+ 

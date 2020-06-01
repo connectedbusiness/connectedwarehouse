@@ -443,13 +443,24 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             }
             .cartitem-1 li,
             .cartitem-3 li {
-                overflow: hidden;
+                
                 text-overflow: ellipsis;
                 white-space: nowrap;
             }
             .cartitem-1 { width: 580px !important; }
             .cartitem-2 { width: 158px !important; }
-            .cartitem-3 { width: 195px !important; }        
+
+            .cartitem-3 { width: 195px !important; }
+               ul#cartti { width: 420px !important; }    
+               
+               
+               .unicode {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 30px;
+} 
+
+
             .listitem-1 { width: 323px !important; }        
             .listitem-2 { width: 300px !important; }
             .listitem-3 { width: 293px !important; }
@@ -720,7 +731,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             /*#region Transition*/        
             .transition-container {
                 overflow: hidden;
-             /* position: fixed; */
+                position: fixed;
             }        
             .slider { -webkit-transition:all 0.3s ease-in-out 0.1s; }        
             .slider > section {
@@ -991,7 +1002,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         white-space: nowrap;
         cursor: pointer;
         width: 600px !important;
-        float: left;   
+        float: left;  
+        color: white !important; 
     }  
     ul[class^='boxitem'],
     ul[class^='listitem'],
@@ -1385,8 +1397,15 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             position: relative;
             font-size: 24px;
             font-weight: bold;
-            left: 640px;        
+            left: 500px;        
         }
+
+        .btn-picked {
+           top: 9px;
+           margin-left: 33px;
+        }
+
+
         .paging-footer {
             list-style: none;    
             margin: 0;
@@ -1569,6 +1588,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     #settingsGroup1List { margin-top: 10px; }
     #settingsGroup3List,
     #settingsGroup2List, 
+    #settingsGroup4List,
     #settingsGroup1List { width: 748px; }
     #settingsGroup3List li,
     #settingsGroup2List li,
@@ -1581,7 +1601,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         font-weight: 300;    
     }
     #featurePreferenceList li a ul {
-        width: 150px;
+        width: 185px;
         list-style: none;
         padding-left: 0px;
     }
@@ -1695,8 +1715,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             #boxDetailsBody ul li span, 
             #itemSettingBody ul li span,
             .itemSettingCardBody ul li span {                
-                width:170px;
-                text-align:right;    
+                width:530px;
+                text-align:left;    
                 text-overflow: ellipsis;
                 overflow:hidden;
                 white-space:nowrap;
@@ -1870,11 +1890,13 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         bottom: 0;
     }
 
-    #containerConnectionSection .container-footer {
+    .container-footer, #numericpadFooter {
+        position: absolute;
+        width: 767px;
         bottom: 0;
     }
-    #boxDetailsFooter {
-    bottom: 10px;
+    #containerConnectionSection .container-footer {
+        position: relative !important;
     }
     ul.numericpad-button-group button {
         width: 254px;
@@ -1893,15 +1915,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         position: relative;
         bottom: 10px;
     }
-    #boxFooter, #receiveFooter, .container-footer{
-        position: relative;
-        bottom: 55px;
-    }
-    #numericpadFooter {
-        position: absolute;
-        bottom: 0;
-    }
-    #miscPhysicalFooter {
+    #boxFooter, #receiveFooter {
         position: relative;
         bottom: 55px;
     }
@@ -1912,12 +1926,34 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     #containerTableFullScreenBody.iscroll-picturefs { width:768px; }
     #containerTableFullScreenBody #pictureItemList { width: inherit; display: block; height:auto; }
     #containerTableFullScreenBody #pictureItemList li { list-style: none; display:inline-block; width:100%; text-align:center; }
-    
-    /*#endregion*/    
 
-    #containerAdjustmentSection, #containerStockTakeSection {
-    position: fixed;
-    }   
+
+
+    .toast-message {
+    font-size: 25px;
+}
+    .toast-close-button { 
+    font-size: 40px !important; 
+}
+
+    span#Spndes { 
+    font-weight: 400;
+    color: white;
+    padding: 0 15px;
+    font-size: 19px;
+    display: inline-block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 435px;
+    line-height: 100px;
+}
+
+
+
+
+     
+    /*#endregion*/       
 }
 /*#endregion*/
 
