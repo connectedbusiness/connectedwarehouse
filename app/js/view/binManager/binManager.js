@@ -174,7 +174,7 @@ define([
             var binView = new CartItemView({ model: binModel });
 
 			// $! DAVID this seems to be debug code
-            alert(binView);
+           //alert(binView);
 
             this.$("#cartListContainer tbody").append(binView.render());
 

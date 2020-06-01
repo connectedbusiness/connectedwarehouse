@@ -1231,7 +1231,7 @@ define([
 
            // alert(remainingQty);
 			// $! DAVID is this debug code?  This line was not in the root copy of pick.js
-            remainingQty = 0;
+          //  remainingQty = 0; 
 
 
 
@@ -1727,7 +1727,7 @@ define([
                         this.$("#cardBack").append(cardBackView.render());
 
 					 // $! DAVID Is is supposed to be commited out?  It was not commmented on the root folder copy
-                     //   this.RenderItemDetail(item2)
+                        this.RenderItemDetail(item2)
                     }
                 }
                 this.ChangeCardSize(skippedItemID);
@@ -1807,7 +1807,7 @@ define([
              {
                        Shared.NotifyError("Preference does not allow skipping an item.");
 					   // $! DAVID is there supposed to be a "0" and the end of this line?  The root folder file did not have that.
-                       Shared.BeepError();0
+                       Shared.BeepError();
              }
        
              else
@@ -1823,13 +1823,13 @@ define([
                 }
 				
 				// $! DAVID confirm which of these two lines is correct
-                //this.$("#textScanItem").val(itemCode);
-                this.$("#textScanItem").val('');
+                this.$("#textScanItem").val(itemCode);
+                //this.$("#textScanItem").val('');
 				
                 this.ShowRemainingItems(false);
 				
 				// $! DAVID confirm this line is supposed to be commented out
-               // this.ScanItem();
+                this.ScanItem();
              }
     
           
@@ -2325,7 +2325,7 @@ define([
             }, this);
 			
 			// $! DAVID this line looks messed up and does not match the root file, string was "itemSelected"
-            lookupView.on("itemSe`  1qlected", function (itemModel) {
+            lookupView.on("itemSelected", function (itemModel) {
                 switch (shippingMode) {
                     case "postal":
                         self.UpdatePostal(itemModel);
