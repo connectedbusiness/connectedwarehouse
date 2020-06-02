@@ -427,7 +427,7 @@ define([
                     Items: this.itemsPicked,
                     Serials: this.serialCollection
                 });
-                console.log("Picked Model",pickModel);
+                //console.log("Picked Model",pickModel);
                 this.AnimatePick(true, true);
                 pickModel.save(null, {
                     success: function (model, response, options) {
@@ -689,8 +689,6 @@ define([
             });
             view.on('closenumericpad', function (e) {
 
-
-                //--- Code added by Surinder Kaur--
                 //-- In Pick Module, with Prompt for qty turned on, cancelling out of "enter quantity" screen improperly decrements qty remaining to be picked #9----
 
 
@@ -1213,18 +1211,10 @@ define([
         },
 
         ProcessCurrentPickItem: function (item) {
-
-          
-
             var maxQty = item.get("QuantityToPick");
             var quantityToScan = this.QuantityToScan;
 
             //counter remaining 
-
-
-
- 
-
             var remainingQty = item.get("RemainingQuantity");
             remainingQty -= quantityToScan;
 
@@ -1672,9 +1662,9 @@ define([
             //this.CurrentItem.set(item.get("ItemCode"));
             //this.CurrentItem.set(item.get("ItemName"));
 
-            console.log("itemCollection", this.itemCollection);
-            console.log("itemsSkipped", this.itemsSkipped);
-            console.log("itemsPicked", this.itemsPicked);
+            // console.log("itemCollection", this.itemCollection);
+            // console.log("itemsSkipped", this.itemsSkipped);
+            // console.log("itemsPicked", this.itemsPicked);
 
             if (isAnimate) {
                 this.$("#containerTransition").show();
@@ -2163,11 +2153,11 @@ define([
         ScanItem: function () {
              
             var upcCode = this.CurrentItem.get("UPCCode");
-            console.log("UPCCode", upcCode);
+            //console.log("UPCCode", upcCode);
             var itemCode = this.CurrentItem.get("ItemCode");
-            console.log("ItemCode", itemCode);
+            //console.log("ItemCode", itemCode);
             var itemName = this.CurrentItem.get("ItemName");
-            console.log("itemName", itemName);
+            //console.log("itemName", itemName);
 
             var valueToCheck = $("#textScanItem").val();
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
@@ -2265,14 +2255,11 @@ define([
                 if (isFromRemainingItemSection) {
                     $('#rowRemFreeStock').show();
                      
-                     
-                    //---  This code is commented by Surinder Kaur---
+                    //---  Commented out line below 
                     //---  Reason:  Quanitity going to less some time 2 or 3 along-----
                     //---  Task :  https://github.com/DynEntTech/connectedwarehouse/issues/14----
 
                     //this.RenderRemainingItems(); 
-
-
                 }
                 else $('#rowFreeStock' + skippedItemID).show();
             }

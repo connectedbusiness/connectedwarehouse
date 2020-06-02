@@ -249,7 +249,7 @@ define([
 
             if (items && items.length > 0) {
 
-                console.log(items);
+                //console.log(items);
 
 
                 _.each(items, function (item) {
