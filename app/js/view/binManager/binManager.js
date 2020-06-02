@@ -172,6 +172,9 @@ define([
             this.binCollection.add(binModel);
 
             var binView = new CartItemView({ model: binModel });
+
+           //alert(binView);
+
             this.$("#cartListContainer tbody").append(binView.render());
 
             Shared.AddRemoveHandler("." + binView.model.get('BinItemID') + "-itemcol-3", 'tap', function (e) {
@@ -205,6 +208,8 @@ define([
             var cartModel = new CartItemModel();
             
             cartModel.url = Global.ServiceUrl + Service.PRODUCT + Method.ASSIGNITEMBINLOCATION;
+
+             
 
             if (!isExisting) {
                 cartModel.set({
@@ -243,6 +248,10 @@ define([
             this.$("#cartListItemsContainer tbody").html("");
 
             if (items && items.length > 0) {
+
+                //console.log(items);
+
+
                 _.each(items, function (item) {
                     counter += 1;
                     var itemModel = new CartItemModel();
@@ -360,6 +369,9 @@ define([
         IsUpdate: false,
                               
         LoadAllBin: function (binName) {
+
+
+           
             var binModel = new BinManagerModel();
             var self = this;
 
@@ -385,6 +397,7 @@ define([
         },
 
         LoadBinLocationLookup: function () {
+         
             var binModel = new BinManagerModel();            
             var self = this;
             
