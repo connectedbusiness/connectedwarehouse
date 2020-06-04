@@ -30,9 +30,12 @@ define([
             //-- Code added by dynenttech.com ---
             //-- Task to restrict users to enter more then quanity in numeric pad---
             //--- Task reference https://github.com/connectedbusiness/connectedwarehouse/issues/13------
+			
+			console.log("localStorage", localStorage);
 
             if (localStorage.QuantityToPick != undefined && localStorage.QuantityToPick != "") {
-                if (this.$('#textboxQuantity').val() > localStorage.QuantityToPick) {
+				
+                if ( parseInt(this.$('#textboxQuantity').val()) > parseInt(localStorage.QuantityToPick)) {
                     navigator.notification.alert("Enter " + localStorage.QuantityToPick + " or less", null, "Remaining Quantity Exceeded", "OK");
                     return;
                 } 
