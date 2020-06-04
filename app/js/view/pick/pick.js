@@ -2760,7 +2760,7 @@ define([
                                       self.GoToLookup(); 
                                      isOnItemSettingSection = false;
                                 }
-                            }, "Save Pick", "Yes,No");
+                            }, "Save your work?", "Yes,No");
 
                           }
                           else{
@@ -2791,7 +2791,7 @@ define([
                                       self.GoToLookup(); 
                                      isOnItemSettingSection = false;
                                 }
-                            }, "Save Pick", "Yes,No");
+                            }, "Save your work?", "Yes,No");
 
                             }
                             else{
