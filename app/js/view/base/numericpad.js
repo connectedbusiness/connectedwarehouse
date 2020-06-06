@@ -47,9 +47,9 @@ define([
 
             NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
 
-            if (NumericPadCriteria.NumericPadValue == 0) {
-                NumericPadCriteria.NumericPadValue = 1;
-            }
+           // if (NumericPadCriteria.NumericPadValue == 0) {
+            //    NumericPadCriteria.NumericPadValue = 0;
+           // }
 
 
             this.trigger('quantitychange', NumericPadCriteria);

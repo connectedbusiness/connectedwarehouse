@@ -66,6 +66,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     cursor: pointer;
     color: #ccc;
 }
+#containerSettings
+{
+    z-index: 10001;
+}
 
 /*#region iPad*/
 @media (device-height: 1024px), (min-height: 1024px) {

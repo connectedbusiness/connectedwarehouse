@@ -1220,7 +1220,7 @@ define([
 
 
            // alert(remainingQty);
-          //  remainingQty = 0; 
+           // remainingQty = 0; 
 
 
 
@@ -1715,7 +1715,7 @@ define([
                         this.$("#cardBack").html("");
                         this.$("#cardBack").append(cardBackView.render());
 
-                        this.RenderItemDetail(item2)
+                        //this.RenderItemDetail(item2)
                     }
                 }
                 this.ChangeCardSize(skippedItemID);
@@ -1809,12 +1809,12 @@ define([
                     this.RenderItem(selectedItem,false);
                 }
 				
-                this.$("#textScanItem").val(itemCode);
-                //this.$("#textScanItem").val('');
+                //this.$("#textScanItem").val(itemCode);
+                this.$("#textScanItem").val('');
 				
                 this.ShowRemainingItems(false);
 				
-                this.ScanItem();
+                //this.ScanItem();
              }
     
           
