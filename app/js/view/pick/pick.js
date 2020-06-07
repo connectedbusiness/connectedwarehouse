@@ -2133,8 +2133,9 @@ define([
                         isOnItemSettingSection = false;
                     }
                     if (Preference.PickIsPromptForQty) {
-                        if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                        else this.PickNextItem(this.CurrentItem, 1)
+                       // if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
+                       // else this.PickNextItem(this.CurrentItem, 1)
+                       this.ShowNumericPad();
                     }
                     else {
                         if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
@@ -2177,8 +2178,9 @@ define([
                         isOnItemSettingSection = false;
                     }
                     if (Preference.PickIsPromptForQty) { 
-                        if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                        else this.PickNextItem(this.CurrentItem, 1)
+                        //if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
+                        //else this.PickNextItem(this.CurrentItem, 1)
+                        this.ShowNumericPad();
                     }
                     else { 
                         if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
