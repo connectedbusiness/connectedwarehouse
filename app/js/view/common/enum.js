@@ -74,6 +74,7 @@ define(
 	            Carriers: 18,
 	            ServiceTypes: 19,
                 Boxes: 20,
+	            LocalSetting: 21
 	        }
 	    }
 

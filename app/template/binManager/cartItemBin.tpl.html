@@ -5,9 +5,26 @@
     </div>
     <div class="<%= TapeItemID %>-itemcol-3">
         <ul class="cartitem-1 <%= ViewID %>">
-            <li><%= ItemName %></li>
+            
+               <% if(ItemDescription.length >=50) {  %>
+                <li><%= ItemName %> : <%= ItemDescription.substring(0, 50) %>...</li>          
+                 <% }  else { %>
+                <li><%= ItemName %> : <%= ItemDescription%></li>  
+                 <% } %>  
+
+
             <li>UPC: <span><%= UPCCode %></span></li>
-            <li>UM: <span><%= UnitMeasureCode %></span></li>
+          
+
+
+            <li>
+                    <div ><div class="unicode"  style="margin-left: 0px;">UM: <span id="itemUM<%= TapeItemID %>"><%= UnitMeasureCode %></span></div>
+                    <div class="unicode chkuni"  style="display:none;">In Stock: <span id="Span1"><%= UnitsInStock %></span></div>
+                        </div>
+
+                  
+                </li>  
+
         </ul>
     </div>
 </td>

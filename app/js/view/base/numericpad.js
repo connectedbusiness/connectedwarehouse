@@ -32,7 +32,8 @@ define([
             //--- Task reference https://github.com/connectedbusiness/connectedwarehouse/issues/13------
 
             if (localStorage.QuantityToPick != undefined && localStorage.QuantityToPick != "") {
-                if (this.$('#textboxQuantity').val() > localStorage.QuantityToPick) {
+				
+                if ( parseInt(this.$('#textboxQuantity').val()) > parseInt(localStorage.QuantityToPick)) {
                     navigator.notification.alert("Enter " + localStorage.QuantityToPick + " or less", null, "Remaining Quantity Exceeded", "OK");
                     return;
                 } 
@@ -44,9 +45,9 @@ define([
 
             NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
 
-            if (NumericPadCriteria.NumericPadValue == 0) {
-                NumericPadCriteria.NumericPadValue = 1;
-            }
+           // if (NumericPadCriteria.NumericPadValue == 0) {
+            //    NumericPadCriteria.NumericPadValue = 0;
+           // }
 
 
             this.trigger('quantitychange', NumericPadCriteria);

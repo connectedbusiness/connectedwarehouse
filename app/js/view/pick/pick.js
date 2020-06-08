@@ -1704,7 +1704,7 @@ define([
                         this.$("#cardBack").html("");
                         this.$("#cardBack").append(cardBackView.render());
 
-                        this.RenderItemDetail(item2)
+                        //this.RenderItemDetail(item2)
                     }
                 }
                 this.ChangeCardSize(skippedItemID);
@@ -1797,12 +1797,12 @@ define([
                     this.RenderItem(selectedItem,false);
                 }
 				
-                this.$("#textScanItem").val(itemCode);
-                //this.$("#textScanItem").val('');
+                //this.$("#textScanItem").val(itemCode);
+                this.$("#textScanItem").val('');
 				
                 this.ShowRemainingItems(false);
 				
-                this.ScanItem();
+                //this.ScanItem();
              }
     
           
@@ -2120,8 +2120,9 @@ define([
                         isOnItemSettingSection = false;
                     }
                     if (Preference.PickIsPromptForQty) {
-                        if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                        else this.PickNextItem(this.CurrentItem, 1)
+                       // if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
+                       // else this.PickNextItem(this.CurrentItem, 1)
+                       this.ShowNumericPad();
                     }
                     else {
                         if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
@@ -2164,8 +2165,9 @@ define([
                         isOnItemSettingSection = false;
                     }
                     if (Preference.PickIsPromptForQty) {
-                        if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                        else this.PickNextItem(this.CurrentItem, 1)
+                        //if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
+                        //else this.PickNextItem(this.CurrentItem, 1)
+                        this.ShowNumericPad();
                     }
                     else {
                         if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
@@ -2746,7 +2748,7 @@ define([
                                       self.GoToLookup(); 
                                      isOnItemSettingSection = false;
                                 }
-                            }, "Save Pick", "Yes,No");
+                            }, "Save your work?", "Yes,No");
 
                           }
                           else{
@@ -2777,7 +2779,7 @@ define([
                           self.GoToLookup();
                           isOnItemSettingSection = false;
                         } 
-                            }, "Save Pick", "Yes,No");
+                            }, "Save your work?", "Yes,No");
 
                             }
                             else{
