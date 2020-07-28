@@ -102,8 +102,8 @@ define([
 	        connectionView.InitializeDefaultConnection();
 
 	        if (Global.ServiceUrl == Global.DemoServiceUrl) {
-	            $("#textUsername").val("admin");
-                $("#textPassword").val("admin");
+	            $("#textUsername").val("W");
+                $("#textPassword").val("ICEtea00$");
 	        }
 	    },        
 	    

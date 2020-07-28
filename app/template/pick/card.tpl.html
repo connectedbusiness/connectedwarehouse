@@ -5,31 +5,33 @@
         <li id="qtyCol<%= SkippedListItemID %>" class="pick-item-colqty">x<span id="textQty<%= SkippedListItemID %>"><%= RemainingQuantity %></span></li>
     </ul>
     <div id="pickItemDetail<%= SkippedListItemID %>" class="pick-item-detail">
+        <!--# git issue 52 -- update by Deti (support@dynenttech.com)-- sandeep 21 july 2020-->  
+        <% if(ShippingNotes != null) { %>       
+            <div class="pick-card-caption">
+               <ul class="clear-list">
+                   <li>UPC: <%= BarCode %></li>
+                   <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></li>                
+                   <li><span class="text-ellipsis" style="color: white!important;"><%= ItemDescription %></span></li>
+                   <!--<li ><span class="text-ellipsis" style="color: white!important;">Notes: <%= ShippingNotes %></span></li>-->    
+               </ul>
+           </div>
+           <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes">skip</div>
+            <div  id="buttonPicked<%= SkippedListItemID %>" name="<%= ItemName %>" class ="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes btn-picked">pick</div>
+
+
+         <% }  else { %>
+             <div class="pick-card-caption no-shipping-notes"> 
+               <ul class="clear-list">
+                   <li>UPC: <%= UPCCode %></li>
+                   <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></span></li>
+                   <li><span class="text-ellipsis" style="color: white!important;" id="itemsdesval"><%= ItemDescription %></span></li>  
+               </ul>
+           </div>
+           <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip">skip</div>
+        <div id="buttonPicked<%= SkippedListItemID %>"  name="<%= ItemName %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes  btn-picked">pick</div>
+       <% } %> 
         <img id="pickItemImage<%= SkippedListItemID %>" src="<%= CardImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCard.png';" class="imageCard" />
-         <% if(ShippingNotes != null) { %>       
-             <div class="pick-card-caption">
-                <ul class="clear-list">
-                    <li>UPC: <%= BarCode %></li>
-                    <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></li>                
-                    <li><span class="text-ellipsis" style="color: white!important;"><%= ItemDescription %></span></li>
-                    <!--<li ><span class="text-ellipsis" style="color: white!important;">Notes: <%= ShippingNotes %></span></li>-->    
-                </ul>
-            </div>
-            <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes">skip</div>
-             <div  id="buttonPicked<%= SkippedListItemID %>" name="<%= ItemName %>" class ="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes btn-picked">pick</div>
-
-
-          <% }  else { %>
-              <div class="pick-card-caption no-shipping-notes"> 
-                <ul class="clear-list">
-                    <li>UPC: <%= UPCCode %></li>
-                    <li><span class="text-ellipsis" style="color: white!important;">Name: <%= ItemName %></span></li>
-                    <li><span class="text-ellipsis" style="color: white!important;" id="itemsdesval"><%= ItemDescription %></span></li>  
-                </ul>
-            </div>
-            <div id="buttonSkipItem<%= SkippedListItemID %>" class="btn btn-inverse2 pick-btn-skip">skip</div>
-         <div id="buttonPicked<%= SkippedListItemID %>"  name="<%= ItemName %>" class="btn btn-inverse2 pick-btn-skip pick-btn-skip-item-shipping-notes  btn-picked">pick</div>
-        <% } %>  
+          
     </div>
 </div>
 

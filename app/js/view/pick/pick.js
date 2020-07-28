@@ -1332,7 +1332,8 @@ define([
                 item.set({ QuantitySkipped: qtySkipped });
 
                 var qtyToPick = item.get('QuantityToPick');
-                qtyToPick -= item.get("QuantitySkipped");
+                // git issue #51 -- changed by sandeep 24 july 2020
+               // qtyToPick -= item.get("QuantitySkipped");
                 item.set({ QuantityToPick: qtyToPick });
 
                 item.set({
@@ -2391,8 +2392,11 @@ define([
 
                 //--- Code added by surinder kaur------------------------------------------------
                 //--- Reason:  In Picking, add item description to Enter Quantity screen #11-----
+                // Update by Sandeep git issue #46 
+                // reason : the numericpad #spndes element always gets value from #itemsdesval element
                 //-------------------------------------------------------------------------------
-                var texta = $("#itemsdesval").text();
+                //var texta = $("#itemsdesval").text();
+                var texta = this.currentItem.get("ItemDescription");
                 $('#Spndes').text(texta); 
                 //------------------------------------------------------------------------------
                
