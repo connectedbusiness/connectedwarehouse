@@ -2104,7 +2104,7 @@ define([
             var itemName = this.CurrentItem.get("ItemName");
             console.log("itemName", itemName);
             var valueToCheck = e;
-            console.log(valueToCheck);
+            console.log("valueToCheck", valueToCheck);
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
             if (upcCode != null) upcCode = upcCode.toLowerCase();
@@ -2123,8 +2123,13 @@ define([
                 
                 //this.$("#textScanItem").val(itemCode);
                 this.$("#textScanItem").val('');
+                if (Preference.PickIsPromptForQty) {
+                    
+                    this.ShowNumericPad();
+                 }
+                 else
                 this.PickNextItem(selectedItem, 1);
-                this.ShowRemainingItems(true);
+                //this.ShowRemainingItems(true);
             }
             else if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
                 if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
@@ -2135,7 +2140,8 @@ define([
                     }
                     if (Preference.PickIsPromptForQty) {
                        // if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                       // else this.PickNextItem(this.CurrentItem, 1)
+                       // else 
+                       //this.PickNextItem(this.CurrentItem, 1)
                        this.ShowNumericPad();
                     }
                     else {
@@ -2396,7 +2402,8 @@ define([
                 // reason : the numericpad #spndes element always gets value from #itemsdesval element
                 //-------------------------------------------------------------------------------
                 //var texta = $("#itemsdesval").text();
-                var texta = this.currentItem.get("ItemDescription");
+                var texta = this.CurrentItem.get('ItemDescription');
+                //var texta = this.currentItem.get("ItemDescription");
                 $('#Spndes').text(texta); 
                 //------------------------------------------------------------------------------
                

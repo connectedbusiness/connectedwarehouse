@@ -33,7 +33,7 @@ define([
 			
 			console.log("localStorage", localStorage);
 
-            if (localStorage.QuantityToPick != undefined && localStorage.QuantityToPick != "") {
+            if (localStorage.AllowForMoreQty == "false" || (localStorage.QuantityToPick != undefined && localStorage.QuantityToPick != "")) {
 				
                 if ( parseInt(this.$('#textboxQuantity').val()) > parseInt(localStorage.QuantityToPick)) {
                     navigator.notification.alert("Enter " + localStorage.QuantityToPick + " or less", null, "Remaining Quantity Exceeded", "OK");
