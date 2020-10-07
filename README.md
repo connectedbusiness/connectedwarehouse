@@ -1,7 +1,10 @@
 
 Sytem Information:
+
 MAC Version: macOS Catalina (Version: 10.15.7)
+
 XCode Version: 12.0.1
+
 Cordova Version: 9.0.0
 
 
