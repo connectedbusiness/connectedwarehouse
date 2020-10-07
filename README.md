@@ -22,10 +22,10 @@ Note: Make sure to create a provisioning profile to be use when compiling your a
 2. Create new provisioning profile for both Development and Distribution
 
      Development: ConnectedWarehouse20_1 Development 
-     App ID: CW19 (com.connectedbusiness.connected-warehouse-20-1)
+     App ID: CW20 (com.connectedbusiness.connected-warehouse-20-1)
 
      Distribution: ConnectedWarehouse20_1 Distribution
-     App ID: CW19 (com.connectedbusiness.connected-warehouse-20-1)
+     App ID: CW20 (com.connectedbusiness.connected-warehouse-20-1)
      
 
 How to build connected warehouse and deploy it to your device.
