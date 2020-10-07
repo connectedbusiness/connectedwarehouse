@@ -15,17 +15,17 @@ Note: Make sure to create a provisioning profile to be use when compiling your a
 
 1. Create App Id first. Go to https://developer.apple.com/account/ios/identifier/bundle
 
-   ex. Name:CW20.1
+   ex. Name:CW20_1
        Prefix:5GKC59E3V4
        ID:com.connectedbusiness.connectedwarehouse-20-1
  
 2. Create new provisioning profile for both Development and Distribution
 
      Development: ConnectedWarehouse20_1 Development 
-     App ID: CW20 (com.connectedbusiness.connected-warehouse-20-1)
+     App ID: CW20_1 (com.connectedbusiness.connected-warehouse-20-1)
 
      Distribution: ConnectedWarehouse20_1 Distribution
-     App ID: CW20 (com.connectedbusiness.connected-warehouse-20-1)
+     App ID: CW20_1 (com.connectedbusiness.connected-warehouse-20-1)
      
 
 How to build connected warehouse and deploy it to your device.
