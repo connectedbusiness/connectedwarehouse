@@ -1,0 +1,14 @@
+<td id="<%= LookupItemID %>" class="lookup-row <%= LookupItemID %>">
+    <div class="cartitem-rownumber"><%= RowNumber %></div>
+    <div>
+        <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+    </div>
+    <div>
+        <ul class="cartitem-1">
+            <li><%= ItemName %></li>
+            <li>UPC: <span id="itemUPCCode<%= LookupItemID %>"><%= UPCCode %></span></li>
+            <li>UM: <span id="itemUM<%= LookupItemID %>"><%= UnitMeasureCode %></span></li>
+            <li id="itemTransactionCode<%= LookupItemID %>"></li>
+        </ul>
+    </div>
+</td>

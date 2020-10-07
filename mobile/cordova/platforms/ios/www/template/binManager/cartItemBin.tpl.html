@@ -1,0 +1,30 @@
+﻿<td id="<%= TapeItemID %>" class="lookup-row <%= TapeItemID %>">
+    <div class="<%= TapeItemID %>-itemcol-1 cartitem-rownumber"><span id="itemRow<%= TapeItemID %>"><%= RowNumber %></span></div>
+    <div class="<%= TapeItemID %>-itemcol-2">
+        <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+    </div>
+    <div class="<%= TapeItemID %>-itemcol-3">
+        <ul class="cartitem-1 <%= ViewID %>">
+            
+               <% if(ItemDescription.length >=50) {  %>
+                <li><%= ItemName %> : <%= ItemDescription.substring(0, 50) %>...</li>          
+                 <% }  else { %>
+                <li><%= ItemName %> : <%= ItemDescription%></li>  
+                 <% } %>  
+
+
+            <li>UPC: <span><%= UPCCode %></span></li>
+          
+
+
+            <li>
+                    <div ><div class="unicode"  style="margin-left: 0px;">UM: <span id="itemUM<%= TapeItemID %>"><%= UnitMeasureCode %></span></div>
+                    <div class="unicode chkuni"  style="display:none;">In Stock: <span id="Span1"><%= UnitsInStock %></span></div>
+                        </div>
+
+                  
+                </li>  
+
+        </ul>
+    </div>
+</td>

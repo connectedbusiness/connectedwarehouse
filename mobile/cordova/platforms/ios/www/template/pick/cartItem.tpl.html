@@ -1,0 +1,39 @@
+<td id="<%= TapeItemID %>" class="lookup-row <%= TapeItemID %>">
+
+        <div class="cartitem-rownumber"><span id="itemRow<%= TapeItemID %>"><%= RowNumber %></span></div>        
+        <div>        
+            <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+        </div>
+        <div>
+            <ul class="cartitem-3" id="cartti">
+
+                
+                <!--check limit of Item Description words -->
+
+                 <% if(ItemDescription.length >=50) {  %>
+                <li><%= ItemName %> : <%= ItemDescription.substring(0, 50) %>...</li>          
+                 <% }  else { %>
+                <li><%= ItemName %> : <%= ItemDescription%></li>  
+                 <% } %>  
+                  
+
+
+                <li>UPC: <span id="itemUPCCode<%= TapeItemID %>"><%= UPCCode %></span></li>
+                
+                <li id="rowTransactionCode<%= TapeItemID %>"><%= TransactionCode %></li>
+                <li>
+                    Qty: <span id="itemQty<%= TapeItemID %>"><%= QuantityToPick %></span>
+                    <div class="pull-right"><div class="unicode">UM: <span id="itemUM<%= TapeItemID %>"><%= UnitMeasureCode %></span></div>
+                    <div class="unicode chkuni">Bin: <span id="Span1"><%= BinLocationName %></span></div>
+                        </div>
+
+                  
+                </li>   
+                <% if(ShippingNotes) { %>
+                <li>Notes: <span class="pack-cart-item-text-ellipsis"><%= ShippingNotes %></span></li>
+                <% } %>         
+            </ul>
+        </div>
+  
+   <div><i id="buttonItemSetting<%= TapeItemID %>" class="icon-chevron-right icon-2x"></i></div>
+</td>

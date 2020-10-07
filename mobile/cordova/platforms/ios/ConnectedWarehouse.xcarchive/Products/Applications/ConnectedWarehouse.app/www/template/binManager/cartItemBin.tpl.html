@@ -1,0 +1,13 @@
+﻿<td id="<%= TapeItemID %>" class="lookup-row <%= TapeItemID %>">
+    <div class="<%= TapeItemID %>-itemcol-1 cartitem-rownumber"><span id="itemRow<%= TapeItemID %>"><%= RowNumber %></span></div>
+    <div class="<%= TapeItemID %>-itemcol-2">
+        <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+    </div>
+    <div class="<%= TapeItemID %>-itemcol-3">
+        <ul class="cartitem-1 <%= ViewID %>">
+            <li><%= ItemName %></li>
+            <li>UPC: <span><%= UPCCode %></span></li>
+            <li>UM: <span><%= UnitMeasureCode %></span></li>
+        </ul>
+    </div>
+</td>

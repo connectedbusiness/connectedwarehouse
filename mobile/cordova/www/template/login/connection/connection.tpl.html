@@ -1,0 +1,46 @@
+<div class="transition-container">
+    <div class="slider page2">
+        <!--CONNECTION SECTION-->
+        <section id="connectionSection" class="container">
+            <nav id="connectionNav" class="container-nav navbar navbar-inverse">
+                <div class="navbar-header">                        
+                    <span class="navbar-title">connections</span>
+                    <button id="buttonBackConnection" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down"></i></button>
+                </div>
+            </nav>
+            <div id="connectionBody" class="container-body connection-body">
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <h4>Choose a Server...</h4>
+                    </div>
+                    <div id="itemTable">
+                        <table id="tableUrl" class="bordered-list">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <footer class="container-footer">                                        
+                <button id="buttonNewConnection" type="button" class="btn btn-primary btn-lg btn-footer">add connection</button>
+            </footer>
+        </section>
+        <!--END-->
+        <!--URL SECTION-->
+        <section id="urlSection" class="container">
+            <nav id="urlNav" class="container-nav navbar navbar-inverse">
+                <div class="navbar-header">                        
+                    <span class="navbar-title">setting</span>
+                    <button id="buttonBackUrl" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                </div>
+            </nav>
+            <div class="url-body">
+                <input id="textServerName" placeholder="Server Name" type="text" class="form-control input-lg" value="" />
+                <textarea id="textUrl" placeholder="Enter Server URL" rows="4" class="form-control input-lg"></textarea>                
+            </div>
+            <footer class="container-footer">
+                <button id="buttonRemoveConnection" type="button" class="btn btn-danger btn-lg btn-footer">remove</button>
+            </footer>                    
+        </section>
+        <!--END-->
+    </div>
+</div>

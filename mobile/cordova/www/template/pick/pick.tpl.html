@@ -1,0 +1,288 @@
+<section>
+    <div class="transition-container">
+            <!--MAIN SECTION-->
+            <div id="pickContainerSlider" class="slider page3">
+                <!--PICK SECTION-->
+                <section id="containerPick" class="container" style="background-color: white;">
+                    <nav id="receiveNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <button id="buttonEditDetails" class="btn btn-inverse pull-right"><i class="icon-info"></i></button>
+                            <span id="navbar-title" class="navbar-title"><%= TransactionCode %></span>
+                            <button id="buttonBackPick" type="button" class="btn btn-inverse pull-left"><i class="icon-reorder"></i></button>
+                        </div>
+                    </nav>
+                    <button id="buttonAddress" class="btn btn-danger"><span id="textAddress">incomplete shipping address</span><i class="icon-chevron-right pull-right"></i></button>
+                    <header id="pickHeader" class="container-header">
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button id="buttonCounter" class="btn btn-danger" type="button"><i class="text-error"><strong>items: <span id="textCounter">0</span></strong></i></button>
+                            </span>
+                            <input id="textScanItem" class="input-counter form-control" placeholder="scan or enter item" type="text">
+                            <span class="input-group-btn">
+                                <button id="buttonScanItem" class="btn btn-default" type="button"><i class="icon-search"></i></button>
+                            </span>
+                        </div>
+                    </header>
+                    <div id="pickBody" class="container-body-2 iscroll-pickbody">
+                        <ul id="skippedItemList">
+                            <li id="currentCardContainer">
+                                <div class="pull-left">
+                                    <div class="flip-container">
+                                        <div id="flipper" class="flipper">
+                                            <div id="containerCard" class="flip-front" />
+                                            <div id="containerItemSettings" class="flip-back" />
+                                        </div>
+                                    </div>
+                                    <div id="containerTransition" class="pick-item-transition section-close">
+                                        <div id="cardFront" class="pick-body pick-item-front" />
+                                        <div id="cardBack" class="pick-body pick-item-back" />
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--<footer id="pickFooter" class="container-footer">
+                        <ul class="paging-footer">
+                            <li class="paging-footer-button pull-right"><button id="buttonCounter" class="btn btn-more btn-footer btn-lg"><span id="textCounter">0</span>&nbsp;more</button></li>
+                            <li class="paging-footer-button pull-right"><button id="buttonSkippedItemsLookup" class="btn btn-skiplookup btn-footer btn-lg"><span id="textTotalItemsSkipped">0</span>&nbsp;<span id="labelSkip">skip</span></button></li>
+                        </ul>
+                    </footer>-->
+                </section>
+                <!--END SECTION-->
+                <!--SHIPPINGADDRESS SECTION-->
+                <section id="shippingAddressSection" class="container section-close">
+                    <nav id="shippingAddressNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span id="shippingAddressNavTitle" class="navbar-title">shipping address</span>
+                            <button id="buttonBackShippingAddress" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                        </div>
+                    </nav>
+                    <div id="containerTableShippingAddressBody" class="container-body iscroll-shippingaddress">
+                        <ul id="addressList" class="clear-list">
+                            <li>
+                                <div class="form-group">
+                                    <input id="textAddressName" class="form-control" placeholder="name" type="text">
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <input id="textCountry" type="text" readonly class="form-control" placeholder="country">
+                                </div>
+                            </li>
+                            <li class="list-col-3">
+                                <div class="form-group">
+                                    <input id="textPostal" readonly type="text" class="form-control" placeholder="postal">
+                                </div>
+                            </li>
+                            <li id="plus4Container" class="list-col-1">
+                                <input id="textPlus4" maxlength="4" type="text" class="form-control">
+                            </li>
+                            <li>
+                                <div class="form-group">
+                                    <textarea id="textAreaAddress" class="form-control" rows="6" placeholder="enter address"></textarea>
+                                </div>
+                            </li>
+                            <li class="list-col-2">
+                                <div class="form-group">
+                                    <input id="textCity" class="form-control" placeholder="city" type="text">
+                                </div>
+                            </li>
+                            <li class="list-col-2">
+                                <div class="form-group">
+                                    <input id="textState" class="form-control" placeholder="state" type="text">
+                                </div>
+                            </li>
+                            <li class="list-col-2">
+                                <div class="form-group">
+                                    <input id="textCounty" class="form-control" placeholder="county" type="text">
+                                </div>
+                            </li>
+                            <li id="addressTypeContainer" class="list-col-2">
+                                <div class="btn-group">
+                                    <button id="buttonAddressType" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                        <div id="textAddressType"></div> <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a id="linkResidential">Residential</a></li>
+                                        <li><a id="linkCommercial">Commercial</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="list-col-3">
+                                <div class="form-group">
+                                    <input id="textPhone" class="form-control" placeholder="phone" maxlength="30" type="text">
+                                </div>
+                            </li>
+                            <li class="list-col-1"><input id="textExt" class="form-control" placeholder="ext" maxlength="5" type="text"></li>
+                        </ul>
+                    </div>
+                    <section id="lookupSectionContainer" class="section-close"></section>                    
+                </section>                
+                <!--END SECTION-->
+                <!--BOX DETAILS SECTION-->
+                <section id="boxDetailsSection" class="container section-close">
+                    <nav id="boxDetailsNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span id="boxDetailsNavTitle" class="navbar-title">box details</span>
+                            <button id="buttonBackBoxDetails" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                        </div>
+                    </nav>
+                    <div id="boxDetailsBody" class="container-body setting-body">
+                        <ul id="boxDetailsList" class="list-group">
+                            <li id="rowTrackingNumberManual" class="list-group-item section-close"><a><input id="textManualTrackingNumber" class="pull-right" type="text">Tracking Number</a></li>
+                            <li id="rowCarrierCode" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i><span id="textCarrier" class="pull-right"></span>Carrier</a></li>
+                            <li id="rowShippingMethodCode" class="list-group-item"><a><span id="textShippingMethodCode" class="pull-right"></span>Shipping Method</a></li>
+                            <li id="rowBoxWeight" class="list-group-item"><a><span id="textBoxWeight" class="pull-right"></span>Weight(Lbs)</a></li>
+                            <li id="rowFreightRate" class="list-group-item"><a><input id="textFreightRate" class="pull-right" readonly="readonly" type="text">Freight Rate</a></li>
+                            <li id="rowDimension" class="list-group-item"><a><span id="textDimension" class="pull-right"></span>L x W x H(in)</a></li>
+                            <li id="rowServiceType" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i><span id="textServiceType" class="pull-right"></span>Service Type</a></li>
+                            <li id="rowPackagingType" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i><span id="textPackagingType" class="pull-right"></span>Packaging Type</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <!--END SECTION-->
+                <!--CHECKLIST SECTION-->
+                <section id="checkListSection" class="container">
+                    <nav id="checkListNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span id="checkListNavTitle" class="navbar-title"></span>
+                            <button id="buttonBackCheckList" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                        </div>
+                    </nav>
+                    <div id="checkListBody" class="container-body-2">
+                        <div id="containerTableCheckList" class="iscroll-cartitem">
+                            <table id="cartCheckList" class="bordered-list">
+                                <tbody />
+                            </table>
+                        </div>
+                        <div id="containerServiceTypeCheckList" class="iscroll-cartitem">
+                            <table id="serviceTypeCheckList" />
+                        </div>
+                    </div>
+                </section>
+                <!--END SECTION-->
+            </div>            
+            <!--END SECTION-->
+            <!--ITEMSREMAINING SECTION-->
+            <div id="itemRemainingSlider" class="slider page2 container-remaining">
+                <section id="itemsRemainingSection" class="container" style="background-color: white;">
+                    <nav id="itemsRemainingNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span class="navbar-title">remaining items</span>
+                            <button id="buttonBackItemsRemaining" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                        </div>
+                    </nav>
+                    <div id="itemsRemainingBody" class="container-body-2">
+                        <div id="containerTableItemsRemaining" class="iscroll-cartitem-2">
+                            <table id="cartListItemsRemaining">
+                                <tbody />
+                            </table>
+                        </div>
+                    </div>
+                    <footer id="itemsRemainingFooter" class="container-footer">
+                        <div class="footerTotal">total items: <span id="textTotalItemsRemaining">0</span></div>
+                    </footer>
+                </section>
+                <section id="itemRemSettingSection" class="container">
+                    <nav id="itemRemSettingNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span id="itemRemSettingNavTitle" class="navbar-title">item detail</span>
+                            <button id="buttonBackItemRemSetting" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                        </div>
+                    </nav>
+                    <div id="itemRemSettingBody" class="container-body">
+                        <ul id="itemRemSettingList" class="list-group">
+                            <li id="rowRemItemCode" class="list-group-item"><a><span id="remSettingsItemCode" class="pull-right"></span>Item Code</a></li>
+                            <li id="rowRemName" class="list-group-item"><a><span id="remSettingsItemName" class="pull-right"></span>Name</a></li>
+                            <li id="rowRemItemDesc" class="list-group-item"><a><span id="remSettingsItemDesc" class="pull-right"></span>Description</a></li>
+                            <li id="rowRemUPCCode" class="list-group-item"><a><span id="remSettingsUPCCode" class="pull-right"></span>UPC Code</a></li>
+                            <li id="rowRemQty" class="list-group-item"><a><span id="remSettingsQuantity" class="pull-right"></span>Quantity</a></li>
+                            <li id="rowRemFreeStock" class="list-group-item"><a><span id="remSettingsFreeStock" class="pull-right"></span>Free Stock</a></li>
+                            <li id="rowRemUnitMeasure" class="list-group-item"><a><span id="remSettingsRemUnitMeasureCode" class="pull-right"></span>Unit Measure</a></li>
+                            <li id="rowRemBinLocation" class="list-group-item"><a><span id="remSettingsBinLocation" class="pull-right"></span>Bin Location</a></li>
+                            <li id="rowRemTransactionCode" class="list-group-item"><a><span id="remSettingsTransactionCode" class="pull-right"></span>Transaction Code</a></li>
+                            <li id="rowRemShippingNotes" class="list-group-item"><a><span id="remSettingsShippingNotes" class="pull-right"></span>Notes</a></li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+            <!--END SECTION-->
+            <!--SKIPPEDITEMS SECTION-->
+            <div id="skippedItemsSlider" class="slider container-remaining">
+                <section id="skippedItemsSection" class="container">
+                    <nav id="skippedItemsNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span class="navbar-title">reviewable items</span>
+                            <button id="buttonBackSkippedItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                        </div>
+                    </nav>
+                    <div id="skippedItemsBody" class="container-body-2">
+                        <div id="containerTableSkippedItems" class="iscroll-cartitem-2">
+                            <table id="cartListSkippedItems">
+                                <tbody />
+                            </table>
+                        </div>
+                    </div>
+                    <footer id="skippedItemsFooter" class="container-footer">
+                        <div class="footerTotal">
+                            <div class="color-danger">total skips: <span id="textSkippedQty">0</span></div>
+                            <div>total items: <span id="textTotalSkippedItems">0</span></div>
+                        </div>
+                    </footer>
+                </section>
+            </div>
+            <!--END SECTION-->
+            <!--COMPLETED SECTION-->
+            <section id="containerCompletedAnimation" class="container container-completed section-close">
+                <nav id="completedNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="completedNavTitle" class="navbar-title"></span>
+                        <button id="buttonMenu" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                    </div>
+                </nav>
+                <div id="completedBody" class="container-body">
+                    <i class="icon-ok-sign icon-17"></i>
+                    <h2>Pick Completed!</h2>
+                </div>
+                <footer id="completedFooter" class="container-footer">
+                    <button id="buttonMore" class="btn btn-info btn-lg btn-footer" type="button">pick more</button>
+                    <button id="buttonPackOrder" class="btn btn-primary btn-lg btn-footer" type="button">pack order</button>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <div id="itemLookupContainer"></div>
+            <div id="numericPadContainer" />
+            <!--BINMANAGER SECTION-->
+            <div id="binManagerSlider" class="slider container-remaining">
+                <section id="containerBinManager" class="container"></section>
+            </div>
+            <!--END SECTION-->
+            <!--SERIAL SECTION-->
+            <div id="serialSlider" class="slider container-remaining">
+                <section id="serialContainer" class="container">
+                    <nav id="serialNav" class="container-nav navbar navbar-inverse">
+                        <div class="navbar-header">
+                            <span class="navbar-title">enter serial number</span>
+                            <button id="buttonBackItemsSerial" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                        </div>
+                    </nav>
+                    <div id="serialBody" class="container-body-2" style="margin: 0px 0px; background-color: black;" >
+                        <div id="serialTextBlock" style="margin: 0px 10px;">
+                            <p style="text-align: right; color: white; font-size: 24px;">
+                                <span id="serialScanned">0</span>
+                                &nbsp;of&nbsp;
+                                <span id="serialTotal">0</span>
+                            </p>
+                            <div class="btn-group" style="width: 100%;">
+                                <input id="textScanSerial" type="text" class="form-control input-lg" />
+                                <span id="serialClear" class="icon-remove-circle"></span>
+                            </div>
+                            <input id="buttonScanSerial" type="button" class="form-control input-lg btn-success" value="enter" />
+                        </div>
+                    </div>
+                    </footer>
+                </section>
+            </div>
+            <!--END SECTION-->           
+        </div>
+</section>

@@ -1,0 +1,270 @@
+﻿<section id="containerStockTakeSection" class="container">
+    <div class="transition-container">
+        <div id="itemMainSlider" class="slider page3">
+            <!--STOCKTAKE SECTION-->
+            <section id="stockTakeSection" class="container">
+                <nav id="stockTakeNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">                        
+                        <span id="stockNavTitle" class="navbar-title">physical inventory</span>
+                        <button id="buttonMenuStockTake" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                    </div>
+                </nav>
+                <div id="stockTakeBody" class="container-body">
+                    <button id="buttonItemCount" class="btn btn-belize btn-block">
+                        <ul>
+                            <li><i class="icon-tags icon-4x"></i></li>
+                            <li><span id="textItemCountTitle" class="navbar-title">item count</span></li>
+                            <li><span id="textItemCount" class="navbar-title">(0)</span></li>
+                        </ul>
+                    </button>
+                    <button id="buttonMiscPhysical" class="btn btn-belize btn-block">
+                        <ul>
+                            <li><i class="icon-asterisk icon-4x"></i></li>
+                            <li><span class="navbar-title">misc. physical</span></li>
+                        </ul>
+                    </button>
+                    <button id="buttonResume" class="btn btn-river btn-block">
+                        <ul>
+                            <li><i class="icon-edit-sign icon-4x"></i></li>
+                            <li><span class="navbar-title">resume</span></li>
+                        </ul>
+                    </button>
+                </div>
+            </section>
+            <!--END SECTION-->
+            <!--ITEMCOUNT SECTION-->
+            <section id="itemCountSection" class="container section-close">
+                <nav id="itemCountNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <button id="buttonItemCountDetails" type="button" class="btn btn-inverse pull-right"><i class="icon-info"></i></button>
+                        <span class="navbar-title">item count</span>
+                        <button id="buttonBackItemCount" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <header id="itemCountHeader" class="container-header">
+                    <div class="input-group">
+                        <span class="input-group-btn">
+                            <button id="buttonCounter" class="btn btn-danger" type="button"><i class="text-error"><strong>items: <span id="textCounter">0</span></strong></i></button>
+                        </span>
+                        <input id="textScanItemCount" class="input-counter form-control" placeholder="scan or enter item" type="text">
+                        <span class="input-group-btn">
+                            <button id="buttonScanItemCount" class="btn btn-default" type="button"><i class="icon-search"></i></button>
+                        </span>
+                    </div>
+                </header>
+
+                <div id="itemCountBody" class="container-body-2 iscroll-pickbody">
+                    <ul id="skippedItemList">
+                        <li id="currentCardContainer">
+                            <div class="pull-left">
+                                <div class="flip-container">
+                                    <div id="flipper" class="flipper">
+                                        <div id="containerCard" class="flip-front" />
+                                        <div id="containerItemSettings" class="flip-back" />
+                                    </div>
+                                </div>
+                                <div id="containerTransition" class="stocktake-item-transition section-close">
+                                    <div id="cardFront" class="pick-body pick-item-front" />
+                                    <div id="cardBack" class="pick-body pick-item-back" />
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <footer id="pickFooter" class="container-footer">
+                    <ul class="paging-footer">
+                        <li class="paging-footer-button pull-right"><button id="buttonNextItem" class="btn btn-belize btn-footer btn-lg">next</button></li>                        
+                        <li class="paging-footer-button pull-right"><button id="buttonPostponeItemCount" class="btn btn-river btn-footer btn-lg">pause</button></li>
+                        <!--<li class="paging-footer-button pull-right"><button id="buttonCounter" class="btn btn-more btn-footer btn-lg"><span id="textCounter">0</span>&nbsp;more</button></li>-->
+                        <!--<li class="paging-footer-button pull-right"><button id="buttonSkippedItemsLookup" class="btn btn-skiplookup btn-footer btn-lg"><span id="textTotalItemsSkipped">0</span>&nbsp;<span id="labelSkip">skip</span></button></li>-->                                                
+                    </ul>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--MISC PHYSICAL SECTION-->
+            <section id="miscPhysicalSection" class="container section-close">
+                <nav id="miscPhysicalNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="miscPhysicalNavTitle" class="navbar-title">misc. physical</span>
+                        <button id="buttonBackMiscPhysical" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <header id="miscPhysicalHeader" class="container-header">
+                    <div class="input-group">
+                        <input id="textboxSearch" class="input-counter form-control" placeholder="scan or enter item" type="text">
+                        <div class="input-group-btn">
+                            <button id="buttonSearch" class="btn btn-default" type="button"><i class="icon-search"></i></button>
+                        </div>
+                    </div>
+                </header>
+                <div id="miscPhysicalBody" class="container-body-2">
+                    <div id="containerTableMiscPhysical" class="iscroll-cartitem-3">
+                        <table id="cartListMiscPhysical">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="miscPhysicalFooter" class="container-footer sliderFooter">
+                    <div id="slideFooter">
+                        <div class="footerTotal">
+                            <div>total items: <span id="textTotalItemsIn">0</span></div>
+                           <!-- <div id="totalItemsOut">total out: <span id="textTotalItemsOut">0</span></div>-->
+                        </div>
+                    <button id="buttonPostponeMiscPhysical" class="btn btn-river btn-lg btn-footer" type="button">pause</button>
+                    <button id="buttonComplete" class="btn btn-belize btn-lg btn-footer" type="button">complete</button>
+                        <div>
+                            <button id="buttonCancelRemoveItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                            <button id="buttonRemoveItems" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--ITEMSETTING SECTION-->
+            <section id="itemSettingSection" class="container">
+                <nav id="itemSettingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="itemSettingNavTitle" class="navbar-title">item detail</span>
+                        <button id="buttonBackItemSetting" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="itemSettingBody" class="container-body setting-body">
+                    <ul id="itemSettingList" class="list-group">
+                        <li id="rowItemCode" class="list-group-item"><a><span id="textItemCode" class="pull-right"></span>Item Code</a></li>
+                        <li id="rowItemName" class="list-group-item"><a><span id="textItemName" class="pull-right"></span>Name</a></li>
+                        <li id="rowItemDesc" class="list-group-item"><a><span id="textItemDesc" class="pull-right"></span>Description</a></li>
+                        <li id="rowUPCCode" class="list-group-item"><a><span id="textUPCCode" class="pull-right"></span>UPC Code</a></li>
+                        <li id="rowQty" class="list-group-item"><a><span id="textQuantity" class="pull-right"></span>Quantity</a></li>
+                        <li id="rowFreeStock" class="list-group-item"><a><span id="textFreeStock" class="pull-right"></span>Free Stock</a></li>
+                        <li id="rowUnitMeasure" class="list-group-item"><a><span class="pull-right"><span id="textUnitMeasure"></span></span>Unit Measure</a></li>
+                        <li id="rowZone" class="list-group-item"><a><span id="textZone" class="pull-right">Normal</span>Zone</a></li>
+                    </ul>
+                </div>
+                <footer id="itemSettingFooter" class="container-footer">
+                    <button id="buttonDelete" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--CHECKLIST SECTION-->
+            <section id="checkListSection" class="container">
+                <nav id="checkListNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="checkListNavTitle" class="navbar-title"></span>
+                        <button id="buttonBackCheckList" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="checkListBody" class="container-body-2">
+                    <div id="containerTableCheckList" class="iscroll-cartitem">
+                        <table id="cartCheckList" class="bordered-list">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!--END-->
+        </div>
+        <!--ITEMSREMAINING SECTION-->
+        <div id="itemRemainingSlider" class="slider page2 container-remaining">
+            <section id="itemsRemainingSection" class="container" style="background-color: white;">
+                <nav id="itemsRemainingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span class="navbar-title">remaining items</span>
+                        <button id="buttonBackItemsRemaining" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                    </div>
+                </nav>
+                <div id="itemsRemainingBody" class="container-body-2">
+                    <div id="containerTableItemsRemaining" class="iscroll-cartitem-2">
+                        <table id="cartListItemsRemaining">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="itemsRemainingFooter" class="container-footer">
+                    <div class="footerTotal">total items: <span id="textTotalItemsRemaining">0</span></div>
+                    <button id="buttonPreviousPage" type="button" class="btn btn-belize btn-footer btn-lg">prev</button>
+                    <button id="buttonNextPage" type="button" class="btn btn-river btn-footer btn-lg">next</button>
+                </footer>
+            </section>
+            <section id="itemRemSettingSection" class="container">
+                <nav id="itemRemSettingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="itemRemSettingNavTitle" class="navbar-title">item detail</span>
+                        <button id="buttonBackItemRemSetting" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="itemRemSettingBody" class="container-body">
+                    <ul id="itemRemSettingList" class="list-group">
+                        <li id="rowRemItemCode" class="list-group-item"><a><span id="remSettingsItemCode" class="pull-right"></span>Item Code</a></li>
+                        <li id="rowRemName" class="list-group-item"><a><span id="remSettingsItemName" class="pull-right"></span>Name</a></li>
+                        <li id="rowRemDesc" class="list-group-item"><a><span id="remSettingsItemDesc" class="pull-right"></span>Description</a></li>
+                        <li id="rowRemUPCCode" class="list-group-item"><a><span id="remSettingsUPCCode" class="pull-right"></span>UPC Code</a></li>
+                        <!--<li id="rowRemQty" class="list-group-item"><a><span id="remSettingsQuantity" class="pull-right"></span>Quantity</a></li>-->
+                        <li id="rowRemFreeStock" class="list-group-item"><a><span id="remSettingsFreeStock" class="pull-right"></span>Free Stock</a></li>
+                        <li id="rowRemUnitMeasure" class="list-group-item"><a><span id="remSettingsRemUnitMeasureCode" class="pull-right"></span>Unit Measure</a></li>
+                        <li id="rowRemZone" class="list-group-item"><a><span id="remSettingsZone" class="pull-right">Normal</span>Zone</a></li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--END SECTION-->
+        <!--SKIPPEDITEMS SECTION-->
+        <div id="skippedItemsSlider" class="slider container-remaining">
+            <section id="skippedItemsSection" class="container">
+                <nav id="skippedItemsNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span class="navbar-title">reviewable items</span>
+                        <button id="buttonBackSkippedItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                    </div>
+                </nav>
+                <div id="skippedItemsBody" class="container-body-2">
+                    <div id="containerTableSkippedItems" class="iscroll-cartitem-2">
+                        <table id="cartListSkippedItems">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="skippedItemsFooter" class="container-footer">
+                    <div class="footerTotal">
+                        <div class="color-danger">total skips: <span id="textSkippedItems">0</span></div>
+                        <div>total items: <span id="textTotalSkippedItems">0</span></div>
+                    </div>
+                </footer>
+            </section>
+        </div>
+        <!--END SECTION-->
+        <!--COMPLETED SECTION-->
+        <section id="completedSection" class="container container-completed section-close">
+            <nav id="completedNav" class="container-nav navbar navbar-inverse">
+                <div class="navbar-header">
+                    <span id="completedNavTitle" class="navbar-title">physical inventory</span>
+                    <button id="buttonMenuCompleted" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                </div>
+            </nav>
+            <div id="completedBody" class="container-body">
+                <i id="piIconOkay" class="icon-ok-sign icon-17"></i>
+                <div id="piIconPostponedContainer">
+                    <i id="piIconStop" class="icon-stop icon-17"></i>
+                    <i id="piIconPause" class="icon-pause icon-17"></i>
+                </div>
+                <h2 id="completedMessage">Count Completed!</h2>
+            </div>
+            <footer id="completedFooter" class="container-footer">
+                <button id="buttonMore" class="btn btn-info btn-lg btn-footer" type="button">count more</button>
+            </footer>
+        </section>
+        <!--END SECTION-->
+        <!--ITEMLOOKUPCONTAINER SECTION-->
+        <div id="itemLookupContainer" />
+        <!--END SECTION-->
+        <!--NUMERICPADCONTAINER SECTION-->
+        <div id="numericPadContainer" />
+        <!--END SECTION-->
+        <!--BINMANAGER SECTION-->
+        <div id="binManagerSlider" class="slider container-remaining">
+            <section id="containerBinManager" class="container"></section>
+        </div>
+        <!--END SECTION-->
+
+    </div>
+</section>

@@ -1,0 +1,34 @@
+<section id="dashboardSection" class="container">
+    <nav id="dashboardNav" class="container-nav navbar navbar-inverse">
+        <div class="navbar-header">
+            <div class="dropdown pull-right">
+                <button class="dropdown-toggle btn btn-inverse" data-toggle="dropdown"><i class="icon-user"></i></button>
+                <ul class="dropdown-menu text-center">
+                    <li><span id="textUserCode" class="dropdown-header text-left"><%= UserCode %></span></li>                    
+                    <li class="divider"></li>
+                    <li><button id="buttonSetting" class="btn btn-inverse2 clear-margin">settings</button></li>
+                    <li><button id="buttonLogOut" class="btn btn-danger"><i class="icon-power-off"></i> logout</button></li>
+                    <li><span id="textVersion" class="dropdown-header">v14.0.0.0</span></li>
+                </ul>
+            </div>
+            <span class="navbar-title"><span class="connected-text">connected</span>warehouse</span>
+        </div>
+    </nav>
+    <div id="containerScrollUp" class="section-close"><i class="icon-sort-up"></i></div>
+    <div id="dashboardBody" class="container-body">
+        <div id="containerDashboard" class="iscroll-dashboard">                          
+            <div>                                
+                <button id="pick" class="btn btn-belize btn-dashboard"><i class="icon-list icon-6"></i><br />Pick</button>
+                <button id="pack" class="btn btn-belize btn-dashboard"><i class="icon-archive icon-6"></i><br />Pack</button>
+                <button id="label" class="btn btn-belize btn-dashboard"><i class="icon-barcode icon-6"></i><br />Ship</button>                
+                <button id="receive" class="btn btn-belize btn-dashboard"><i class="icon-download-alt icon-6"></i><br />Receive</button>
+                <button id="stock" class="btn btn-belize btn-dashboard"><i class="icon-align-justify icon-6"></i><br />Stock</button>
+                <button id="adjustment" class="btn btn-belize btn-dashboard"><i class="icon-retweet icon-6"></i><br />Adjustment</button>
+                <button id="transfer" class="btn btn-belize btn-dashboard"><i class="icon-truck icon-6"></i><br />Transfer</button>                
+                <button id="stockTake" class="btn btn-belize btn-dashboard"><i class="icon-tasks icon-6"></i><br />Physical Inventory</button>
+                <button id="binInventory" class="btn btn-belize btn-dashboard"><i class="icon-inbox icon-6"></i><br />Bin Inventory</button>                
+            </div>                        
+        </div>
+    </div>
+    <div id="containerScrollDown"><i class="icon-sort-down"></i></div>    
+</section>

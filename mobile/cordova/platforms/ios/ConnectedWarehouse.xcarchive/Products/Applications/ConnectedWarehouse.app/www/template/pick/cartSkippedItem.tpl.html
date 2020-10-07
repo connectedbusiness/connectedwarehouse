@@ -1,0 +1,14 @@
+﻿<td id="skippedItemRow<%= SkippedListItemID %>" class="lookup-row <%= SkippedListItemID %>">
+    <div id="rowNumber<%= SkippedListItemID %>" class="cartitem-rownumber"><span id="itemRow<%= SkippedListItemID %>"><%= RowNumber %></span></div>
+    <div>
+        <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+    </div>
+    <div>
+        <ul class="cartitem-1">
+            <li><%= ItemName %></li>
+            <li>UPC: <span id="itemUPCCode<%= SkippedListItemID %>"><%= UPCCode %></span></li>            
+            <li>Bin: <span><%= BinLocationName %></span></li>
+            <li>Qty: <span id="itemQty<%= SkippedListItemID %>"><%= QuantitySkipped %></span></li>
+        </ul>
+    </div>
+</td>
