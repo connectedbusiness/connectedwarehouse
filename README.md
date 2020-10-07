@@ -1,5 +1,5 @@
 
-Sytem Information:
+Dependencies Information:
 
 MAC Version: macOS Catalina (Version: 10.15.7)
 
