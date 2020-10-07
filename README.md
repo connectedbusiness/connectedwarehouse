@@ -1,22 +1,28 @@
+
+Sytem Information:
+MAC Version: macOS Catalina (Version: 10.15.7)
+XCode Version: 12.0.1
+Cordova Version: 9.0.0
+
+
 # connectedwarehouse
 Connected Warehouse is an iOS application that manages inventories for Connected Business.
-
 
 Note: Make sure to create a provisioning profile to be use when compiling your app using xcode and uploading you app in the app store.
 
 1. Create App Id first. Go to https://developer.apple.com/account/ios/identifier/bundle
 
-   ex. Name:CW19
+   ex. Name:CW20.1
        Prefix:5GKC59E3V4
-       ID:com.connectedbusiness.connectedwarehouse19-1
+       ID:com.connectedbusiness.connectedwarehouse-20-1
  
 2. Create new provisioning profile for both Development and Distribution
 
-     Development: ConnectedWarehouse19 Development 
-     App ID: CW19 (com.connectedbusiness.connected-warehouse-19-1)
+     Development: ConnectedWarehouse20_1 Development 
+     App ID: CW19 (com.connectedbusiness.connected-warehouse-20-1)
 
-     Distribution: ConnectedWarehouse19 Distribution
-     App ID: CW19 (com.connectedbusiness.connected-warehouse-19-1)
+     Distribution: ConnectedWarehouse20_1 Distribution
+     App ID: CW19 (com.connectedbusiness.connected-warehouse-20-1)
      
 
 How to build connected warehouse and deploy it to your device.
@@ -50,19 +56,19 @@ org.apache.c…k-information
 Identity
 
 Display Name: Connected Warehouse
-Bundle Identifier: com.connectedbusiness.connected-warehouse-19-1
-Version: 19.1.7032
-Build  : 19.1.7032.1
+Bundle Identifier: com.connectedbusiness.connected-warehouse-20-1
+Version: 20.1.7508
+Build  : 20.1.7508.1
 
 Signing
 
 Automatically Manage signing:  uncheck
 
 Signing Debug
-Provisioning Profile : Connected Warehouse 19 Development
+Provisioning Profile : Connected Warehouse 20_1 Development
 
 Signing Release
-Provisioning Profile : Connected Warehouse 19 Distribution
+Provisioning Profile : Connected Warehouse 20_1 Distribution
 
 Deployment Info
 Deployment Target: 10.0
