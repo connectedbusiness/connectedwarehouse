@@ -515,6 +515,15 @@ define([
                     else { 
                         $('#switchIsAllowToScanitem').bootstrapSwitch('setState', false);
                     }
+                    // added by sandeep@dynenttech.com git issue #54
+                    if (localStorage.AllowForMoreQty == "true") { 
+                        $('#switchIsAllowForMoreQty').bootstrapSwitch('setState', true);
+                    }
+                    else { 
+                        $('#switchIsAllowForMoreQty').bootstrapSwitch('setState', false);
+                    }
+
+                   
 
                   
 
@@ -1146,6 +1155,8 @@ define([
                     var newIsAutoComplete = $('#switchIsAutoComplete').bootstrapSwitch('status');  
 
                     localStorage.AllowToScan = $('#switchIsAllowToScanitem').bootstrapSwitch('status'); 
+                    // added by sandeep - support@dynenttech.com related to git #54 
+                    localStorage.AllowForMoreQty = $('#switchIsAllowForMoreQty').bootstrapSwitch('status'); 
  
                      
                     if (this.HasChanges(CurrentPreference.PickIsAllowToSkipItems, newIsAllowToSkipItems)) {
