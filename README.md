@@ -35,26 +35,15 @@ How to build connected warehouse and deploy it to your device.
 
 2. If INSTALLED and needs to update cordova. In terminal run  (sudo npm update -g cordova)
 
-3. Create new directory (Documents > CW > SourceCode). Then copy the connected warehouse source code in this folder.
+3. Use command npm install in root folder.
 
-4. Create a new directory (Documents > CW > Build > mobile > cordova > www)
+4. Use command corodva platform add ios.
 
-5. Copy the content of app folder from the source code (Step 3) then paste it in the  www folder Step 4.
+5. Use command cordova build ios.
 
-6.  Create new directory Documents > CW > Build > mobile > cordova > plugins then add the following plugins
+6. If there is an error when building of app using cordova just open the Xcode and build using Xcode. Open the root folder platforms > iOS > ConnectedWarehouse.xcodeproj
 
-com.connect…ins.airprinter
-cordova-plugin-dialogs
-org.apache.cordova.console
-org.apache.c…k-information
-
-7. In terminal under Documents > CW > Build > mobile > cordova  add new iOS platform run cordova platform add iOS
-
-8. In terminal under Documents > CW > Build > mobile > cordova run cordova build iOS
-
-9. If there is an error when building of app using cordova just open the Xcode and build using Xcode. Open the Documents > CW > Build > mobile > cordova > platforms > iOS > ConnectedWarehouse.xcodeproj
-
-10. Under General setting of ConnectedWarehouse.xcodeproj set the following:
+7. Under General setting of ConnectedWarehouse.xcodeproj set the following:
 
 Identity
 
