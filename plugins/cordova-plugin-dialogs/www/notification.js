@@ -1,4 +1,3 @@
-cordova.define("cordova-plugin-dialogs.notification", function(require, exports, module) {
 /*
  *
  * Licensed to the Apache Software Foundation (ASF) under one
@@ -129,5 +128,3 @@ function convertButtonLabels (buttonLabels) {
 
     return buttonLabels;
 }
-
-});
