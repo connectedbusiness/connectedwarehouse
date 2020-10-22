@@ -10,8 +10,8 @@ define(
 	            UnitMeasureSystem: ''
 	        },
 	        CurrentTransactions: null,
-			DemoServiceUrl:"http://detiserver2.westus2.cloudapp.azure.com/CBPOSSVC_19_0/",
-	        // DemoServiceUrl: "http://data.connectedbusiness.com/demo/pos17/",
+			//DemoServiceUrl:"http://detiserver2.westus2.cloudapp.azure.com/CBPOSSVC_19_0/",
+	         DemoServiceUrl: "http://data.connectedbusiness.com/demo/pos17/",
 	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CBPOS_14_0_1/",
 	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CW/",
             IsBrowserMode : true,
