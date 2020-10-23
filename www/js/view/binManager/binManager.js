@@ -494,15 +494,6 @@ define([
         },
 
         PopulateCartItem: function (bins) {
-
-            //issue #37
-            //date: June 23, 2020
-            bins.sort(function (a, b) {
-                if (a.BinLocationName < b.BinLocationName) { return -1; }
-                if (a.BinLocationName > b.BinLocationName) { return 1; }
-                return 0;
-            });
-            
             this.binCollection.reset();
             var self = this;            
             

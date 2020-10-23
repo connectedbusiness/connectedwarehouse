@@ -844,10 +844,9 @@ define([
                 this.QuantityToScan = 0;
                 isSkipped = true;
             }
-            Shared.Focus('#textScanItem');
+
             if (Global.IsPrePackMode) this.ChangeAddressButton();
             setTimeout(function () { isRotateCard = true; }, 500);            
-                       
         },
         
         GetPicks: function () {
@@ -1321,8 +1320,7 @@ define([
                 item.set({ QuantitySkipped: qtySkipped });
 
                 var qtyToPick = item.get('QuantityToPick');
-                // git issue #51 -- changed by sandeep 24 july 2020
-               // qtyToPick -= item.get("QuantitySkipped");
+                qtyToPick -= item.get("QuantitySkipped");
                 item.set({ QuantityToPick: qtyToPick });
 
                 item.set({
@@ -1806,17 +1804,13 @@ define([
 				
                 //this.ScanItem();
              }
-             for(var i=0;i<this.itemsPicked.length;i++)
-             {
-                this.itemSkippediScroll.next();
-             }
     
           
         },
 
         RenderRemainingItems: function () {
 
-            this.$('#currentCardContainer').focus();
+           
 
             var self = this;
             if (this.itemCollection && this.itemCollection.length > 0) {
@@ -2096,7 +2090,7 @@ define([
             var itemName = this.CurrentItem.get("ItemName");
             console.log("itemName", itemName);
             var valueToCheck = e;
-            console.log("valueToCheck", valueToCheck);
+            console.log(valueToCheck);
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
             if (upcCode != null) upcCode = upcCode.toLowerCase();
@@ -2115,13 +2109,8 @@ define([
                 
                 //this.$("#textScanItem").val(itemCode);
                 this.$("#textScanItem").val('');
-                if (Preference.PickIsPromptForQty) {
-                    
-                    this.ShowNumericPad();
-                 }
-                 else
                 this.PickNextItem(selectedItem, 1);
-                //this.ShowRemainingItems(true);
+                this.ShowRemainingItems(true);
             }
             else if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
                 if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
@@ -2388,14 +2377,9 @@ define([
             else {
                 $('#numericPadNavTitle').text("enter quantity");
 
-                //--- Code added by surinder kaur------------------------------------------------
-                //--- Reason:  In Picking, add item description to Enter Quantity screen #11-----
-                // Update by Sandeep git issue #46 
-                // reason : the numericpad #spndes element always gets value from #itemsdesval element
+                //--- Reason:  In Picking, add item description to Enter Quantity screen-----
                 //-------------------------------------------------------------------------------
-                //var texta = $("#itemsdesval").text();
-                var texta = this.CurrentItem.get('ItemDescription');
-                //var texta = this.currentItem.get("ItemDescription");
+                var texta = $("#itemsdesval").text();
                 $('#Spndes').text(texta); 
                 //------------------------------------------------------------------------------
                
@@ -2508,9 +2492,7 @@ define([
 
             if (this.itemCollection.length == 1) {
                 var qty = this.CurrentItem.get("Quantity");
-                // change by sandeep support@dynenttech.com git issue #58
-                //if (qty > 1) this.ProcessSkipItems();
-                if (qty > 0) this.ProcessSkipItems();
+                if (qty > 1) this.ProcessSkipItems();
                 else {
                     Shared.BeepError();
                     return;
@@ -2524,7 +2506,7 @@ define([
             this.itemSkippediScroll.next();
             this.GetCurrentItem();
 
-            //Shared.Focus('#textScanItem');
+            Shared.Focus('#textScanItem');
         },
         
         SwitchDisplay: function (page) {
@@ -2825,18 +2807,6 @@ define([
                         for(var i=0; i<serialQuantity; i++) {
                             self.serialCollection.pop();
                         }
-                        // Added by sandeep to save picked in case of no
-                        navigator.notification.confirm("Do you want to save Picked Items?", function (button) {
-                            if (button == 1) {
-
-                                self.CompletePick();
-
-                            }
-                            else {
-                                  self.GoToLookup(); 
-                                 isOnItemSettingSection = false;
-                            }
-                        }, "Save your work?", "Yes,No");
                     }
                 }, "Complete Pick", "Yes,No");
                 return false;

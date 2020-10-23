@@ -115,8 +115,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .pick-item-transition { height: 890px; }
     .pick-item-detail { height: 335px }    
     .pick-card-caption { top: -14px; }
-    .no-shipping-notes { top: 18px;}
-    .pick-btn-skip { top: -40px; } /* # git issue #53*/
+    .no-shipping-notes { top: 78px;}
+    .pick-btn-skip { top: 10px; }
     .pick-btn-skip-item-shipping-notes { top: -85px; }
 
     .pick-item-prepack { height: 648px; }
@@ -1405,7 +1405,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         }
 
         .btn-picked {
-           top: -40px; /* # git issue #53*/
+           top: 9px;
            margin-left: 33px;
         }
 
