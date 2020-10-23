@@ -80,6 +80,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }  
     .container-body,
     .container-body-2 { min-height: 858px; }    
+    div#stockBody { min-height: 804px; }
     #skippedItemsFooter .footerTotal,                            
     #adjustmentSection .footerTotal { padding-top: 10px; }                        
 
@@ -90,8 +91,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .imageCard {
         width: 300px;
         height: 300px;
-        margin-top: 105px;
-        margin-bottom: 105px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     }
     .imageCard-prepack {
@@ -115,8 +116,11 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .pick-item-transition { height: 890px; }
     .pick-item-detail { height: 335px }    
     .pick-card-caption { top: -14px; }
+    #containerPick .pick-card-caption {
+        top: 650px;
+    }
     .no-shipping-notes { top: 78px;}
-    .pick-btn-skip { top: 10px; }
+    .pick-btn-skip { top: 580px; }
     .pick-btn-skip-item-shipping-notes { top: -85px; }
 
     .pick-item-prepack { height: 648px; }
@@ -125,9 +129,12 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .stocktake-item,
     .stocktake-item-transition { height: 621px; }
     .stocktake-item-detail { height: 275px }
-    .stocktake-card-caption { top: 78px; }
-    .stocktake-btn-skip { top: 10px; }
-        
+    .stocktake-card-caption { top: 46px; }
+    .stocktake-btn-skip { top: -23px; }
+    .stocktake-item-detail .pick-item-image {
+        margin-top: 120px;
+        margin-bottom: 120px;
+    }   
     /*#endregion*/
 
     /*#region iScroll*/
@@ -154,6 +161,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .iscroll-cartitem-3 {
         height: 842px;
         max-height: 842px;
+    }
+    #containerTableStock {
+        height: 770px;
+        max-height: 770px;
     }
     .iscroll-cartitem-4 {
         height: 615px;
@@ -224,8 +235,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }
     #boxBody, 
     #transferBody, #containerTableTransfer { 
-        min-height: 824px !important;
-        height: 824px !important;
+        min-height: 770px !important;
+        height: 770px !important;
     }
     #currentCardContainer #itemSettingBody { height: 295px; }
     #wrapper { height: 1024px; }
@@ -1401,15 +1412,12 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             position: relative;
             font-size: 24px;
             font-weight: bold;
-            left: 500px;        
+            left: 640px;        
         }
-
         .btn-picked {
            top: 9px;
            margin-left: 33px;
         }
-
-
         .paging-footer {
             list-style: none;    
             margin: 0;
@@ -1433,9 +1441,11 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             width: 730px;
             margin-left: 5px;
             margin-top: 0 !important;  
-            height: 766px;     
+            height: 830px;     
         }
-        
+        .stocktake-item {
+            height: 770px;
+        }
         .pick-item-header {
             width: 742px;
             height: 75px;
@@ -1890,7 +1900,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }
     #itemsRemainingFooter {
         position: absolute;
-        width: 760px;
+        width: 100%;
         bottom: 0;
     }
 
@@ -1898,6 +1908,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         position: absolute;
         width: 767px;
         bottom: 0;
+    }
+    footer#transferFooter, footer#stockFooter {
+        position: inherit;
+        bottom: auto;
     }
     #containerConnectionSection .container-footer {
         position: relative !important;
@@ -1922,6 +1936,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     #boxFooter, #receiveFooter {
         position: relative;
         bottom: 55px;
+    }
+    footer#boxFooter {
+        bottom: 0;
+        position: inherit;
     }
     /*#endregion*/
 
