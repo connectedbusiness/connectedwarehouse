@@ -34,7 +34,7 @@
 /*#endregion*/
 
 header, body { -webkit-tap-highlight-color:rgba(0,0,0,0); }
-body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
+body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
 .custom-danger {
     color: #ffffff;
     background-color: #d9534f;
@@ -1170,6 +1170,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         width: 768px;
         position: relative;
         overflow: hidden;
+        margin: 0 auto;
     }
     .wrapper-body { position: absolute; }
     /*#endregion */
