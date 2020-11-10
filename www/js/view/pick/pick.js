@@ -427,7 +427,7 @@ define([
                     Items: this.itemsPicked,
                     Serials: this.serialCollection
                 });
-                //console.log("Picked Model",pickModel);
+
                 this.AnimatePick(true, true);
                 pickModel.save(null, {
                     success: function (model, response, options) {
@@ -676,31 +676,16 @@ define([
             var headerName = '#pickHeader';
             view.WireNumericPadEvents();
             view.off('closenumericpad', function (e) {
-
-               
                 self.$(headerName).show();
                 self.ItemLookupView.SlideDownItemLookup();
                 if (!self.QuantityToScan) self.QuantityToScan = 1;
                 Shared.Focus('#textScanItem');
             });
             view.on('closenumericpad', function (e) {
-
-                //-- In Pick Module, with Prompt for qty turned on, cancelling out of "enter quantity" screen improperly decrements qty remaining to be picked #9----
-
                 self.$(headerName).show();
                 self.ItemLookupView.SlideDownItemLookup();
-                self.QuantityToScan = 0;
+                if (!self.QuantityToScan) self.QuantityToScan = 1;
                 Shared.Focus('#textScanItem');
-
-
-               //self.$(headerName).show();
-               //self.ItemLookupView.SlideDownItemLookup();
-               //if (!self.QuantityToScan) {
-               // self.QuantityToScan = 1;
-               //}
-               //Shared.Focus('#textScanItem');
-
-
             });
             view.off('quantitychange', function (numericPadCriteria) {
                 if (self.NumericPadType == "freightrate") {
@@ -746,19 +731,19 @@ define([
                 if(shippingNotes) {
                   $('#rowRemShippingNotes').show();
                    if (shippingNotes.length > 20) {
-                       this.$('#rowRemShippingNotes').html("<a style='color:white!important;'>Notes<br><span style='white-space:normal'>" + shippingNotes  + "</span></a>")
+                       this.$('#rowRemShippingNotes').html("<a>Notes<br><span style='white-space:normal'>" + shippingNotes  + "</span></a>")
                    }
                    else {
-                       this.$('#rowRemShippingNotes').html("<a style='color:white!important;'><span class='pull-right'>" + shippingNotes + "</span>Notes</a>")
+                      this.$('#rowRemShippingNotes').html("<a><span class='pull-right'>" + shippingNotes  + "</span>Notes</a>")
                    }
                 } 
                 else  $('#rowRemShippingNotes').hide();
 
                 if (itemDescription.length > 20) {
-                    this.$('#rowRemItemDesc').html("<a style='color:white!important;'>Description<br><span style='white-space:normal'>" + itemDescription + "</span></a>")
+                       this.$('#rowRemItemDesc').html("<a>Description<br><span style='white-space:normal'>" + itemDescription  + "</span></a>")
                  }
                  else {
-                    this.$('#rowRemItemDesc').html("<a style='color:white!important;'><span class='pull-right'>" + itemDescription + "</span>Description</a>")
+                    this.$('#rowRemItemDesc').html("<a><span class='pull-right'>" + itemDescription  + "</span>Description</a>")
                  }
 
             }
@@ -1177,8 +1162,6 @@ define([
         },
 
         ProcessPickItems: function (item, quantityToScan) {
-
-            
             if (this.itemCollection && this.itemCollection.length > 0) {
                 item.set({ IsItemSkipped: false });
 
@@ -1209,13 +1192,6 @@ define([
             //counter remaining 
             var remainingQty = item.get("RemainingQuantity");
             remainingQty -= quantityToScan;
-
-
-           // alert(remainingQty);
-          //  remainingQty = 0; 
-
-
-
             item.set({ RemainingQuantity: remainingQty });
 
             //qty picked
@@ -1301,17 +1277,6 @@ define([
                 var self = this;
               //  var item = this.itemCollection.models[0];
                 var item = this.CurrentItem;
-                var itemName = this.CurrentItem.get("ItemName");
-                var itemModel = this.ItemSettingView.model;
-               
-                if (itemModel != undefined) {
-                    var itemNameModelName = this.ItemSettingView.model.get("ItemName");;
-                    if (itemName != itemNameModelName) {
-                        item = itemModel;
-                    }
-                    
-                }
-
                 this.UpdateCounter(item.get("RemainingQuantity") * -1);
 
                 var remainingQuantity = item.get("RemainingQuantity");
@@ -1355,14 +1320,9 @@ define([
                   
                     this.ShowSerialSection(true);
                     }
-                else { 
-                    this.ProcessPickItems(item, quantityToScan);
-
+                    else this.ProcessPickItems(item, quantityToScan);   
              }
-            }
-            else { 
-                this.ProcessPickItems(item, quantityToScan);
-            }
+            else this.ProcessPickItems(item, quantityToScan);   
 
              
         },
@@ -1646,15 +1606,6 @@ define([
         RenderItem: function (item, isAnimate) {
             this.CurrentItem = item;
 
-            //this.CurrentItem.get("UPCCode"); 
-            //console.log("UPCCode", upcCode);
-            //this.CurrentItem.set(item.get("ItemCode"));
-            //this.CurrentItem.set(item.get("ItemName"));
-
-            // console.log("itemCollection", this.itemCollection);
-            // console.log("itemsSkipped", this.itemsSkipped);
-            // console.log("itemsPicked", this.itemsPicked);
-
             if (isAnimate) {
                 this.$("#containerTransition").show();
                 this.$("#containerCard").hide();
@@ -1704,7 +1655,7 @@ define([
                         this.$("#cardBack").html("");
                         this.$("#cardBack").append(cardBackView.render());
 
-                        //this.RenderItemDetail(item2)
+                        this.RenderItemDetail(item2)
                     }
                 }
                 this.ChangeCardSize(skippedItemID);
@@ -1730,6 +1681,7 @@ define([
 
             this.ShowFreeStockItemSetting(skippedItemID);
             this.ShowTransactionCodeItemSetting(skippedItemID);
+           
             this.WireCardEvents(skippedItemID, false);
 
             var onAttributeChanged = function () {
@@ -1784,7 +1736,6 @@ define([
                        Shared.NotifyError("Preference does not allow skipping an item.");
                        Shared.BeepError();
              }
-       
              else
              {
                 var upcCode = itemView.model.get('UPCCode');
@@ -1796,22 +1747,15 @@ define([
                 {
                     this.RenderItem(selectedItem,false);
                 }
-				
-                //this.$("#textScanItem").val(itemCode);
-                this.$("#textScanItem").val('');
-				
+                this.$("#textScanItem").val(itemCode);
                 this.ShowRemainingItems(false);
-				
-                //this.ScanItem();
+                this.ScanItem();
              }
     
           
         },
 
         RenderRemainingItems: function () {
-
-           
-
             var self = this;
             if (this.itemCollection && this.itemCollection.length > 0) {
                 this.itemCollection.each(function (item) {
@@ -1975,10 +1919,10 @@ define([
              if (shippingNotes) {
                  $('#rowShipNotes').show();
                    if (shippingNotes.length > 20) {
-                       this.$('#rowShipNotes' + skippedItemId).html("<a style='color:white!important;'>Notes<br><span style='white-space:normal'>" + shippingNotes + "</span></a>")
+                      this.$('#rowShipNotes'+ skippedItemId).html("<a>Notes<br><span style='white-space:normal'>" + shippingNotes  + "</span></a>")
                    }
                    else {
-                       this.$('#rowShipNotes' + skippedItemId).html("<a style='color:white!important;'><span class='pull-right'>" + shippingNotes + "</span>Notes</a>")
+                      this.$('#rowShipNotes'+ skippedItemId).html("<a><span class='pull-right'>" + shippingNotes  + "</span>Notes</a>")
                    }
 
              } 
@@ -1998,10 +1942,10 @@ define([
                      var itemDescription = this.CurrentItem.get('ItemDescription');
                      var shippingNotes = this.CurrentItem.get('ShippingNotes');
                      if (itemDescription.length > 20) {
-                         this.$('#rowDescription' + skippedItemID).html("<a style='color:white!important;'>Description<br><span style='white-space:normal'>" + itemDescription + "</span></a>")
+                          this.$('#rowDescription'+ skippedItemID).html("<a>Description<br><span style='white-space:normal'>" + itemDescription  + "</span></a>")
                      }
                      else {
-                         this.$('#rowDescription' + skippedItemID).html("<a style='color:white!important;'><span class='pull-right'>" + itemDescription + "</span>Description</a>")
+                             this.$('#rowDescription'+ skippedItemID).html("<a><span class='pull-right'>" + itemDescription  + "</span>Description</a>")
                      }
 
                     this.ShowHideShippingNotes(shippingNotes, skippedItemID);
@@ -2080,73 +2024,10 @@ define([
             $('#lookupSection').addClass('slideOutDown').removeClass('slideInUp');
         },
 
-
-        PickedScanItem: function (e) {
-
-            var upcCode = this.CurrentItem.get("UPCCode");
-            console.log("UPCCode", upcCode );
-            var itemCode = this.CurrentItem.get("ItemCode");
-            console.log("ItemCode", itemCode);
-            var itemName = this.CurrentItem.get("ItemName");
-            console.log("itemName", itemName);
-            var valueToCheck = e;
-            console.log(valueToCheck);
-            var qtySkipped = this.CurrentItem.get("QuantitySkipped");
-
-            if (upcCode != null) upcCode = upcCode.toLowerCase();
-            if (itemCode != null) itemCode = itemCode.toLowerCase();
-            if (itemName != null) itemName = itemName.toLowerCase();
-            if (valueToCheck != null) valueToCheck = valueToCheck.toLowerCase();
-
-            this.$("#textScanItem").val("");
-            // added by sandeep for skiping remaining item
-            if (itemName != valueToCheck) {
-
-                var unitMeasureCode = this.ItemSettingView.model.get('UnitMeasureCode');
-              
-                var selectedItem = Shared.FindItem(this.itemCollection, e, unitMeasureCode);
-                this.CurrentItem = selectedItem;
-                
-                //this.$("#textScanItem").val(itemCode);
-                this.$("#textScanItem").val('');
-                this.PickNextItem(selectedItem, 1);
-                this.ShowRemainingItems(true);
-            }
-            else if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
-                if (valueToCheck == upcCode || valueToCheck == itemCode || valueToCheck == itemName) {
-
-                    if (isOnItemSettingSection) {
-                        Shared.FlipY('.flipper', 0);
-                        isOnItemSettingSection = false;
-                    }
-                    if (Preference.PickIsPromptForQty) {
-                       // if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                       // else this.PickNextItem(this.CurrentItem, 1)
-                       this.ShowNumericPad();
-                    }
-                    else {
-                        if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
-                        else this.PickNextItem(this.CurrentItem, 1);
-                    }
-                }
-            }
-            else {
-                Shared.NotifyError("You are scanning the wrong item.");
-                Shared.BeepError();
-            }
-        },
-
-
-
         ScanItem: function () {
-             
             var upcCode = this.CurrentItem.get("UPCCode");
-            //console.log("UPCCode", upcCode);
             var itemCode = this.CurrentItem.get("ItemCode");
-            //console.log("ItemCode", itemCode);
             var itemName = this.CurrentItem.get("ItemName");
-            //console.log("itemName", itemName);
-
             var valueToCheck = $("#textScanItem").val();
             var qtySkipped = this.CurrentItem.get("QuantitySkipped");
 
@@ -2165,9 +2046,8 @@ define([
                         isOnItemSettingSection = false;
                     }
                     if (Preference.PickIsPromptForQty) {
-                        //if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
-                        //else this.PickNextItem(this.CurrentItem, 1)
-                        this.ShowNumericPad();
+                        if (this.CurrentItem.get('QuantityToPick') > 1) this.ShowNumericPad();
+                        else this.PickNextItem(this.CurrentItem, 1)
                     }
                     else {
                         if (qtySkipped > 0) this.RemoveFromSkippedItemList(this.CurrentItem, 1);
@@ -2243,14 +2123,7 @@ define([
             if (Preference.PickIsShowQtyOnHand) {
                 if (isFromRemainingItemSection) {
                     $('#rowRemFreeStock').show();
-                     
-                    //---  Commented out line below 
-                    //---  Reason:  Quanitity going to less some time 2 or 3 along-----
-                    //---  Task :  https://github.com/DynEntTech/connectedwarehouse/issues/14----
-
-                    //this.RenderRemainingItems(); 
-
-
+                    this.RenderRemainingItems();
                 }
                 else $('#rowFreeStock' + skippedItemID).show();
             }
@@ -2296,7 +2169,6 @@ define([
                 }
                 self.SlideDownLookup();
             }, this);
-			
             lookupView.on("itemSelected", function (itemModel) {
                 switch (shippingMode) {
                     case "postal":
@@ -2376,17 +2248,7 @@ define([
             }
             else {
                 $('#numericPadNavTitle').text("enter quantity");
-
-                //--- Reason:  In Picking, add item description to Enter Quantity screen-----
-                //-------------------------------------------------------------------------------
-                var texta = $("#itemsdesval").text();
-                $('#Spndes').text(texta); 
-                //------------------------------------------------------------------------------
-               
                 $('#textboxQuantity').val(this.CurrentItem.get('QuantityToPick'));
-
-                localStorage.QuantityToPick = this.CurrentItem.get('QuantityToPick');
-
             }
             
             this.$('#textScanItem').blur();
@@ -2736,28 +2598,8 @@ define([
 
                     navigator.notification.confirm("Do you want to cancel Pick?", function (button) {
                         if (button == 1) {
-                          if(!Preference.PickIsAutoComplete)
-                          {
-                            navigator.notification.confirm("Do you want to save Picked Items?", function (button) {
-                                if (button == 1) {
-
-                                    self.CompletePick();
-
-                                }
-                                else {
-                                      self.GoToLookup(); 
-                                     isOnItemSettingSection = false;
-                                }
-                            }, "Save your work?", "Yes,No");
-
-                          }
-                          else{
-
                             self.GoToLookup(); 
                             isOnItemSettingSection = false;
-
-                          }
-                            
                            }
                     }, "Cancel Pick", "Yes,No");
                     return false;
@@ -2767,27 +2609,8 @@ define([
 
                     navigator.notification.confirm("Some items have been picked. Do you want to cancel Pick?", function (button) {
                         if (button == 1) {
-                            if(!Preference.PickIsAutoComplete)
-                            {
-                                navigator.notification.confirm("Do you want to save Picked Items?", function (button) {
-                                if (button == 1) {
-
-                                    self.CompletePick();
-
-                                }
-                                else {
                           self.GoToLookup();
                           isOnItemSettingSection = false;
-                        } 
-                            }, "Save your work?", "Yes,No");
-
-                            }
-                            else{
-
-                            self.GoToLookup(); 
-                                     isOnItemSettingSection = false;
-
-                            } 
                         } 
                     }, "Cancel Pick", "Yes,No");
                     return false;
@@ -2974,6 +2797,7 @@ define([
 
         WireCardEvents: function (skippedItemID, isSkippedItem) {
             var self = this;
+            
             if (isSkippedItem) {
                 //Bin Manager
                 if (Preference.PickIsPromptBinManager) {
@@ -2986,7 +2810,6 @@ define([
 
                 //Rotate Card
                 Shared.AddRemoveHandler('#' + skippedItemID, 'tap', function () { self.RotateContainerCard(skippedItemID); });
-              
             }
             else {
                 //Bin Manager
@@ -3005,27 +2828,8 @@ define([
             }
 
             //Skip Item
-            if (Preference.PickIsAllowToSkipItems && !this.model.get("HasOnlyOneItem")) {
-                Shared.AddRemoveHandler('#buttonSkipItem' + skippedItemID, 'tap', function () { 
-                    self.SkipItem();
-
-                });
-            }
+            if (Preference.PickIsAllowToSkipItems && !this.model.get("HasOnlyOneItem")) { Shared.AddRemoveHandler('#buttonSkipItem' + skippedItemID, 'tap', function () { self.SkipItem(); }); }
             else this.HideSkipButton(skippedItemID);
-
-            //Require Scan stroage locally---------------------------------
-            if (localStorage.AllowToScan == "false") {  
-                $('.btn-picked').show();
-                Shared.AddRemoveHandler('#buttonPicked' + skippedItemID, 'tap', function () {
-                    self.PickedScanItem($(this).attr('name'));
-                    //Shared.FlipY('.flipper', 0);
-                    self.RotateContainerCard(skippedItemID);
-                });
-            }
-            else {
-                $('.btn-picked').hide();                
-            }
-            //------------------------------------
         },
 
         WireEvents: function () {
@@ -3045,9 +2849,6 @@ define([
             Shared.AddRemoveHandler('#buttonBackShippingAddress', 'tap', function (e) { self.buttonBackShippingAddress_tap(e); });
             Shared.AddRemoveHandler('#buttonBackSkippedItems', 'tap', function (e) { self.buttonBackSkippedItems_tap(e); });
             Shared.AddRemoveHandler('#buttonSkippedItemsSetting', 'tap', function (e) { self.buttonSkippedItemsSetting_tap(e); });
-
-            Shared.AddRemoveHandler('#buttonPicked', 'tap', function (e) { self.buttonPicked_tap(e); });
-
             Shared.AddRemoveHandler('#buttonScanSerial', 'tap', function (e) { self.buttonScanSerial_tap(e); });
             Shared.AddRemoveHandler('#serialClear', 'tap', function (e) { self.buttonSerialClear_tap(e); });
 

@@ -181,16 +181,3 @@ button.toast-close-button {
     width: 25em;
   }
 }
-
-
-.toast-top-full-width {
-    top: 16%;
-}
-
-.toast-title {
-    font-size: 26px;
-}
-
-.toast-message {
-    font-size: 28px;
-}
