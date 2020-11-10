@@ -210,7 +210,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
     .progress-fullscreen { height: 1024px; }
     .progress-bodyscreen { height: 1024px; }
     .url-body,
-    .connection-body { height: calc(100vh - 175px); }
+    .connection-body { /*height: calc(100vh - 175px);*/ height: 849px;}
     /*#endregion*/
 
     /*#region FeatureBody*/
@@ -466,14 +466,14 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
             .cartitem-2 { width: 158px !important; }
 
             .cartitem-3 { width: 195px !important; }
-               ul#cartti { width: 420px !important; }    
+            ul#cartti { width: 420px !important; }    
                
                
-               .unicode {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 30px;
-} 
+            .unicode {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 30px;
+            } 
 
 
             .listitem-1 { width: 323px !important; }        
@@ -746,7 +746,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
             /*#region Transition*/        
             .transition-container {
                 overflow: hidden;
-                position: fixed;
+                position: relative;
             }        
             .slider { -webkit-transition:all 0.3s ease-in-out 0.1s; }        
             .slider > section {
