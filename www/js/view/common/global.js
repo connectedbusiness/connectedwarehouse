@@ -10,7 +10,7 @@ define(
 	            UnitMeasureSystem: ''
 	        },
 	        CurrentTransactions: null,
-		    DemoServiceUrl: "http://cbdemo.connectedbusiness.com/DEMO/pos20.1/",
+		    DemoServiceUrl: "http://cbdemo.connectedbusiness.com/pos21/",
             IsBrowserMode : true,
             IsPrePackMode: false,
             ServiceUrl: "",
