@@ -117,7 +117,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
     .pick-item-detail { height: 335px }    
     .pick-card-caption { top: -14px; }
     #containerPick .pick-card-caption {
-        top: 650px;
+        top: 350px;
     }
     .no-shipping-notes { top: 78px;}
     .pick-btn-skip { top: 580px; }
@@ -1413,7 +1413,11 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
             position: relative;
             font-size: 24px;
             font-weight: bold;
-            left: 640px;        
+            left: 640px;
+            top: 280px;    
+        }
+        .stocktake-btn-skip {
+            top: -22px;
         }
         .btn-picked {
            top: 9px;
