@@ -7,19 +7,19 @@
   "_phantomChildren": {},
   "_requested": {
     "type": "git",
-    "raw": "https://github.com/apache/cordova-plugin-console.git",
-    "rawSpec": "https://github.com/apache/cordova-plugin-console.git",
+    "raw": "git+https://github.com/apache/cordova-plugin-console.git",
+    "rawSpec": "git+https://github.com/apache/cordova-plugin-console.git",
     "saveSpec": "git+https://github.com/apache/cordova-plugin-console.git",
     "fetchSpec": "https://github.com/apache/cordova-plugin-console.git",
     "gitCommittish": null
   },
   "_requiredBy": [
-    "#USER",
-    "/"
+    "#DEV:/",
+    "#USER"
   ],
   "_resolved": "git+https://github.com/apache/cordova-plugin-console.git#7acec7a651e206e05b7319a5b53bbb57055396f9",
-  "_spec": "https://github.com/apache/cordova-plugin-console.git",
-  "_where": "/Users/david/Documents/CWDETI190",
+  "_spec": "git+https://github.com/apache/cordova-plugin-console.git",
+  "_where": "/Users/david/Documents/CBGit20/connectedwarehouse",
   "author": {
     "name": "Apache Software Foundation"
   },
