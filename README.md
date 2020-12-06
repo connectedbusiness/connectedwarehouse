@@ -13,13 +13,13 @@ Connected Warehouse is an iOS application that manages inventories for Connected
 
 Note: Make sure to create a provisioning profile to be use when compiling your app using xcode and uploading you app in the app store.
 
-1. Create App Id first. Go to https://developer.apple.com/account/ios/identifier/bundle
+# Create App Id first. Go to https://developer.apple.com/account/ios/identifier/bundle
 
    ex. Name:CW20_1
        Prefix:5GKC59E3V4
        ID:com.connectedbusiness.connectedwarehouse-20-1
  
-2. Create new provisioning profile for both Development and Distribution
+# Create new provisioning profile for both Development and Distribution
 
      Development: ConnectedWarehouse20_1 Development 
      App ID: CW20_1 (com.connectedbusiness.connected-warehouse-20-1)
@@ -28,31 +28,36 @@ Note: Make sure to create a provisioning profile to be use when compiling your a
      App ID: CW20_1 (com.connectedbusiness.connected-warehouse-20-1)
      
 
-How to build connected warehouse and deploy it to your device.
+# Enviroment Setup - 
+1. Install Node js - https://nodesource.com/blog/installing-nodejs-tutorial-mac-os-x/
+2. In you MAC install the cordova globally. In terminal run (sudo npm install -g cordova)
+3. If INSTALLED and needs to update cordova. In terminal run (sudo npm update -g cordova)
 
+# Steps to build iOS app with updated code
+1. Copy complete source code from git repository connectedwarehouse/app and paste in current repository www folder.
+2. If version change required change config.xml version number under www folder and root folder.
+3. In terminal run commands
+4. Run command - cordova platform remove ios
+5. Run command - cordova platform add ios
+6. Run command - cordova build ios
+7. Copy root folder Images.xcassets and paste in platforms/ios/[app name]
+8. Open application in xcode and build app. Use this link for more details - https://blog.codemagic.io/how-to-code-sign-publish-ios-apps/
+9. Use https://www.diawi.com/ and upload app and share with users for testing.
 
-1. In you MAC install the cordova globally. In terminal run (sudo npm install -g cordova)
+# Update plugins -
+1. Remove plugin which are listed in plugins root folder using command line. 
+2. Cordova plugin remove [Plugin Name]
+3. Cordova Plugin add [Plugin Name]
+4. Then use steps given in [ Steps to build IOS app with update code]
 
-2. If INSTALLED and needs to update cordova. In terminal run  (sudo npm update -g cordova)
-
-3. Use command npm install in root folder.
-
-4. Use command corodva platform add ios.
-
-5. Use command cordova build ios.
-
-6. If there is an error when building of app using cordova just open the Xcode and build using Xcode. Open the root folder platforms > iOS > ConnectedWarehouse.xcodeproj
-
-7. Under General setting of ConnectedWarehouse.xcodeproj set the following:
-
-Identity
+# Identity
 
 Display Name: Connected Warehouse
 Bundle Identifier: com.connectedbusiness.connected-warehouse-20-1
 Version: 20.1.7508
 Build  : 20.1.7508.1
 
-Signing
+# Signing
 
 Automatically Manage signing:  uncheck
 
@@ -72,24 +77,25 @@ Device Orientation: Portrait (Check)
                     Hide status bar (Check)
 		    Require Full Screen (Check)
 
-9 Connect your device in MAC then set the Active Scheme to your device.
+# Build
+1. Connect your device in MAC then set the Active Scheme to your device.
 
-10. Product Clean 
-11. Product Build 
-12. If there is an error regarding ARC semantic Issue (CDVPlugin)
+2. Product Clean 
+3. Product Build 
+4. If there is an error regarding ARC semantic Issue (CDVPlugin)
 
 Go to build phases
 Expand the compiled resources tap
 select “CDVConnection.m”
 add the compiler flag ( -fno-objc-arc )
 
-13. Product Clean 
-14. Product Build 
+5. Product Clean 
+6. Product Build 
 
 
-15. if you encountered an errorabout 2 duplicate symbols for architecture armv7 remove the CDVLogger in the Build Phrases > Complied Resources
+7. if you encountered an errorabout 2 duplicate symbols for architecture armv7 remove the CDVLogger in the Build Phrases > Complied Resources
 
-16. Product Clean 
-17. Product Build 
+8. Product Clean 
+9. Product Build 
 
-18. If there are no errors. Product > Run. The app will be installed to your device.
+10. If there are no errors. Product > Run. The app will be installed to your device.

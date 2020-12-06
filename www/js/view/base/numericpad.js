@@ -14,7 +14,6 @@ define([
     NumericPadTemplate) {
 
     var NumericPadCriteria = {
-
         IsCloseNumericPad: true,
         NumericPadValue: 1
     }
@@ -26,33 +25,11 @@ define([
         },
 
         buttonEnter_tap: function (e) {
-
-            //-- Code added by dynenttech.com ---
-            //-- Task to restrict users to enter more then quanity in numeric pad---
-            //--- Task reference https://github.com/connectedbusiness/connectedwarehouse/issues/13------
-
-            if (localStorage.QuantityToPick != undefined && localStorage.QuantityToPick != "") {
-				
-                if ( parseInt(this.$('#textboxQuantity').val()) > parseInt(localStorage.QuantityToPick)) {
-                    navigator.notification.alert("Enter " + localStorage.QuantityToPick + " or less", null, "Remaining Quantity Exceeded", "OK");
-                    return;
-                } 
-            }
-
-            //---------------------------------------------------------------------------------------
-
-            var qty = this.$('#textboxQuantity').val();
-
+            var qty = this.$('#textboxQuantity').val();            
             NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
-
-           // if (NumericPadCriteria.NumericPadValue == 0) {
-            //    NumericPadCriteria.NumericPadValue = 0;
-           // }
-
+            if (NumericPadCriteria.NumericPadValue == 0) NumericPadCriteria.NumericPadValue = 1;
 
             this.trigger('quantitychange', NumericPadCriteria);
-
-
             if (NumericPadCriteria.IsCloseNumericPad) {
                 this.ClearNumericPad();
                 this.isFirstNumericPadInput = true;                
@@ -66,9 +43,6 @@ define([
         },
 
         buttonCloseNumericPad_tap: function (e) {
-
-
-           
             this.isFirstNumericPadInput = true;
             this.trigger('closenumericpad', this);
             $('.numericpad').removeClass('slideInUp').addClass('slideOutDown');
