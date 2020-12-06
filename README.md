@@ -20,7 +20,7 @@ First go to https://developer.apple.com/account/ios/identifier/bundle
        Prefix:5GKC59E3V4
        ID:com.connectedbusiness.connectedwarehouse-20-1
  
-# Create new provisioning profile for both Development and Distribution
+Create new provisioning profile for both Development and Distribution
 
      Development: ConnectedWarehouse20_1 Development 
      App ID: CW20_1 (com.connectedbusiness.connected-warehouse-20-1)
