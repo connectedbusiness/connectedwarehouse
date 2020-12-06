@@ -13,7 +13,8 @@ Connected Warehouse is an iOS application that manages inventories for Connected
 
 Note: Make sure to create a provisioning profile to be use when compiling your app using xcode and uploading you app in the app store.
 
-# Create App Id first. Go to https://developer.apple.com/account/ios/identifier/bundle
+# Create App Id 
+First go to https://developer.apple.com/account/ios/identifier/bundle
 
    ex. Name:CW20_1
        Prefix:5GKC59E3V4
