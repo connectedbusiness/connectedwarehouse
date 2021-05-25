@@ -1,0 +1,89 @@
+﻿<section id="binManagerSection">
+    <div class="transition-container">
+        <div id="binMainSlider" class="slider page2">
+            <!--BINMANAGERSECTION-->
+            <section id="binManagerContainer" class="container">
+                <nav id="binManagerNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="binManagerTitle" class="navbar-title">select bin location</span>
+                        <button id="buttonBackBin" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                        <button id="buttonMenu" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>                        
+                    </div>
+                </nav>
+                <button id="buttonZone" class="btn btn-inverse2"><span id="textZone"><%= LocationCodeDesc %></span><i class="icon-chevron-right pull-right"></i></button>
+                <header id="binManagerHeader" class="container-header">
+                    <div class="input-group">
+                        <input id="textSearchAdd" class="form-control" placeholder="scan or add new bin" type="text">
+                        <span class="input-group-btn">
+                            <button id="buttonSearchAdd" class="btn btn-default" type="button"><i class="icon-plus"></i></button>
+                        </span>
+                    </div>
+                </header>
+                <div id="binManagerBody" class="container-body-2">
+                    <div id="containerTableBinManager" class="iscroll-cartitem-3">
+                        <table id="cartListContainer" cellspacing="0" cellpadding="0">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="binManagerFooter" class="container-footer sliderFooter">
+                    <div id="binSlideFooter">
+                        <div class="footerTotal">total bins: <span id="textTotalBins">0</span></div>
+                        <button id="buttonDeleteBin" class="btn btn-danger btn-lg btn-footer" type="button">clear bin</button>
+                        <div>
+                            <button id="buttonCancelRemoveBins" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                            <button id="buttonRemoveBins" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+            <!--ENDSECTION-->            
+            <!--CHECKLISTSECTION-->
+            <section id="checkListSection" class="container">
+                <nav id="checkListNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="checkListNavTitle" class="navbar-title">zone</span>
+                        <button id="buttonBackCheckList" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="checkListBody" class="container-body-2">
+                    <div id="containerTableCheckList" class="iscroll-cartitem">
+                        <table id="cartCheckList" class="bordered-list">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!--ENDSECTION-->
+        </div>
+        <!--ITEMSSECTION-->
+        <div id="binItemsSlider" class="container-remaining">
+            <section id="binItemsContainer" class="container">
+                <nav id="binItemsNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <button id="buttonBackBinItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                        <span id="binItemsTitle" class="navbar-title"></span>
+                    </div>
+                </nav>
+                <div id="binItemsBody" class="container-body-2">
+                    <div id="containerTableBinItems" class="iscroll-cartitem-2">
+                        <table id="cartListItemsContainer" cellspacing="0" cellpadding="0">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="binItemsFooter" class="container-footer sliderFooter">
+                    <div id="slideFooter">
+                        <div class="footerTotal">total items: <span id="textTotalItems">0</span></div>
+                        <button id="buttonDeleteSpecificBin" class="btn btn-danger btn-lg btn-footer" type="button">clear bin</button>
+                        <div>
+                            <button id="buttonCancelRemoveItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                            <button id="buttonRemoveItems" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>            
+        </div>
+        <!--ENDSECTION-->
+    </div>
+</section>

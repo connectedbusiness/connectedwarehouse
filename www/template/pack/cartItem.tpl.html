@@ -1,0 +1,24 @@
+<td id="<%= TapeItemID %>" class="lookup-row <%= TapeItemID %>">
+    <div class="<%= TapeItemID %>-itemcol-1 cartitem-rownumber"><span id="itemRow<%= TapeItemID %>"><%= RowNumber %></span></div>
+    <div class="<%= TapeItemID %>-itemcol-2">
+        <img src="<%= CartItemImage %>" onerror="this.onerror = null; this.src = 'css/img/BlankImageCartItem.png';" class="imageCartItem" />
+    </div>
+    <div class="<%= TapeItemID %>-itemcol-3">
+        <ul class="cartitem-3">
+            <li><%= ItemName %></li>
+            <li id="rowUPCCode<%= TapeItemID %>">UPC: <span id="itemUPC<%= TapeItemID %>"><%= UPCCode %></span></li>
+            <li>
+                Qty: <span id="itemQty<%= TapeItemID %>"><%= Quantity %></span>
+                <% if(UnitMeasureSystem == 'Metric') { %>
+                <div class="pull-right">Weight: <span id="itemWeight<%= TapeItemID %>"><%= WeightInKilograms %></span></div>
+                <% } else { %>
+                <div class="pull-right">Weight: <span id="itemWeight<%= TapeItemID %>"><%= WeightInPounds %></span></div>
+                <% } %>
+            </li>
+             <% if(ShippingNotes !=  null) { %>
+             <li>Notes: <span class="pack-cart-item-text-ellipsis"><%= ShippingNotes %></span></li>
+             <% } %>
+        </ul>
+    </div>
+    <div class="<%= TapeItemID %>-itemcol-4"><i id="buttonItemSetting<%= TapeItemID %>" class="icon-chevron-right icon-2x"></i></div>
+</td>

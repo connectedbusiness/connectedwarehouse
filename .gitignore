@@ -24,12 +24,8 @@ pos/node_modules/
 pos/release/
 tmp/
 temp/
-hooks/
 platforms/
-plugins/
-plugins/android.json
-plugins/ios.json
-www/
+node_modules/
 $RECYCLE.BIN/
 
 .DS_Store

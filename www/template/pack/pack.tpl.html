@@ -1,0 +1,137 @@
+<section>
+    <div class="transition-container"> 
+
+        <div id="itemMainSlider" class="container page3">
+
+            <!--PACK SECTION-->
+            <section id="packSection" class="container">
+                <nav id="packNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="packNavTitle" class="navbar-title"></span>
+                        <button id="buttonBackPack" type="button" class="btn btn-inverse pull-left"><i class="icon-reorder"></i></button>
+                    </div>
+                </nav>
+                <header id="packHeader">
+                    <button id="buttonCounterPack" class="btn btn-danger btn-block" type="button">remaining items to pack: <span id="textCounterPack">0</span></button>
+                    <button id="buttonCounterShip" class="btn btn-danger btn-block" type="button" style="display: none; margin-top: 0px;">remaining items to pack: <span id="textCounterShip">0</span></button>
+                </header>
+                <div id="PackShip">
+                    <div id="shipBody" class="container-body-2">
+                        <div id="containerTableShip" class="iscroll-boxitem">
+                            <table id="cartListShip" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div id="packBody" class="container-body-2" style="display: none;">
+                        <div id="containerTablePack" class="iscroll-boxitem">
+                            <table id="cartListPack" cellspacing="0" cellpadding="0">
+                                <tbody>
+                                    <tr>
+                                        <td id="buttonAddBox" class="lookup-row" style="cursor: pointer; cursor: hand; height: 64px !important;">
+                                            <div class="cartitem-rownumber icon-archive icon2" style="font-size: 40px; width: 70px !important;">
+                                            </div>
+                                            <div style="background-color: #2980b9;padding-right: 5px;width: 677px;">
+                                                <ul class="listitemship" style="color: white;">
+                                                    <li id="listAddBox" style="font-size: 20px; font-weight: normal;">add a box</li>
+                                                    <li id="listShipMethod" style="font-size: 20px; font-weight: normal; display: none;">User Entered</li>
+                                                </ul>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <footer id="packFooter" class="container-footer sliderFooter">
+                    <div id="slideFooter">
+                        <div class="footerTotal">total boxes: <span id="textPackTotalBoxes">0</span></div>
+                        <button id="buttonCompletePack" class="btn btn-belize btn-lg btn-footer" type="button">complete</button>
+                        <div>
+                            <button id="buttonCancelRemoveItems" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                            <button id="buttonRemoveBoxes" class="btn btn-danger btn-lg btn-footer" type="button">remove</button>
+                        </div>
+                    </div>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--BOX SECTION-->
+            <section id="boxSectionContainer" class="section-close"></section>
+            <!--END SECTION-->
+
+            <!--BOXLOOKUP SECTION-->
+            <section id="lookupSectionContainer" class="section-close"></section>
+            <!--END SECTION-->
+
+        </div>        
+
+        <div id="itemRemainingSlider" class="slider page2 container-remaining">
+            <!--ITEMSREMAINING SECTION-->
+            <section id="itemsRemainingSection" class="container">
+                <nav id="itemsRemainingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span class="navbar-title">remaining items</span>
+                        <button id="buttonBackItemsRemaining" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-down text-primary"></i></button>
+                    </div>
+                </nav>
+                <div id="itemsRemainingBody" class="container-body-2">
+                    <div id="containerTableItemsRemaining" class="iscroll-cartitem-2">
+                        <table id="cartListItemsRemaining">
+                            <tbody />
+                        </table>
+                    </div>
+                </div>
+                <footer id="itemsRemainingFooter" class="container-footer">
+                    <div class="footerTotal">total items: <span id="textTotalItemsRemaining">0</span></div>
+                </footer>
+            </section>
+            <!--END SECTION-->
+            <!--ITEMSETTINGREMAINING SECTION-->
+            <section id="itemRemSettingSection" class="container">
+                <nav id="itemRemSettingNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="itemRemSettingNavTitle" class="navbar-title">item detail</span>
+                        <button id="buttonBackItemRemSetting" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
+                    </div>
+                </nav>
+                <div id="itemRemSettingBody" class="container-body">
+                    <ul id="itemRemSettingList" class="list-group">
+                        <li id="rowRemItemCode" class="list-group-item"><a><span id="remSettingsItemCode" class="pull-right"></span>Item Code</a></li>
+                        <li id="rowRemName" class="list-group-item"><a><span id="remSettingsItemName" class="pull-right"></span>Name</a></li>
+                        <li id="rowRemDesc" class="list-group-item"><a><span id="remSettingsItemDesc" class="pull-right"></span>Description</a></li>
+                        <li id="rowRemUPCCode" class="list-group-item"><a><span id="remSettingsUPCCode" class="pull-right"></span>UPC Code</a></li>
+                        <li id="rowRemQty" class="list-group-item"><a><span id="remSettingsQuantity" class="pull-right"></span>Quantity</a></li>
+                        <li id="rowRemFreeStock" class="list-group-item"><a><span id="remSettingsFreeStock" class="pull-right"></span>Free Stock</a></li>
+                        <li id="rowRemUnitMeasure" class="list-group-item"><a><span id="remSettingsRemUnitMeasureCode" class="pull-right"></span>Unit Measure</a></li> 
+                        <li id="rowRemShippingNotes" class="list-group-item"><a><span id="remSettingsShippingNotes" class="pull-right"></span>Notes</a></li>
+                 
+                    </ul>
+                </div>
+            </section>
+            <!--END SECTION-->
+        </div>
+
+            <!--COMPLETED SECTION-->
+            <section id="completedSection" class="container container-completed section-close">
+                <nav id="completedNav" class="container-nav navbar navbar-inverse">
+                    <div class="navbar-header">
+                        <span id="completedNavTitle" class="navbar-title"></span>
+                        <button id="buttonMenuCompleted" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
+                    </div>
+                </nav>
+                <div id="completedBody" class="container-body">
+                    <i id="iconCompleted" class="icon-ok-sign icon-17"></i>
+                    <h2 id="completedMessage">Pack Completed!</h2>
+                </div>
+                <footer id="completedFooter" class="container-footer">                    
+                    <button id="buttonMore" class="btn btn-info btn-lg btn-footer" type="button">pack more</button>
+                    <button id="buttonPrint" class="btn btn-primary btn-lg btn-footer" type="button">print label</button>
+                    <button id="buttonRetry" class="btn btn-danger btn-lg btn-footer" type="button">retry</button>
+                    <button id="buttonOther" class="btn btn-info btn-lg btn-footer" type="button">pack other</button>
+                </footer>
+            </section>
+            <!--END SECTION-->
+        </div>
+</section>
