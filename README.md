@@ -28,7 +28,8 @@ Create the development environment
 Development environment requirements:
 - MAC Version: macOS Catalina OR macOS Big Sur
 - XCode Version: 12.x
-- Cordova Version: 9.0.0
+- Cordova Version: 10.0.0
+- Github Desktop
 
 For new MAC users
 - The command line is found under LaunchPad / Other / Terminal
