@@ -34,6 +34,10 @@ Development environment requirements:
 For new MAC users
 - The command line is found under LaunchPad / Other / Terminal
 
+If you are using your own MAC 
+- if you need to install cordova globally: In terminal run (sudo npm install -g cordova)
+- If INSTALLED and needs to update cordova. In terminal run  (sudo npm update -g cordova)
+
 To confirm development envrionment versions installed on your system:
 	For OS version
 		- click on apple icon, select "about this mac"
@@ -43,26 +47,32 @@ To confirm development envrionment versions installed on your system:
 	Cordova version
 		- from the terminal command line: cordova -v
  
+ NOTE: whenever we remove and add platform, the images go to the default and we need to copy/paste images
+
+
+ Using Github Desktop 
+ - Clone the repository to a folder
+ 
 How to build connected warehouse and deploy it to your device.
-
-1. In you MAC install the cordova globally. In terminal run (sudo npm install -g cordova)
-
-2. If INSTALLED and needs to update cordova. In terminal run  (sudo npm update -g cordova)
-
-3. Use command npm install in root folder.
+- in terminal command line, change to root folder of application
+- Use command "npm install" in root folder. (node js command), Use command "npn audit fix" to address issues
 
 4. Use command corodva platform add ios.
+IGNORE ERROR: Cannot find plugin.xml for plugin "com.connectedbusiness.plugins.airprinter". Please try adding it again.
+   REMOVE OR FIX per CB
 
 5. Use command cordova build ios.
+should get BUILD SUCCEEDED at the end
 
-6. If there is an error when building of app using cordova just open the Xcode and build using Xcode. Open the root folder platforms > iOS > ConnectedWarehouse.xcodeproj
 
-7. Under General setting of ConnectedWarehouse.xcodeproj set the following:
+6. Open the root folder, platforms > iOS > ConnectedWarehouse.xcodeproj, right mouse click, open (opens XCode)
+
+7. In XCode, Under General setting of ConnectedWarehouse.xcodeproj set the following:
 
 Identity
 
 Display Name: Connected Warehouse
-Bundle Identifier: com.connectedbusiness.connected-warehouse-20-1
+Bundle Identifier: com.connectedbusiness.connected-warehouse-20-1 (change to what you created in apple developer site)
 Version: 20.1.7508
 Build  : 20.1.7508.1
 
@@ -88,8 +98,8 @@ Device Orientation: Portrait (Check)
 
 9 Connect your device in MAC then set the Active Scheme to your device.
 
-10. Product Clean 
-11. Product Build 
+10. Product Clean in xcode
+11. Product Build in xcode
 12. If there is an error regarding ARC semantic Issue (CDVPlugin)
 
 Go to build phases
