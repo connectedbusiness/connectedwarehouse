@@ -20,9 +20,9 @@ define(
             PackMode: "Pack", 
             PreviousPage: "",
 	        PrintPluginLoaded: false,
-	        Plugins : {	            
-	            AirPrinter : "com.connectedbusiness.plugins.airprinter.AirPrinter"	            
-	        },
+	        // Plugins : {	            
+	        //     AirPrinter : "com.connectedbusiness.plugins.airprinter.AirPrinter"	            
+	        // },
 	        ProductType: "Connected Warehouse",
 	        TransactionCode: "",
 	        TemporaryDocumentCode: "[To be generated]",
