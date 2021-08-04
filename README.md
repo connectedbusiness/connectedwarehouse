@@ -1,5 +1,16 @@
+
+Dependencies Information:
+
+MAC Version: macOS Catalina (Version: 10.15.7)
+
+XCode Version: 12.0.1
+
+Cordova Version: 9.0.0
+
+
 # connectedwarehouse
 Connected Warehouse is a Cordova iOS application that manages inventories for Connected Business.
+
 
 In order to perform development, you need to follow the instructions below.
 
@@ -43,6 +54,7 @@ To confirm development envrionment versions installed on your system:
 	Cordova version
 		- from the terminal command line: cordova -v
  
+
 How to build connected warehouse and deploy it to your device.
 
 1. In you MAC install the cordova globally. In terminal run (sudo npm install -g cordova)

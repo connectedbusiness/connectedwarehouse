@@ -1,0 +1,77 @@
+{
+  "_from": "git+https://github.com/apache/cordova-plugin-console.git",
+  "_id": "cordova-plugin-console@1.1.1-dev",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/cordova-plugin-console",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "https://github.com/apache/cordova-plugin-console.git",
+    "rawSpec": "https://github.com/apache/cordova-plugin-console.git",
+    "saveSpec": "git+https://github.com/apache/cordova-plugin-console.git",
+    "fetchSpec": "https://github.com/apache/cordova-plugin-console.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "git+https://github.com/apache/cordova-plugin-console.git#7acec7a651e206e05b7319a5b53bbb57055396f9",
+  "_spec": "https://github.com/apache/cordova-plugin-console.git",
+  "_where": "/Users/david/Documents/CWDETI190",
+  "author": {
+    "name": "Apache Software Foundation"
+  },
+  "bugs": {
+    "url": "https://issues.apache.org/jira/browse/CB"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-console",
+    "platforms": [
+      "ios",
+      "ubuntu",
+      "wp7",
+      "wp8",
+      "windows8",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova Console Plugin",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "engines": {
+    "cordovaDependencies": {
+      ">=1.1.0": {
+        "cordova-ios": "<4.5.0",
+        "cordova-windows": "<=5.0.0"
+      }
+    }
+  },
+  "homepage": "https://github.com/apache/cordova-plugin-console#readme",
+  "keywords": [
+    "cordova",
+    "console",
+    "ecosystem:cordova",
+    "cordova-ios",
+    "cordova-ubuntu",
+    "cordova-wp7",
+    "cordova-wp8",
+    "cordova-windows8",
+    "cordova-windows"
+  ],
+  "license": "Apache-2.0",
+  "name": "cordova-plugin-console",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apache/cordova-plugin-console.git"
+  },
+  "scripts": {
+    "jshint": "node node_modules/jshint/bin/jshint www && node node_modules/jshint/bin/jshint src && node node_modules/jshint/bin/jshint tests",
+    "test": "npm run jshint"
+  },
+  "version": "1.1.1-dev"
+}
