@@ -169,8 +169,9 @@
             if (window.plugins.printPlugin == null) {                
                 if (cordova == null) throw "Unable to initialize printer plugin.";
                 
-                window.plugins.printPlugin = cordova.require(Global.Plugins.AirPrinter);
-                                
+
+               // window.plugins.printPlugin = cordova.require(Global.Plugins.AirPrinter);
+              
 
                 if (window.plugins.printPlugin == null) throw "Unable to initialize printer plugin.";
             }            

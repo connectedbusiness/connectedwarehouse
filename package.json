@@ -14,25 +14,26 @@
   "license": "Apache-2.0",
   "dependencies": {
     "cordova-browser": "^6.0.0",
-    "cordova-plugin-console": "git+https://github.com/apache/cordova-plugin-console.git",
+
     "cordova-plugin-dialogs": "^2.0.2",
-    "cordova-plugin-network-information": "git+https://github.com/apache/cordova-plugin-network-information.git",
-    "cordova-plugin-wkwebviewxhrfix": "git+https://github.com/TheMattRay/cordova-plugin-wkwebviewxhrfix.git"
+    "cordova-plugin-network-information": "git+https://github.com/apache/cordova-plugin-network-information.git"
+
   },
   "cordova": {
     "plugins": {
       "cordova-plugin-dialogs": {},
-      "cordova-plugin-console": {},
+
       "cordova-plugin-network-information": {},
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-wkwebviewxhrfix": {}
+      "cordova-plugin-whitelist": {}
     },
     "platforms": [
-      "browser"
+      "browser",
+      "ios"
     ]
   },
   "devDependencies": {
-    "cordova-ios": "^6.1.1",
+    "cordova-ios": "^6.2.0",
     "cordova-plugin-whitelist": "^1.3.4"
   }
 }
+
