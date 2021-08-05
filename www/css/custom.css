@@ -34,7 +34,7 @@
 /*#endregion*/
 
 header, body { -webkit-tap-highlight-color:rgba(0,0,0,0); }
-body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
+body {font-family: 'Lato'; font-weight: 300; background-color: #1d2028; }
 .custom-danger {
     color: #ffffff;
     background-color: #d9534f;
@@ -155,6 +155,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         height: 842px;
         max-height: 842px;
     }
+    #containerTableStock {
+        height: 770px;
+        max-height: 770px;
+    }
     .iscroll-cartitem-4 {
         height: 615px;
         max-height: 615px;
@@ -199,7 +203,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     .progress-fullscreen { height: 1024px; }
     .progress-bodyscreen { height: 1024px; }
     .url-body,
-    .connection-body { height: calc(100vh - 175px); }
+    .connection-body { /*height: calc(100vh - 175px);*/ height: 849px;}
     /*#endregion*/
 
     /*#region FeatureBody*/
@@ -224,8 +228,8 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }
     #boxBody, 
     #transferBody, #containerTableTransfer { 
-        min-height: 824px !important;
-        height: 824px !important;
+        min-height: 770px !important;
+        height: 770px !important;
     }
     #currentCardContainer #itemSettingBody { height: 295px; }
     #wrapper { height: 1024px; }
@@ -455,14 +459,14 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             .cartitem-2 { width: 158px !important; }
 
             .cartitem-3 { width: 195px !important; }
-               ul#cartti { width: 420px !important; }    
+            ul#cartti { width: 420px !important; }    
                
                
-               .unicode {
-    display: inline-block;
-    vertical-align: middle;
-    margin: 0 30px;
-} 
+            .unicode {
+                display: inline-block;
+                vertical-align: middle;
+                margin: 0 30px;
+            } 
 
 
             .listitem-1 { width: 323px !important; }        
@@ -735,7 +739,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             /*#region Transition*/        
             .transition-container {
                 overflow: hidden;
-                position: fixed;
+                position: relative;
             }        
             .slider { -webkit-transition:all 0.3s ease-in-out 0.1s; }        
             .slider > section {
@@ -1159,6 +1163,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         width: 768px;
         position: relative;
         overflow: hidden;
+        margin: 0 auto;
     }
     .wrapper-body { position: absolute; }
     /*#endregion */
@@ -1408,8 +1413,6 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
            top: -40px; /* # git issue #53*/
            margin-left: 33px;
         }
-
-
         .paging-footer {
             list-style: none;    
             margin: 0;
@@ -1433,9 +1436,11 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
             width: 730px;
             margin-left: 5px;
             margin-top: 0 !important;  
-            height: 766px;     
+            height: 830px;     
         }
-        
+        .stocktake-item {
+            height: 770px;
+        }
         .pick-item-header {
             width: 742px;
             height: 75px;
@@ -1890,7 +1895,7 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     }
     #itemsRemainingFooter {
         position: absolute;
-        width: 760px;
+        width: 100%;
         bottom: 0;
     }
 
@@ -1898,6 +1903,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
         position: absolute;
         width: 767px;
         bottom: 0;
+    }
+    footer#transferFooter, footer#stockFooter {
+        position: inherit;
+        bottom: auto;
     }
     #containerConnectionSection .container-footer {
         position: relative !important;
@@ -1922,6 +1931,10 @@ body {font-family: 'Lato'; font-weight: 300; background-color: #bdc3c7; }
     #boxFooter, #receiveFooter {
         position: relative;
         bottom: 55px;
+    }
+    footer#boxFooter {
+        bottom: 0;
+        position: inherit;
     }
     /*#endregion*/
 

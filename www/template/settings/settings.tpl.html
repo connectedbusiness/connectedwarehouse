@@ -4,7 +4,7 @@
             <!--SETTINGS SECTION-->
             <section id="settingsSection">
                 <nav id="settingsNav" class="container-nav navbar navbar-inverse">
-                    <div class="navbar-header">                         
+                    <div class="navbar-header">
                         <span class="navbar-title">settings</span>
                         <button id="buttonMenu" type="button" class="btn btn-inverse pull-left"><i class="icon-th-large"></i></button>
                     </div>
@@ -18,7 +18,7 @@
                             </ul>
 
                             <ul id="settingsGroup2List" class="list-group">
-                                <li id="rowAdjustment" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Adjustment</a></li>                                
+                                <li id="rowAdjustment" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Adjustment</a></li>
                                 <li id="rowPack" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Pack</a></li>
                                 <li id="rowPhysicalInventory" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Physical Inventory</a></li>
                                 <li id="rowPick" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Pick</a></li>
@@ -26,12 +26,12 @@
                                 <li id="rowReceive" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Receive</a></li>
                                 <li id="rowLabel" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Ship</a></li>
                                 <li id="rowStock" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Stock</a></li>
-                                <li id="rowTransfer" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Transfer</a></li>                                                                
+                                <li id="rowTransfer" class="list-group-item"><a><i class="icon-chevron-right pull-right"></i>Transfer</a></li>
                             </ul>
 
                             <ul id="settingsGroup3List" class="list-group">
-                                <li id="rowItemImage" class="list-group-item"><a><i id="iconItemImage" class="icon-chevron-right"></i><span id="textItemImage" class="pull-right"><%= WebSite %></span>Item Images</a></li>                                
-                            </ul> 
+                                <li id="rowItemImage" class="list-group-item"><a><i id="iconItemImage" class="icon-chevron-right"></i><span id="textItemImage" class="pull-right"><%= WebSite %></span>Item Images</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
             <!--FEATUREPREFERENCE SECTION-->
             <section id="featurePreferenceSection" class="section-close">
                 <nav id="featurePreferenceNav" class="container-nav navbar navbar-inverse">
-                    <div class="navbar-header">                                             
+                    <div class="navbar-header">
                         <span id="featurePreferenceNavTitle" class="navbar-title"></span>
                         <button id="buttonBackFeaturePreference" type="button" class="btn btn-inverse pull-left"><i class="icon-arrow-left"></i></button>
                     </div>
@@ -49,120 +49,118 @@
                     <div id="containerTableFeaturePreference" class="iscroll-cartitem">
                         <div id="featurePreferenceList">
                             <ul id="featurePreferenceList" class="list-group">
-                            <li id="rowIsAutoPrint" class="list-group-item">
-                                <a><span id="switchIsAutoPrint" class="switch pull-right"><input class="checkboxIsAutoPrint" type="checkbox" /></span>
+                                <li id="rowIsAutoPrint" class="list-group-item">
+                                    <a><span id="switchIsAutoPrint" class="switch pull-right"><input class="checkboxIsAutoPrint" type="checkbox" /></span>
                                     <ul id="descriptionAutoPrint">
                                         <li>Auto Print</li>
                                         <li>It automatically prints the image directly to the printer.</li>
                                     </ul>
-                                </a>                            
-                            </li>
-                            <li id="rowIsAutoComplete" class="list-group-item">
-                                <a><span id="switchIsAutoComplete" class="switch pull-right"><input type="checkbox" /></span>
+                                </a>
+                                </li>
+                                <li id="rowIsAutoComplete" class="list-group-item">
+                                    <a><span id="switchIsAutoComplete" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionAutoComplete">
                                         <li>Auto Complete</li>
                                         <li>It automatically converts the sales order to an invoice. It is not applicable on prepack items.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowBatchPick" class="list-group-item">
-                                <a><span id="switchIsBatchPick" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowBatchPick" class="list-group-item">
+                                    <a><span id="switchIsBatchPick" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionBatchPick">
                                         <li>Batch Pick</li>
                                         <li>Coming soon.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowIsPromptBinManager" class="list-group-item">
-                                <a><span id="switchIsPromptBinManager" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsPromptBinManager" class="list-group-item">
+                                    <a><span id="switchIsPromptBinManager" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionPromptBinManager">
                                         <li><label id="textPromptBin">Prompt for bin</label></li>
                                         <li>It automatically prompts bin manager when adding an item to cart.</li>
                                     </ul>                                
                                 </a>
-                            </li>
-                            <li id="rowIsAllowToSkipItems" class="list-group-item">
-                                <a><span id="switchIsAllowToSkipItems" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsAllowToSkipItems" class="list-group-item">
+                                    <a><span id="switchIsAllowToSkipItems" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionAllowSkipItems">
                                         <li>Allow to skip items</li>
                                         <li>It allows the user to skip the current item then proceed to the next item.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowIsEnable" class="list-group-item">
-                                <a><span id="switchIsEnable" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsEnable" class="list-group-item">
+                                    <a><span id="switchIsEnable" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionEnable">
                                         <li>Enable</li>
                                         <li>It enables the user to use the prepack feature.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowIsPromptForQty" class="list-group-item">
-                                <a><span id="switchIsPromptForQty" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsPromptForQty" class="list-group-item">
+                                    <a><span id="switchIsPromptForQty" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionPromptForQty">
                                         <li>Prompt for qty</li>
                                         <li>It automatically prompts numeric keypad for multiple quantities.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowIsAllowForMoreQty" class="list-group-item">
-                                <a><span id="switchIsAllowForMoreQty" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsAllowForMoreQty" class="list-group-item">
+                                    <a><span id="switchIsAllowForMoreQty" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionIsAllowForMoreQty">
                                         <li>Allow more quantity than ordered (stored locally)</li>
                                         <li>Allow more quantity than ordered.</li>
                                     </ul>
                                 </a>
-                            </li>
-                            <li id="rowIsQuickPack" class="list-group-item">
-                                <a><span id="switchIsQuickPack" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsQuickPack" class="list-group-item">
+                                    <a><span id="switchIsQuickPack" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionQuickPack">
                                         <li>Quick Pack</li>
                                         <li>Coming Soon.</li>
                                     </ul>
                                 </a>
-                            </li> 
-                            <li id="rowIsShowQtyOnHand" class="list-group-item">
-                                <a><span id="switchIsShowQtyOnHand" class="switch pull-right"><input type="checkbox" /></span>
+                                </li>
+                                <li id="rowIsShowQtyOnHand" class="list-group-item">
+                                    <a><span id="switchIsShowQtyOnHand" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionQtyOnHand">
                                         <li>Qty on hand</li>
                                         <li>It displays the number of free stock of an item.</li>
                                     </ul>
                                 </a>
-                            </li>
-                           
+                                </li>
+
 
                                 <li id="rowLocalstore" class="list-group-item">
-                                <a><span id="switchIsAllowToScanitem" class="switch pull-right"><input type="checkbox" /></span>
+                                    <a><span id="switchIsAllowToScanitem" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="rowlocal">
                                         <li>Require Scan (stored locally)</li>
                                         <li>It enables the user to use the prepack feature.</li>
                                     </ul>
                                 </a>
-                            </li>
+                                </li>
 
 
-                                 <li id="rowSourceTransaction" class="list-group-item">                            
-                                <div class="btn-group pull-right">
-                                    <button id="buttonSourceTransaction" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                <li id="rowSourceTransaction" class="list-group-item">
+                                    <div class="btn-group pull-right">
+                                        <button id="buttonSourceTransaction" type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                         <span id="textSourceTransaction" class="pull-left">order</span><span class="caret"></span>
                                     </button>
-                                    <ul id="dropdownSourceTransaction" class="dropdown-menu" role="menu">
-                                        <li><a id="buttonOrder">order</a></li>
-                                        <li><a id="buttonInvoice">invoice</a></li>
-                                    </ul>
-                                </div>
-                                <a>
-                                    <ul id="descriptionSourceTransaction">
-                                        <li>Source Transaction</li>
-                                        <li>It allows the user to choose what kind of transaction to display in lookup.</li>
-                                    </ul>
-                                </a>
-                            </li>  
-                                
-                                
-                                                                              
-                            <li id="rowUseCbeImage" class="list-group-item">
-                                <a><span id="switchUseCbeImage" class="switch pull-right"><input type="checkbox" /></span>
+                                        <ul id="dropdownSourceTransaction" class="dropdown-menu" role="menu">
+                                            <li><a id="buttonOrder">order</a></li>
+                                            <li><a id="buttonInvoice">invoice</a></li>
+                                        </ul>
+                                    </div>
+                                    <a>
+                                        <ul id="descriptionSourceTransaction">
+                                            <li>Source Transaction</li>
+                                            <li>It allows the user to choose what kind of transaction to display in lookup.</li>
+                                        </ul>
+                                    </a>
+                                </li>
+
+                                <li id="rowUseCbeImage" class="list-group-item">
+                                    <a><span id="switchUseCbeImage" class="switch pull-right"><input type="checkbox" /></span>
                                     <ul id="descriptionUseCbeImage">
                                         <li>Use eCommerce Images</li>
                                         <li>It displays the images of an item.</li>
@@ -180,7 +178,6 @@
                                     </ul>
                                 </a>
                             </li>
-                                 
                         </ul>
                         </div>
                     </div>

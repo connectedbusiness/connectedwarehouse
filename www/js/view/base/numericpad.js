@@ -14,7 +14,6 @@ define([
     NumericPadTemplate) {
 
     var NumericPadCriteria = {
-
         IsCloseNumericPad: true,
         NumericPadValue: 1
     }
@@ -44,15 +43,9 @@ define([
             var qty = this.$('#textboxQuantity').val();
 
             NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
-
-           // if (NumericPadCriteria.NumericPadValue == 0) {
-            //    NumericPadCriteria.NumericPadValue = 0;
-           // }
-
+            if (NumericPadCriteria.NumericPadValue == 0) NumericPadCriteria.NumericPadValue = 1;
 
             this.trigger('quantitychange', NumericPadCriteria);
-
-
             if (NumericPadCriteria.IsCloseNumericPad) {
                 this.ClearNumericPad();
                 this.isFirstNumericPadInput = true;                
@@ -66,9 +59,6 @@ define([
         },
 
         buttonCloseNumericPad_tap: function (e) {
-
-
-           
             this.isFirstNumericPadInput = true;
             this.trigger('closenumericpad', this);
             $('.numericpad').removeClass('slideInUp').addClass('slideOutDown');
