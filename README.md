@@ -58,7 +58,8 @@ How to build connected warehouse and deploy it to your device.
 - Use command "npm install" in root folder. (node js command), Use command "npn audit fix" to address issues
 
 4. Use command corodva platform add ios.
-
+IGNORE ERROR: Cannot find plugin.xml for plugin "com.connectedbusiness.plugins.airprinter". Please try adding it again.
+   REMOVE OR FIX per CB
 
 5. Use command cordova build ios.
 should get BUILD SUCCEEDED at the end
