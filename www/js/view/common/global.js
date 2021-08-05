@@ -1,6 +1,6 @@
 define(
-    function() {
-        var Global = {
+function() {
+    var Global = {
             ApplicationType: "Adjustment",
             CurrentLocation: "MAIN",
             CurrentUser: {
@@ -21,8 +21,8 @@ define(
             PackMode: "Pack",
             PreviousPage: "",
             PrintPluginLoaded: false,
-            Plugins : {	            
-                //AirPrinter : "com.connectedbusiness.plugins.airprinter.AirPrinter"	            
+            Plugins : {
+                //AirPrinter : "com.connectedbusiness.plugins.airprinter.AirPrinter"
             },
             ProductType: "Connected Warehouse",
             TransactionCode: "",
@@ -47,9 +47,9 @@ define(
                 // CurrentVersion: { Major: 19, Minor: 1, Build: 7031, Revision: 0
                 Version: { Major: 20, Minor: 1, Build: 7508, Revision: 2 },
                 CurrentVersion: { Major: 20, Minor: 1, Build: 7508, Revision: 2 }
-            },
-            ScreenWidth: 0
-        }
+        },
+        ScreenWidth: 0
+}
 
-        return Global;
-    });
+return Global;
+});
