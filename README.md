@@ -48,9 +48,9 @@ How to build connected warehouse and deploy it to your device.
 Identity
 
 Display Name: Connected Warehouse
-Bundle Identifier: com.connectedbusiness.connected-warehouse-20-1
-Version: 20.1.7508
-Build  : 20.1.7508.1
+Bundle Identifier: com.connectedbusiness.connectedwarehouse23
+Version: 23.0.8411
+Build  : 23.0.8411.0
 
 Signing
 

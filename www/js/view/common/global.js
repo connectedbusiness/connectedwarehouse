@@ -10,9 +10,7 @@ define(
 	            UnitMeasureSystem: ''
 	        },
 	        CurrentTransactions: null,
-	         DemoServiceUrl: "https://data.connectedbusiness.com/demo/pos22/",
-	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CBPOS_14_0_1/",
-	        //DemoServiceUrl: "http://webservices.connectedbusiness.com/CW/",
+	        DemoServiceUrl: "http://cbdemo.connectedbusiness.com/POS23/Webservice/",
             IsBrowserMode : true,
             IsPrePackMode: false,
             ServiceUrl: "",
@@ -27,12 +25,11 @@ define(
 	        TransactionCode: "",
 	        TemporaryDocumentCode: "[To be generated]",
 	        WorkstationID: "Warehouse1",
-	        
 	        Version14:  "19.0.0.0",
 	        Versions: {
-	            MinimumVersion: { Major: 19, Minor: 0, Build: 6914, Revision: 0 },
-	            Version: { Major: 22, Minor: 24, Build: 7884, Revision: 0},
-	            CurrentVersion: { Major: 22, Minor: 24, Build: 7884, Revision: 0
+	            MinimumVersion: { Major: 23, Minor: 0, Build: 8411, Revision: 0 },
+	            Version: { Major: 23, Minor: 0, Build: 8411, Revision: 0},
+	            CurrentVersion: { Major: 23, Minor: 0, Build: 8411, Revision: 0
                 }
             },
             ScreenWidth: 0
