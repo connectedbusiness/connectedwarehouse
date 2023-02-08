@@ -159,7 +159,7 @@ ul#cartti { width: 420px !important; }
 .unicode { display: inline-block; vertical-align: middle; margin: 0 30px; }
 .listitem-1 { width: 323px !important; }
 .listitem-2 { width: 300px !important; }
-.listitem-3 { width: 293px !important; }
+.listitem-3 { width: 100% !important; }
 .listitem-4 { width: 287px !important; }
 .listitem-5 { width: 259px !important; }
 .listitem-6 { width: 201px !important; }
@@ -629,6 +629,7 @@ to { opacity: 1; }
   /*#region iPhone MAX*/
 @media (device-height: 1020px), (max-height: 1020px) {
 	/*.container {max-width: 414px;}*/
+	#loginBody {margin: 10vh 10%;}
 	.container {max-width: 100vw;}
 	.btn-dashboard { width: 49%; height: 17vh; font-size:1.5rem; }
 	.btn-dashboard .icon-6 {font-size:5rem; }
@@ -652,9 +653,12 @@ to { opacity: 1; }
 	   
 } /*-----end iPhone MAX----*/
 
+
+
   /*#region iPhone 12PRO*/
 @media (device-height: 844px), (max-height: 844px) {
 	/*.container {max-width: 390px;}*/
+	#loginBody {margin: 10vh 10%;}
 	.container {max-width: 100vw;}
 	.btn-dashboard {height: 16.7vh; }
 	.stocktake-item-detail .pick-item-image {margin-top: 3vh; margin-bottom: 3vh;}
@@ -667,6 +671,7 @@ to { opacity: 1; }
   /*#region iPhone X*/
 @media (device-height: 812px), (max-height: 812px) {
 	/*.container {max-width: 375px;}*/
+	#loginBody {margin: 10vh 10%;}
 	.container {max-width: 100vw;}
 	.btn-dashboard {height: 16.6vh; }
 	.cartitem-1 { width: 100% ; min-width: 190px;}
@@ -677,6 +682,23 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	   
 } /*-----end iPhone X----*/
+
+
+  /*#region iPhone Samsung S8*/
+@media (device-height: 740px), (max-height: 740px) {
+	/*.container {max-width: 360px;}*/
+	#loginBody {margin: 10vh 10%;}
+	.container {max-width: 100vw;}
+	.btn-dashboard {height: 16.3vh; }
+	.cartitem-1 { width: 100% ; min-width: 170px;}
+	.stocktake-item-detail .pick-item-image {margin-top: 3vh; margin-bottom: 3vh;}
+	#containerPick .pick-card-caption {top: 41vh;}
+	.pick-btn-skip, .stocktake-btn-skip {top:29vh;}
+	.pick-item-detail .imageCard {width: 260px; height: 260px;}
+	.pick-item, .stocktake-item {width: 100%; height: 65vh;}
+	.pick-item-detail .imageCard {width: 221px; height: 221px;}
+	   
+} /*-----end iPhone Samsung S8----*/
 
   /*#region iPhone PLUS*/
 @media (device-height: 736px), (max-height: 736px) {
