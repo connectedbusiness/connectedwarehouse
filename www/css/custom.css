@@ -645,6 +645,7 @@ to { opacity: 1; }
 	.pick-btn-skip, .stocktake-btn-skip {top:40vh;}
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	
 	
 	
@@ -665,6 +666,7 @@ to { opacity: 1; }
 	#containerPick .pick-card-caption {top: 48vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:38vh;}
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	   
 } /*-----end iPhone 12PRO----*/
 
@@ -680,6 +682,7 @@ to { opacity: 1; }
 	.pick-btn-skip, .stocktake-btn-skip {top:36vh;}
 	.pick-item-detail .imageCard {margin-top: -70px}
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	   
 } /*-----end iPhone X----*/
 
@@ -712,6 +715,7 @@ to { opacity: 1; }
 	#containerPick .pick-card-caption {top: 44vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:32vh;}
 	.pick-item-detail .imageCard {margin-top: -70px}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	   
 } /*-----end iPhone PLUS----*/
 
