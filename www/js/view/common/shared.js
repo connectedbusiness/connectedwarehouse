@@ -434,6 +434,26 @@ define([
 		        Toastr.error(title,message);
 		    },
 
+			 NotifyErrorWithDuration: function (message, duration) {
+		        Toastr.options = {
+		            "closeButton": true,
+		            "debug": false,
+		            "positionClass": "toast-top-full-width",
+		            "onclick": null,
+		            "showDuration": duration,
+		            "hideDuration": "2000",
+		            "timeOut": "3000",
+		            "extendedTimeOut": "1000",
+		            "showEasing": "swing",
+		            "hideEasing": "linear",
+		            "showMethod": "fadeIn",
+		            "hideMethod": "fadeOut"
+		        }
+
+		        Toastr.error(message);
+		    },
+
+
 		    RemoveBinFromItem: function (itemModel, binCodeDeleted, binCollection, isDeleteAll) {
 		        switch (Global.ApplicationType) {
 		            case "Stock":

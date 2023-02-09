@@ -137,8 +137,8 @@
                     else {
                         message = result.message;
                     }
-
-                    navigator.notification.alert(message, null, "Print Error", "OK");
+                    Shared.NotifyErrorWithDuration(message,"1000");
+                   // navigator.notification.alert(message, null, "Print Error", "OK");
                     if (error) error();
                 },
                 printingMode : printingMode
