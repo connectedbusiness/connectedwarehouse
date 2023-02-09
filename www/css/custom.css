@@ -23,7 +23,7 @@ section { height: 100vh !important; }
 div#stockBody { min-height: 804px; }
 #skippedItemsFooter .footerTotal,  #adjustmentSection .footerTotal { padding-top: 10px; }
 /*#region Controls*/
-#buttonMoreLookup { top: 990px; }
+#buttonMoreLookup { top: calc(100vh - 34px); }
 #buttonDone { top: 633px; }  /*#changes for Melko*/
 #containerScrollDown { top: 650px; }
 .imageCard { width: 300px; height: 300px; margin-top: 0px; margin-bottom: 0px; }
@@ -54,18 +54,18 @@ ul[class^='boxitem'] { min-height: 108px; }
   
       /*#region iScroll*/
 
-.iscroll-lookup-2 { height: 100vh; max-height: 100vh; }
-.iscroll-workstation { height: 647px; max-height: 647px; }
+.iscroll-lookup-2 { height: 100vh; max-height: calc(100vh - 160px); }
+.iscroll-workstation { height: 100vh; max-height: calc(100vh - 160px);; }
 .iscroll-cartitem { height: 100vh; max-height: 100vh; }
-.iscroll-cartitem-2 { height: 895px; max-height: 895px; }
+.iscroll-cartitem-2 { height: 100vh; max-height: calc(100vh - 165px); }
 .iscroll-cartitem-3 { height: 842px; max-height: 842px; }
 #containerTableStock { height: 770px; max-height: 770px; }
-.iscroll-cartitem-4 { height: 615px; max-height: 615px; }
+.iscroll-cartitem-4 {height: 100vh; max-height: calc(100vh - 254px); }
 .iscroll-boxitem { height: 523px; max-height: 523px; }
 .iscroll-dashboard { height: 100vh; max-height: 100vh; }
-.iscroll-itemdetail { height: 448px; max-height: 448px; max-width: 748px; }
+.iscroll-itemdetail { height: 448px; max-height: 448px; max-width: 100vw; }
 .iscroll-pickbody { width: 100%; max-width: 100%; }
-.iscroll-pick-card-itemdetail { height: 90%; max-width: 728px; overflow: hidden; }
+.iscroll-pick-card-itemdetail { height: 90%; max-width: 100%; overflow: hidden; }
 .iscroll-stocktake-card-itemdetail { height: 90%; /*max-width: 728px; */overflow: hidden; }
 .iscroll-picturefs { max-width: 100%; max-height: 559px; min-height: 557px; background-color: #3A3B3F; }
 .iscroll-shippingaddress { height: 508px; max-height: 508px; }
@@ -86,7 +86,7 @@ ul[class^='boxitem'] { min-height: 108px; }
 /*#boxBody,  #transferBody, #containerTableTransfer { min-height: 770px !important; height: 770px !important; }*/
 #currentCardContainer #itemSettingBody { height: 295px; }
 #wrapper { height: 100vh; }
-.setting-body { height: 691px; }
+.setting-body { height: calc(100vh -  165px); }
      
   
       /*#region General*/
@@ -184,7 +184,7 @@ ul[class^='boxitem'] { padding: 5px; font-size: 13px; }
   
               /*#region Container */
 .container-body { margin: 10px 10px 0px; }
-.container-body-2 { margin: 0px 10px; }
+.container-body-2 { margin: 0px; }
 .container-nav { height: auto; width: 100%; max-width: 100%; background-color: #1d2028; position: static; }
 .container-menu { width: 100%; height: auto; background: #fff; }
 .container-footer,  .container-footer-2 { height: auto; text-align: center; }
@@ -202,7 +202,7 @@ section { max-width: 100%; }
 
   
               /*#region CheckList */
-.checkListGroupTable { margin: 10px 0px; width: 748px; height: 40px; padding: 10px; color: #3498db; font-weight: 600; font-size: 16px; }
+.checkListGroupTable { margin: 10px 0px; width: 100vw; height: 40px; padding: 10px; color: #3498db; font-weight: 600; font-size: 16px; }
 .checkListGroupTable thead i { color: #86929b; padding-bottom: 5px; }
 #cartCheckList { margin: 10px 0px; }
 #checkListBody ul a { padding: 15px; line-height: 30px; }
@@ -370,7 +370,7 @@ div[id^='completedBody'] { color: #27ae60; text-align: center; display: table-ce
 #cartListContainer tr, #cartListContainer button { width: 100%; }
 #cartListContainer td { display: block; }
 #buttonDone { position: absolute; width: 100%; border-radius: 0; }
-#buttonPrePack { height: 84px; width: 748px; margin-top: 10px; border: none; font-size: 24px; text-align: left; }
+#buttonPrePack { height: 84px; width: 100vw; margin-top: 10px; border: none; font-size: 24px; text-align: left; }
 #buttonPrePack ul { list-style: none; padding: 0; margin: 0px 0px 0px 20px; }
 #buttonPrePack ul li { display: inline-block; vertical-align: middle; margin-right: 15px; }
 
@@ -452,9 +452,9 @@ padding: 3px 10px; text-align: right;/*font-weight: 300;*/
       }*/
 #settingsBody .table-bordered { border: 1px solid #ddd; border-top-left-radius: 4px; border-top-right-radius: 4px; text-shadow: #fff 0px 1px 0px, #fff -1px 0px 0px; font-weight: 300 !important; color: #606060; }
 #settingsGroup1List { margin-top: 10px; }
-#settingsGroup3List,  #settingsGroup2List,  #settingsGroup4List,  #settingsGroup1List { width: 748px; }
+#settingsGroup3List,  #settingsGroup2List,  #settingsGroup4List,  #settingsGroup1List { width: 100vw; }
 #settingsGroup3List li,  #settingsGroup2List li,  #settingsGroup1List li { cursor: pointer; }
-#featurePreferenceList { width: 748px; }
+#featurePreferenceList { width: 100vw; }
 #featurePreferenceList li a { line-height: 30px; }
 #featurePreferenceList li a span { color: white; font-weight: 300; }
 #featurePreferenceList li a ul { width: 185px; list-style: none; padding-left: 0px; }
@@ -532,7 +532,7 @@ form#formLogin { margin-top: 20px; }
 .pick-item-colbin { width: 82%; }
 #buttonShippingMethod { padding-top: 6px !important; padding-right: 12px !important; padding-bottom: 6px !important; padding-left: 12px !important; }
 #textPackFilter { margin-right: 10px !important; }
-#containerTableCheckList td { width: 748px; }
+#containerTableCheckList td { width: 100vw; }
 #containerScrollDown { display: none !important; }
 #itemRemainingSlider,  #containerCompletedAnimation,  #packSection,  #labelSection,  #lookupSectionContainer,  #containerPick,  #containerStockSection,  #containerAdjustmentSection,  #containerTransferSection,  #containerStockTakeSection,  #binManagerSection,  #containerDashboard,  #receiveSection,  #dashboardSection { overflow: hidden; }
 #lookupSection {}
@@ -540,7 +540,7 @@ form#formLogin { margin-top: 20px; }
 #cartListAdjustment tbody tr td div:nth-child(3),  #cartListMiscPhysical tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3),  #cartListItemsRemaining tbody tr td div:nth-child(3),  #cartListBox tbody tr td div:nth-child(3),  #cartListTransfer tbody tr td div:nth-child(3),  #cartListStock tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3) { width: 597px; }
 #cartListItemsContainer tbody tr td div:nth-child(3), #cartListPack tbody tr td div:nth-child(3) { width: 628px; }
 #itemsRemainingFooter { position: absolute; width: 100%; bottom: 0; }
-.container-footer, #numericpadFooter { position: absolute; width: 100%; bottom: 0; }
+.container-footer, #numericpadFooter { position: absolute; /*width: 100%; bottom: 0;*/ width: 100vw; bottom: -100vh;}
 footer#transferFooter, footer#stockFooter { position: inherit; bottom: auto; }
 #containerConnectionSection .container-footer { position: relative !important; }
 ul.numericpad-button-group button { width: 254px; height: 149px; }
@@ -646,6 +646,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
+	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
 	
 	
 	
@@ -700,6 +701,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.pick-item, .stocktake-item {width: 100%; height: 65vh;}
 	.pick-item-detail .imageCard {width: 221px; height: 221px;}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 100px; height: 100px;}
 	   
 } /*-----end iPhone Samsung S8----*/
 
@@ -748,8 +750,10 @@ to { opacity: 1; }
 	#containerPick .pick-card-caption {top: 54vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:47vh;}
 	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
+	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
 	   
 } /*-----end IPAD MINI----*/
+
 
 
   /*#region Galaxy Tab S4*/
@@ -780,6 +784,37 @@ to { opacity: 1; }
 	   
 } /*-----end IPAD AIR----*/
 
+  /*#region Unihertiz Titan Slim*/
+@media (device-height: 1280px), (min-height: 1280px) {
+	/*.container {max-width: 768px;}*/
+	.container {max-width: 100vw;}
+	.btn-dashboard { width: 33%; height: 29.8vh; font-size:2.5rem; }
+	.btn-dashboard .icon-6 {font-size:6rem; }
+	.iscroll-lookup, .pick-body, .iscroll-pickbody { height: calc(100vh - 160px); max-height: 100vh; }
+	.cartitem-1 { width: 100% ; min-width: 500px;}
+	.cartitem-date, ul[class^='listitem'], ul[class^='cartitem'] { font-size: 2rem;}
+	.pick-item, .stocktake-item {width: 100%; height: 61.1vh;}
+	#containerPick .pick-card-caption {top: 51vh;}
+	.pick-btn-skip, .stocktake-btn-skip {top:45vh;}
+	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
+	   
+} /*-----end Unihertiz Titan Slim----*/
+
+
+  /*#region Galaxy Tab A7*/
+@media (device-height: 1340px), (min-height: 1340px) {
+	/*.container {max-width: 800px;}*/
+	.container {max-width: 100vw;}
+	.btn-dashboard { height: 30vh; font-size:2.5rem; }
+	.btn-dashboard .icon-6 {font-size:10rem; }
+	.cartitem-1 { width: 100% ; min-width: 800px;}
+	.pick-item, .stocktake-item {width: 100%; height: 58.8vh;}
+	#containerPick .pick-card-caption {top: 46vh;}
+	.pick-btn-skip, .stocktake-btn-skip {top:40.8vh;}
+
+	   
+} /*-----end  Galaxy Tab A7----*/
+
   /*#region iPad PRO*/
 @media (device-height: 1366px), (min-height: 1366px) {
 	/*.container {max-width: 1024px;}*/
@@ -793,6 +828,24 @@ to { opacity: 1; }
 
 	   
 } /*-----end IPAD PRO----*/
+
+
+  /*#region Unihertz Titan Full Size*/
+@media (device-height: 1438px), (min-height: 1438px) {
+	/*.container {max-width: 1430px;}*/
+	.container {max-width: 100vw;}
+	.btn-dashboard { height: 30.3vh; font-size:3rem; }
+	.btn-dashboard .icon-6 {font-size:10rem; }
+	.cartitem-1 { width: 100% ; min-width: 800px;}
+	.pick-item, .stocktake-item {width: 100%; height: 58.8vh;}
+	#containerPick .pick-card-caption {top: 46vh;}
+	.stocktake-card-caption {top: 5vh;}
+	.pick-btn-skip, .stocktake-btn-skip {top:40.8vh;}
+	.pick-card-caption .text-ellipsis {float: none;}
+	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: 0vh;}
+
+	   
+} /*-----end Unihertz Titan Full Size----*/
 
 
 
