@@ -75,7 +75,7 @@ ul[class^='boxitem'] { min-height: 108px; }
 
   
       /*#region FeatureBody*/
-#labelBody,  div[id^='completedBody'],  #itemsRemainingBody { height: 913px; }
+#labelBody,  div[id^='completedBody'],  #itemsRemainingBody { height: calc(100vh - 105px); }
 #serialBody { height: 895px; padding-top: 155px; }
 /*changes for Melko*/
 #bucketBody { height: 780px; padding-top: 155px; }
@@ -150,12 +150,11 @@ div[id$='Body'] ul[id$='List'] li a i.icon-chevron-right { float: right; font-si
 .spanpriority { color: #d44950 !important; font-size: 14px; font-weight: 600; }
 table[id*='cartList'] tr, .pick-item, .stocktake-item { display: block; border: 1px solid #c9cbd2; border-bottom: 0; -webkit-box-shadow: 0px 1px 3px 0px #9C9C9D; margin-top: 10px; }
 table[id*='cartCheckList'] tbody { margin: 10px 0; }
-ul[class^='listitem'] li:first-child,  ul[class^='cartitem'] li:first-child { font-size: 20px; font-weight: 600; }
-.cartitem-1 li,  .cartitem-3 li { text-overflow: ellipsis; white-space: nowrap; }
+ul[class^='listitem'] li:first-child,  ul[class^='cartitem'] li:first-child { font-size: 2rem; font-weight: 600; }
+.cartitem-1 li,  .cartitem-3 li { text-overflow: ellipsis; white-space: nowrap; overflow:auto; }
 /*.cartitem-1 { width: 580px !important; }
 .cartitem-2 { width: 158px !important; }
 .cartitem-3 { width: 195px !important; }*/
-ul#cartti { width: 420px !important; }
 .unicode { display: inline-block; vertical-align: middle; margin: 0 30px; }
 .listitem-1 { width: 323px !important; }
 .listitem-2 { width: 300px !important; }
@@ -225,7 +224,7 @@ li[class^='list-col'] { display: inline-block; }
 #numClear { color: white; }
 #numEnter { border-radius: 2px; font-size: 50px; }
 .numericpad, .container-remaining, .slideDownReady { width: 100%; position: absolute; -webkit-transform: translateY(100vh); z-index: 1; top: 0px; }
-.numericpad-button-group { margin: 0; padding: 0; list-style: none; font-size: 0; background-color: #dfdfe0; }
+.numericpad-button-group { margin: 0; padding: 0; list-style: none; font-size: 0; background-color: #dfdfe0;height: calc(100vh - 255px); }
 .numericpad-button-group li { text-align: center; }
 .numericpad-button-group:first-child li:first-child > button { margin-top: 2px; }
 .numericpad-button-group li > button { font-size: 60px; font-weight: 300; border-radius: 2px; color: #959ba7; width: 123px; margin: 1px; }
@@ -298,7 +297,7 @@ li[class^='list-col'] { display: inline-block; }
 #divItemNameview5 { width: 100%; }
 .text-ellipsis { text-align: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; width: 600px !important; float: left; color: white !important; }
 ul[class^='boxitem'],  ul[class^='listitem'],  ul[class^='cartitem'] { list-style-type: none; margin: 0; font-weight: 300; }
-ul[class^='listitem'],  ul[class^='cartitem'] { color: #2c3e50; padding: 0; }
+ul[class^='listitem'],  ul[class^='cartitem'] { color: #2c3e50; padding: 0;width: calc(100vw - 165px); }
 .boxitem-rownumber,  .cartitem-rownumber,  .cartitem-rownumber-true { font-weight: 900; font-size: 20px; text-align: center; }
 .pick-item,  .stocktake-item,  ul[class^='cartitem'],  table[id*='cartList'] td { background-color: white; }
 .imageCard { display: block; margin-left: auto; margin-right: auto; }
@@ -313,7 +312,7 @@ ul[class^='listitem'],  ul[class^='cartitem'] { color: #2c3e50; padding: 0; }
 
   
       /*#region Completed*/
-div[id^='completedBody'] { color: #27ae60; text-align: center; display: table-cell; vertical-align: middle; min-width: 100%; }
+div[id^='completedBody'] { color: #27ae60; text-align: center; /*display: table-cell;*/ vertical-align: middle; min-width: 100%; margin: 20vh auto; }
 #messageFailed { padding: 0 10px; font-size: 18px; color: black !important; }
 #messageFailed,  #completedBody .icon-remove-sign { color: #d9534f; }
 .container-completed { width: 100%; position: absolute; z-index: 1; top: 0px; }
@@ -499,7 +498,7 @@ font-weight: 600; font-size: 16px; }
 
   
               /*#region ItemSetting */                
-#itemRemSettingBody ul li span,  #boxDetailsBody ul li span,  #itemSettingBody ul li span,  .itemSettingCardBody ul li span { /*width: 530px;*/ width: 100%; text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; cursor: pointer; }
+#itemRemSettingBody ul li span,  #boxDetailsBody ul li span,  #itemSettingBody ul li span,  .itemSettingCardBody ul li span { /*width: 530px;*/ /*width: 100%;*/ width: auto; text-align: left; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; cursor: pointer; }
 #itemSettingBody ul li { display: block; }
         
   
@@ -537,13 +536,13 @@ form#formLogin { margin-top: 20px; }
 #itemRemainingSlider,  #containerCompletedAnimation,  #packSection,  #labelSection,  #lookupSectionContainer,  #containerPick,  #containerStockSection,  #containerAdjustmentSection,  #containerTransferSection,  #containerStockTakeSection,  #binManagerSection,  #containerDashboard,  #receiveSection,  #dashboardSection { overflow: hidden; }
 #lookupSection {}
 #binItemsBody { min-height: 914px; }
-#cartListAdjustment tbody tr td div:nth-child(3),  #cartListMiscPhysical tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3),  #cartListItemsRemaining tbody tr td div:nth-child(3),  #cartListBox tbody tr td div:nth-child(3),  #cartListTransfer tbody tr td div:nth-child(3),  #cartListStock tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3) { width: 597px; }
+#cartListAdjustment tbody tr td div:nth-child(3),  #cartListMiscPhysical tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3),  #cartListItemsRemaining tbody tr td div:nth-child(3),  #cartListBox tbody tr td div:nth-child(3),  #cartListTransfer tbody tr td div:nth-child(3),  #cartListStock tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3) { width: 100%; }
 #cartListItemsContainer tbody tr td div:nth-child(3), #cartListPack tbody tr td div:nth-child(3) { width: 628px; }
 #itemsRemainingFooter { position: absolute; width: 100%; bottom: 0; }
 .container-footer, #numericpadFooter { position: absolute; /*width: 100%; bottom: 0;*/ width: 100vw; bottom: -100vh;}
 footer#transferFooter, footer#stockFooter { position: inherit; bottom: auto; }
 #containerConnectionSection .container-footer { position: relative !important; }
-ul.numericpad-button-group button { width: 254px; height: 149px; }
+ul.numericpad-button-group button { width: 31vw; height: 16vh; }
 #tableUrl td div:nth-child(2) { width: 100%; }
 #dashboardSection { position: fixed; }
 #connectionSection .container-footer { bottom: 9px; }
@@ -559,7 +558,7 @@ footer#boxFooter { bottom: 0; position: inherit; }
 #containerTableFullScreenBody #pictureItemList li { list-style: none; display: inline-block; width: 100%; text-align: center; }
 .toast-message { font-size: 25px; }
 .toast-close-button { font-size: 40px !important; }
-span#Spndes { font-weight: 400; color: white; padding: 0 15px; font-size: 19px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 435px; line-height: 100px; }
+span#Spndes { font-weight: 400; color: white; padding: 0 15px; font-size: 19px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 100px; }
 
 
 
@@ -623,11 +622,48 @@ to { opacity: 1; }
 
 .btn-dashboard { border-radius: 2px; margin: 0px 0px 3px 0px;}
 
+#containerTableItemLookup #cartListItemLookup {width: 99vw;}
+#containerTableItemLookup #cartListItemLookup .lookup-row div:nth-child(3) {width: 100vw}
+
 
 /*-------------------------Phones-------------------------------------------*/
 
-  /*#region iPhone MAX*/
-@media (device-height: 1020px), (max-height: 1020px) {
+  /*#region iPhone 12 Pro Max*/
+@media (device-height: 926px), (max-height: 926px) {
+	/*.container {max-width: 428px;}*/
+	#loginBody {margin: 10vh 10%;}
+	.container {max-width: 100vw;}
+	.btn-dashboard { width: 49%; height: 17vh; font-size:1.5rem; }
+	.btn-dashboard .icon-6 {font-size:5rem; }
+	.iscroll-lookup, .pick-body, .iscroll-pickbody { height: calc(100vh - 160px); max-height: 100vh; }
+	.cartitem-1 { width: 100% ; min-width: 200px;}
+	.cartitem-date, ul[class^='listitem'], ul[class^='cartitem'] { font-size: 1.7rem;width: 61vw;}
+	.pick-item, .stocktake-item {width: 100%; height: 69vh;}
+	.pick-item-colbin {width: 62%}
+	.pick-btn-skip, .stocktake-btn-skip {left: 77%;}
+	.stocktake-item-detail .pick-item-image {margin-top: 6vh; margin-bottom: 6vh;}
+	#containerCard > li, #skippedItemList > li {width: 98vw;}
+	#containerPick .pick-card-caption {top: 50vh;}
+	.pick-btn-skip, .stocktake-btn-skip {top:40vh;}
+	.pick-item-detail .imageCard {width: 260px; height: 260px;}
+	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
+	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
+	#numBackSpace {padding-left: 17px;}
+	.triangle-left {width: 45px;height: 40px;border-top: 20px solid transparent;border-right: 30px solid white;border-bottom: 20px solid transparent; }
+	.rectangle {height: 40px;width: 40px;}
+	.rectangle .icon-remove {font-size: 30px;margin: 5px -11px;}
+	ul#cartti { width: 60vw; }
+	
+	
+	
+	/*.cartitem-2 { width: 158px !important; }
+	.cartitem-3 { width: 195px !important; }*/
+	   
+} /*-----end iPhone XR----*/
+
+  /*#region iPhone XR*/
+@media (device-height: 896px), (max-height: 896px) {
 	/*.container {max-width: 414px;}*/
 	#loginBody {margin: 10vh 10%;}
 	.container {max-width: 100vw;}
@@ -648,16 +684,12 @@ to { opacity: 1; }
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
 	
-	
-	
-	.cartitem-2 { width: 158px !important; }
-	.cartitem-3 { width: 195px !important; }
-	   
-} /*-----end iPhone MAX----*/
+
+} /*-----end iPhone XR----*/
 
 
 
-  /*#region iPhone 12PRO*/
+  /*#region iPhone 12 PRO*/
 @media (device-height: 844px), (max-height: 844px) {
 	/*.container {max-width: 390px;}*/
 	#loginBody {margin: 10vh 10%;}
@@ -668,8 +700,10 @@ to { opacity: 1; }
 	.pick-btn-skip, .stocktake-btn-skip {top:38vh;}
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
+	ul#cartti { width: 57vw; }
+	
 	   
-} /*-----end iPhone 12PRO----*/
+} /*-----end iPhone 12 PRO----*/
 
   /*#region iPhone X*/
 @media (device-height: 812px), (max-height: 812px) {
@@ -684,6 +718,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {margin-top: -70px}
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
+	ul#cartti { width: 55vw; }
 	   
 } /*-----end iPhone X----*/
 
@@ -718,6 +753,7 @@ to { opacity: 1; }
 	.pick-btn-skip, .stocktake-btn-skip {top:32vh;}
 	.pick-item-detail .imageCard {margin-top: -70px}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
+	ul#cartti { width: 60vw; }
 	   
 } /*-----end iPhone PLUS----*/
 
@@ -731,6 +767,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 200px; height: 200px;}
 	#containerPick .pick-card-caption {top: 37vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:24vh;}
+	
 	   
 } /*-----end iPhone SE----*/
 
@@ -751,7 +788,11 @@ to { opacity: 1; }
 	.pick-btn-skip, .stocktake-btn-skip {top:47vh;}
 	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
 	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
-	   
+	#numBackSpace {padding-left: 37px;}
+	.triangle-left {width: 75px;height: 60px; border-top: 30px solid transparent; border-right: 40px solid white; border-bottom: 30px solid transparent; }
+	.rectangle {height: 60px; width: 60px;}
+	.rectangle .icon-remove {font-size: 50px; margin: 5px -19px;}
+		   
 } /*-----end IPAD MINI----*/
 
 
