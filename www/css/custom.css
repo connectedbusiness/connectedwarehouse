@@ -539,15 +539,16 @@ form#formLogin { margin-top: 20px; }
 #cartListAdjustment tbody tr td div:nth-child(3),  #cartListMiscPhysical tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3),  #cartListItemsRemaining tbody tr td div:nth-child(3),  #cartListBox tbody tr td div:nth-child(3),  #cartListTransfer tbody tr td div:nth-child(3),  #cartListStock tbody tr td div:nth-child(3),  #cartListReceive tbody tr td div:nth-child(3) { width: 100%; }
 #cartListItemsContainer tbody tr td div:nth-child(3), #cartListPack tbody tr td div:nth-child(3) { width: 628px; }
 #itemsRemainingFooter { position: absolute; width: 100%; bottom: 0; }
-.container-footer, #numericpadFooter { position: absolute; /*width: 100%; bottom: 0;*/ width: 100vw; bottom: -100vh;}
-footer#transferFooter, footer#stockFooter { position: inherit; bottom: auto; }
+.container-footer { position: absolute; /*width: 100%; bottom: 0;*/ width: 100vw; bottom: -100vh;}
+#binManagerFooter.container-footer, #numericpadFooter.container-footer { bottom: 0vh !important;}
+footer#transferFooter, footer#stockFooter { /*position: inherit; bottom: auto;*/ bottom: -100vh !important; }
 #containerConnectionSection .container-footer { position: relative !important; }
 ul.numericpad-button-group button { width: 31vw; height: 16vh; }
 #tableUrl td div:nth-child(2) { width: 100%; }
 #dashboardSection { position: fixed; }
 #connectionSection .container-footer { bottom: 9px; }
 #itemSettingFooter { position: relative; bottom: 10px; }
-#boxFooter, #receiveFooter { position: relative; bottom: 55px; }
+#boxFooter, #receiveFooter { position: relative; bottom: 115px; }
 footer#boxFooter { bottom: 0; position: inherit; }
 
   
