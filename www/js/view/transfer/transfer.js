@@ -404,6 +404,14 @@ define([
         },
 
         FindItemByUPC: function () {
+
+            var targetLocation = this.model.get("WarehouseCodeDest");
+            if (targetLocation == null || targetLocation == "") {
+                Shared.NotifyError("Target location is not set. Go to details to setup target location.");
+                Shared.BeepError();
+                return false;
+            }
+
             var upcCode = this.$("#textboxSearchTransfer").val();
             
             this.$("#textboxSearchTransfer").val("");
