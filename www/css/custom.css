@@ -30,7 +30,8 @@ div#stockBody { min-height: 804px; }
 .imageCard-prepack { width: 290px; height: 433px; margin-top: 20px; }
 #piIconPause { top: 450px; }
 #numericpadHeader #textboxQuantity { margin: 10px 0; }
-#numEnter { height: 145px !important; }
+/*#numEnter { height: 145px !important; }*/
+#numEnter {height: 10vh !important; font-size: 4rem !important; text-transform: uppercase !important;}
 #stockTakeBody button { height: 15vh; }
 table[id*='boxList'] tr { height: 187px; max-height: 187px; }
 ul[class^='boxitem'] { min-height: 108px; }
@@ -123,7 +124,8 @@ div[id$='Body'] ul[id$='List'] li a i.icon-chevron-right { float: right; font-si
 .navbar { padding: 0px !important; margin-bottom: 0px !important; border: 0 !important; border-radius: 0 !important; max-width: 100% !important; }
 .navbar-header { float: none !important; }
 .navbar-inner { padding: 0px 6px !important; }
-.navbar-title { font-weight: 400; color: white; padding: 0 15px; font-size: 25px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 270px; line-height: 100px; }
+.navbar-title { font-weight: 400; color: white; padding: 0 15px; font-size: 2.5rem; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 57vw; line-height: 100px; }
+#loginSection .navbar-title {width: 80vw !important;}
 .navbar-header .btn-inverse { text-decoration: none; color: #959ba7; font-size: 30px; border-radius: 0; line-height: 100px; padding: 0 15px; }
 .navbar-header .btn-inverse:hover,  .navbar-header .btn-inverse:active { color: white; }
 #totalPagesBlock, #textCurrentPage { color: white; }
@@ -218,7 +220,7 @@ li[class^='list-col'] { display: inline-block; }
   
               /*#region NumericPad*/         
 #numericPadSection,  #numericpadHeader #textboxQuantity[readonly] { background-color: #101010; }
-#numericpadHeader #textboxQuantity { -webkit-border-radius: 0 !important; border: 0; box-shadow: none; color: white; font-size: 75px; font-weight: 500; height: 150px; line-height: 40px; text-align: right; }
+#numericpadHeader #textboxQuantity { -webkit-border-radius: 0 !important; border: 0; box-shadow: none; color: white; /*font-size: 75px; height: 150px;*/ height: 10vh; font-size: 7rem; font-weight: 500; line-height: 40px; text-align: right; }
 #numericpadFooter { position: absolute; width: 100%; bottom: 0; background-color: #dfdfe0; padding: 0; }
 #numBackSpace { padding-left: 37px; }
 #numClear { color: white; }
@@ -540,8 +542,10 @@ form#formLogin { margin-top: 20px; }
 #cartListItemsContainer tbody tr td div:nth-child(3), #cartListPack tbody tr td div:nth-child(3) { width: 628px; }
 #itemsRemainingFooter { position: absolute; width: 100%; bottom: 0; }
 .container-footer { position: absolute; /*width: 100%; bottom: 0;*/ width: 100vw; bottom: -100vh;}
-#binManagerFooter.container-footer, #numericpadFooter.container-footer { bottom: 0vh !important;}
-footer#transferFooter, footer#stockFooter { /*position: inherit; bottom: auto;*/ bottom: -100vh !important; }
+#binManagerFooter.container-footer, #numericpadFooter.container-footer, #adjustmentFooter.container-footer { /*bottom: 0vh !important;*/position:relative !important; bottom: 115px !important;}
+/*footer#stockFooter { position: inherit; bottom: auto;}*/
+footer#transferFooter { /*position: inherit; bottom: auto;*/ bottom: 0px !important; position:relative !important; }
+#packFooter.container-footer { bottom: 199px !important; position:relative !important;}
 #containerConnectionSection .container-footer { position: relative !important; }
 ul.numericpad-button-group button { width: 31vw; height: 16vh; }
 #tableUrl td div:nth-child(2) { width: 100%; }
@@ -550,6 +554,7 @@ ul.numericpad-button-group button { width: 31vw; height: 16vh; }
 #itemSettingFooter { position: relative; bottom: 10px; }
 #boxFooter, #receiveFooter { position: relative; bottom: 115px; }
 footer#boxFooter { bottom: 0; position: inherit; }
+#packBody > #containerTablePack {height: calc(100vh - 139px)}
 
   
       /*#region Receive*/
@@ -625,6 +630,8 @@ to { opacity: 1; }
 
 #containerTableItemLookup #cartListItemLookup {width: 99vw;}
 #containerTableItemLookup #cartListItemLookup .lookup-row div:nth-child(3) {width: 100vw}
+#stockSection footer#stockFooter {position: relative !important;}
+#labelSection footer#labelFooter {bottom: 60px !important; position: relative !important}
 
 
 /*-------------------------Phones-------------------------------------------*/
@@ -638,7 +645,7 @@ to { opacity: 1; }
 	.btn-dashboard .icon-6 {font-size:5rem; }
 	.iscroll-lookup, .pick-body, .iscroll-pickbody { height: calc(100vh - 160px); max-height: 100vh; }
 	.cartitem-1 { width: 100% ; min-width: 200px;}
-	.cartitem-date, ul[class^='listitem'], ul[class^='cartitem'] { font-size: 1.7rem;width: 61vw;}
+	.cartitem-date, ul[class^='listitem'], ul[class^='cartitem'] { font-size: 1.7rem;width: 55vw;}
 	.pick-item, .stocktake-item {width: 100%; height: 69vh;}
 	.pick-item-colbin {width: 62%}
 	.pick-btn-skip, .stocktake-btn-skip {left: 77%;}
@@ -655,6 +662,7 @@ to { opacity: 1; }
 	.rectangle {height: 40px;width: 40px;}
 	.rectangle .icon-remove {font-size: 30px;margin: 5px -11px;}
 	ul#cartti { width: 60vw; }
+	#stockSection footer#stockFooter {bottom: 115px !important;}
 	
 	
 	
@@ -684,6 +692,7 @@ to { opacity: 1; }
 	#boxBody, #transferBody, #containerTableTransfer {height: calc(100vh - 254px);}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	.stocktake-item .stocktake-item-detail .stocktake-btn-skip {top: -2vh;}
+	#stockSection footer#stockFooter {bottom: 128px !important;}
 	
 
 } /*-----end iPhone XR----*/
@@ -702,6 +711,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	ul#cartti { width: 57vw; }
+	#stockSection footer#stockFooter {bottom: 180px !important;}
 	
 	   
 } /*-----end iPhone 12 PRO----*/
@@ -720,11 +730,12 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	ul#cartti { width: 55vw; }
+	#stockSection footer#stockFooter {bottom: 212px !important;}
 	   
 } /*-----end iPhone X----*/
 
 
-  /*#region iPhone Samsung S8*/
+  /*#region  Samsung S8*/
 @media (device-height: 740px), (max-height: 740px) {
 	/*.container {max-width: 360px;}*/
 	#loginBody {margin: 10vh 10%;}
@@ -738,8 +749,9 @@ to { opacity: 1; }
 	.pick-item, .stocktake-item {width: 100%; height: 65vh;}
 	.pick-item-detail .imageCard {width: 221px; height: 221px;}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 100px; height: 100px;}
+	#stockSection footer#stockFooter {bottom: 284px !important;}
 	   
-} /*-----end iPhone Samsung S8----*/
+} /*-----end  Samsung S8----*/
 
   /*#region iPhone PLUS*/
 @media (device-height: 736px), (max-height: 736px) {
@@ -755,6 +767,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {margin-top: -70px}
 	.navbar-title, .navbar-header .btn-inverse {line-height: 130px; height: 100px;}
 	ul#cartti { width: 60vw; }
+	#stockSection footer#stockFooter {bottom: 284px !important;}
 	   
 } /*-----end iPhone PLUS----*/
 
@@ -768,6 +781,7 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 200px; height: 200px;}
 	#containerPick .pick-card-caption {top: 37vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:24vh;}
+	#stockSection footer#stockFooter {bottom: 357px !important;}
 	
 	   
 } /*-----end iPhone SE----*/
@@ -793,6 +807,7 @@ to { opacity: 1; }
 	.triangle-left {width: 75px;height: 60px; border-top: 30px solid transparent; border-right: 40px solid white; border-bottom: 30px solid transparent; }
 	.rectangle {height: 60px; width: 60px;}
 	.rectangle .icon-remove {font-size: 50px; margin: 5px -19px;}
+	#stockSection footer#stockFooter {bottom: 115px !important;}
 		   
 } /*-----end IPAD MINI----*/
 
