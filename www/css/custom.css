@@ -125,7 +125,7 @@ div[id$='Body'] ul[id$='List'] li a i.icon-chevron-right { float: right; font-si
 .navbar-header { float: none !important; }
 .navbar-inner { padding: 0px 6px !important; }
 .navbar-title { font-weight: 400; color: white; padding: 0 15px; font-size: 2.5rem; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 57vw; line-height: 100px; }
-#loginSection .navbar-title {width: 80vw !important;}
+#loginSection .navbar-title, #dashboardSection .navbar-title {width: 80vw !important;}
 .navbar-header .btn-inverse { text-decoration: none; color: #959ba7; font-size: 30px; border-radius: 0; line-height: 100px; padding: 0 15px; }
 .navbar-header .btn-inverse:hover,  .navbar-header .btn-inverse:active { color: white; }
 #totalPagesBlock, #textCurrentPage { color: white; }
@@ -632,6 +632,7 @@ to { opacity: 1; }
 #containerTableItemLookup #cartListItemLookup .lookup-row div:nth-child(3) {width: 100vw}
 #stockSection footer#stockFooter {position: relative !important;}
 #labelSection footer#labelFooter {bottom: 60px !important; position: relative !important}
+#connectionSection .connection-body {height: calc(100vh - 165px) !important;}
 
 
 /*-------------------------Phones-------------------------------------------*/
