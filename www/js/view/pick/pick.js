@@ -228,6 +228,7 @@ define([
         },
 
         numericpad_webkitTransitionEnd: function (e) {
+            if (this.QuantityToScan == null || this.QuantityToScan == "" || this.QuantityToScan == undefined) return;
             if ($('.numericpad').hasClass('slideInUp')) { }
             else {
                 if (this.NumericPadType == "freightrate") return true;
@@ -1346,6 +1347,35 @@ define([
         },
 
         PickNextItem: function (item, quantityToScan) {
+            if (quantityToScan == null || quantityToScan == "" || quantityToScan == undefined) 
+            {
+               var quantityToPick = item.get("QuantityToPick");
+               if (quantityToPick == null || quantityToPick == "" || quantityToPick == undefined)  
+               {
+                  var quantity = item.get("Quantity");
+                  if (quantity == null || quantity == "" || quantity == undefined)   
+                  {
+                    quantityToScan = 1;
+                   
+                  }
+                  else 
+                  { 
+                    quantityToScan = quantity;
+                  }
+
+                  item.set({ QuantityToPick: quantityToScan });
+                  item.set({ RemainingQuantity: quantityToScan });
+               }
+               else  
+               {
+
+                quantityToScan = quantityToPick;
+                var remainingQty =  item.get("RemainingQuantity");
+                if (remainingQty == null || remainingQty == "" || remainingQty == undefined) item.set({ RemainingQuantity: quantityToScan });
+               }
+        
+            }
+
             if (this.IsValidPickTransaction()){
                  if (SerialNumberTransactionValidationType > 1 && item.get("SerializeLot") == "Serial" && Global.IsPrePackMode == false) {
                       var maxQty = 0
