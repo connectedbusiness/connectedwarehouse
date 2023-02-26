@@ -52,6 +52,7 @@ define([
     var serialQuantity = 0;
     var serialRequired = 0;
     var SerialNumberTransactionValidationType = 0;
+    var isFromScanItem = false;
 
     var PickView = Backbone.View.extend({
         _pickTemplate: _.template(PickTemplate),
@@ -200,13 +201,17 @@ define([
         },
 
         itemLookupSection_webkitTransitionEnd: function (e) {
-            if (this.CurrentItem) {
-                if (!Preference.PickIsPromptForQty) {
-                    this.PickNextItem(this.CurrentItem, this.QuantityToScan);
-                    this.QuantityToScan = 1;
-                }
+            if (isFromScanItem) {
+              if (this.CurrentItem) {
+                  if (!Preference.PickIsPromptForQty) {
+                      this.PickNextItem(this.CurrentItem, this.QuantityToScan);
+                      this.QuantityToScan = 1;
+                  }
+              }
+  
             }
-        },
+             
+          },
 
         linkCommercial_tap: function (e) {
             this.UpdateShipToAddressType($('#linkCommercial').text());
@@ -228,15 +233,18 @@ define([
         },
 
         numericpad_webkitTransitionEnd: function (e) {
-            if (this.QuantityToScan == null || this.QuantityToScan == "" || this.QuantityToScan == undefined) return;
-            if ($('.numericpad').hasClass('slideInUp')) { }
-            else {
-                if (this.NumericPadType == "freightrate") return true;
-                if (this.CurrentItem) {
-                    if (isSkipped) this.RemoveFromSkippedItemList(this.CurrentItem, this.QuantityToScan);
-                    else this.PickNextItem(this.CurrentItem, this.QuantityToScan);
+            if (isFromScanItem) {
+                if (this.QuantityToScan == null || this.QuantityToScan == "" || this.QuantityToScan == undefined) return;
+                if ($('.numericpad').hasClass('slideInUp')) { }
+                else {
+                    if (this.NumericPadType == "freightrate") return true;
+                    if (this.CurrentItem) {
+                        if (isSkipped) this.RemoveFromSkippedItemList(this.CurrentItem, this.QuantityToScan);
+                        else this.PickNextItem(this.CurrentItem, this.QuantityToScan);
+                    }
                 }
             }
+           
         },
 
         rowCarrierCode_tap: function (e) {
@@ -1255,9 +1263,10 @@ define([
 
             this.UpdateCounter(quantityToScan * -1);
             item.set({ OverallCounter: this.model.get("Counter") });
-             
-           
+               
             if (remainingQty <= 0) this.RenderItem(item, true);
+
+            isFromScanItem = false;
         },
 
         ProcessPrePackItem: function (item, quantityToScan) {
@@ -2181,6 +2190,7 @@ define([
 
         ScanItem: function () {
              
+            isFromScanItem = true;
             var upcCode = this.CurrentItem.get("UPCCode");
             //console.log("UPCCode", upcCode);
             var itemCode = this.CurrentItem.get("ItemCode");
