@@ -27,9 +27,9 @@ define(
 	        WorkstationID: "Warehouse1",
 	        Version14:  "19.0.0.0",
 	        Versions: {
-	            MinimumVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 14 },
-	            Version: { Major: 23, Minor: 0, Build: 8427, Revision: 14 },
-	            CurrentVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 14
+	            MinimumVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 15 },
+	            Version: { Major: 23, Minor: 0, Build: 8427, Revision: 15 },
+	            CurrentVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 15
                 }
             },
             ScreenWidth: 0
