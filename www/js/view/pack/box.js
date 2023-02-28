@@ -65,6 +65,7 @@ define([
 
         buttonAddress_tap: function (e) {
             this.SwitchDisplay('page2', "ShippingAddress");
+            $('.numericpad').addClass('slideOutDown').removeClass('slideInUp');  
         },
 
         buttonBackBoxDetails_tap: function (e) {
