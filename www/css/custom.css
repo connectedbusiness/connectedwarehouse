@@ -634,7 +634,8 @@ to { opacity: 1; }
 #labelSection footer#labelFooter {bottom: 60px !important; position: relative !important}
 #connectionSection .container-footer {bottom: 10px !important; position: relative !important}
 #connectionSection .connection-body {height: calc(100vh - 165px) !important;}
-
+.form-control {font-size: 16px !important;}
+header#numericpadHeader .form-control {font-size: 300% !important;}
 
 /*-------------------------Phones-------------------------------------------*/
 
@@ -784,6 +785,7 @@ to { opacity: 1; }
 	#containerPick .pick-card-caption {top: 37vh;}
 	.pick-btn-skip, .stocktake-btn-skip {top:24vh;}
 	#stockSection footer#stockFooter {bottom: 357px !important;}
+	ul.numericpad-button-group button {height: 14.5vh;}
 	
 	   
 } /*-----end iPhone SE----*/
