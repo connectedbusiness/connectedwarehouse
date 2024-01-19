@@ -18,7 +18,7 @@
   "cordova-plugin-network-information": {
     "source": {
       "type": "registry",
-      "id": "https://github.com/apache/cordova-plugin-network-information.git"
+      "id": "github:apache/cordova-plugin-network-information"
     },
     "is_top_level": true,
     "variables": {}
