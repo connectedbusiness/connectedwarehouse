@@ -2230,6 +2230,8 @@ define([
                 Shared.NotifyError("You are scanning the wrong item.");
                 Shared.BeepError();
             }
+
+            Shared.Focus('#textScanItem');
         },
 
 
