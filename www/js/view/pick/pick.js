@@ -126,7 +126,8 @@ define([
         },
 
         buttonMenu_tap: function (e) {
-            window.location.hash = "dashboard";
+            //window.location.hash = "dashboard";
+             window.location.hash = "picklookup";
         },
 
         buttonPackOrder_tap: function (e) {
