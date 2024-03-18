@@ -4,15 +4,16 @@
             <!--RECEIVE SECTION-->
             <section id="receiveSection" class="container">
                 <nav id="receiveNav" class="container-nav navbar navbar-inverse">
-                    <div class="navbar-header">
+                     <div class="navbar-header">
                         <span id="receiveNavTitle" class="navbar-title"><%= PurchaseOrderCode %></span>
                         <button id="buttonBackReceive" type="button" class="btn btn-inverse pull-left"><i class="icon-reorder"></i></button>
+                         <div class="" style="float:right; color:#fff;height: 100px;/* vertical-align: middle; */padding: 50px 20px;"><strong>Rem. Quantity: <span id="textCounter">0</span></strong></div>
                     </div>
                 </nav>
                 <header id="receiveHeader" class="container-header">
-                    <div class="input-group">
+                   <div class="input-group">
                         <span class="input-group-btn">
-                            <button id="buttonCounter" class="btn btn-danger" type="button"><i class="text-error"><strong>items: <span id="textCounter">0</span></strong></i></button>
+                            <button id="buttonCounter" class="btn btn-danger" type="button"><strong>view items</strong></button>
                         </span>
                         <input id="textScanItem" class="input-counter form-control" placeholder="scan or enter item" type="text">
                         <span class="input-group-btn">
@@ -104,7 +105,7 @@
                     </div>
                 </div>
                 <footer id="itemsRemainingFooter" class="container-footer">
-                    <div class="footerTotal">total items: <span id="textTotalItemsRemaining">0</span></div>
+                    <div class="footerTotal">rem. quantity: <span id="textTotalItemsRemaining">0</span></div>
                 </footer>
             </section>
             <!--END SECTION-->
