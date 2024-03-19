@@ -126,7 +126,8 @@ define([
         },
 
         buttonMenu_tap: function (e) {
-            window.location.hash = "dashboard";
+           // window.location.hash = "dashboard";
+              window.location.hash = "picklookup";
         },
 
         buttonPackOrder_tap: function (e) {
@@ -2231,6 +2232,8 @@ define([
                 Shared.NotifyError("You are scanning the wrong item.");
                 Shared.BeepError();
             }
+            
+            Shared.Focus('#textScanItem');
         },
 
 
