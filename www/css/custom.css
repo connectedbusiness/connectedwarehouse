@@ -124,7 +124,7 @@ div[id$='Body'] ul[id$='List'] li a i.icon-chevron-right { float: right; font-si
 .navbar { padding: 0px !important; margin-bottom: 0px !important; border: 0 !important; border-radius: 0 !important; max-width: 100% !important; }
 .navbar-header { float: none !important; }
 .navbar-inner { padding: 0px 6px !important; }
-.navbar-title { font-weight: 400; color: white; padding: 0 15px; font-size: 2.5rem; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 57vw; line-height: 100px; }
+.navbar-title { font-weight: 400; color: white; padding: 0 15px; font-size: 2.5rem; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; width: 50vw; line-height: 100px; }
 #loginSection .navbar-title {width: 80vw !important;}
 .navbar-header .btn-inverse { text-decoration: none; color: #959ba7; font-size: 30px; border-radius: 0; line-height: 100px; padding: 0 15px; }
 .navbar-header .btn-inverse:hover,  .navbar-header .btn-inverse:active { color: white; }
