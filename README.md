@@ -49,8 +49,8 @@ Identity
 
 Display Name: Connected Warehouse
 Bundle Identifier: com.connectedbusiness.connectedwarehouse23
-Version: 23.0.8411
-Build  : 23.0.8411.0
+Version: 24.0.0
+Build  : 24.0.0.1
 
 Signing
 
