@@ -10,7 +10,7 @@ define(
 	            UnitMeasureSystem: ''
 	        },
 	        CurrentTransactions: null,
-	        DemoServiceUrl: "https://data.connectedbusiness.com/pos23/webservice/",
+	        DemoServiceUrl: "https://data.connectedbusiness.com/pos24/webservice/",
             IsBrowserMode : true,
             IsPrePackMode: false,
             ServiceUrl: "",
@@ -27,9 +27,9 @@ define(
 	        WorkstationID: "Warehouse1",
 	        Version14:  "19.0.0.0",
 	        Versions: {
-	            MinimumVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 11 },
-	            Version: { Major: 23, Minor: 0, Build: 8427, Revision: 11 },
-	            CurrentVersion: { Major: 23, Minor: 0, Build: 8427, Revision: 11
+	            MinimumVersion: { Major: 20, Minor: 0, Build: 7458, Revision: 1 },
+	            Version: { Major: 24, Minor: 0, Build: 0, Revision: 1 },
+	            CurrentVersion: { Major: 24, Minor: 0, Build: 0, Revision: 1
                 }
             },
             ScreenWidth: 0
