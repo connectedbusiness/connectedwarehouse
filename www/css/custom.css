@@ -748,8 +748,13 @@ to { opacity: 1; }
 	.pick-item-detail .imageCard {width: 260px; height: 260px;}
 	.pick-item, .stocktake-item {width: 100%; height: 65vh;}
 	.pick-item-detail .imageCard {width: 221px; height: 221px;}
-	.navbar-title, .navbar-header .btn-inverse {line-height: 100px; height: 100px;}
+	.navbar-title, .navbar-header .btn-inverse {line-height: 100px; height: 100px;max-width: fit-content;}
+	.navbar-title {font-size: 1.8rem;}
 	#stockSection footer#stockFooter {bottom: 284px !important;}
+	.list-col-3 {width: auto;}
+	.list-col-2 {width: 47%;}
+	.triangle-left {width: 36px;}
+	ul.numericpad-button-group button {height: 15vh;}
 	   
 } /*-----end  Samsung S8----*/
 
