@@ -561,6 +561,8 @@ define([
                 Shared.NotifyError("Item not found.");
                 Shared.BeepError();
             }
+
+           Shared.Focus('#textboxScanItem');
         },
 
         FilterShippingMethod: function(itemCollection, remove) {
