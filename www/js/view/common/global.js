@@ -28,8 +28,8 @@ define(
 	        Version14:  "19.0.0.0",
 	        Versions: {
 	            MinimumVersion: { Major: 20, Minor: 0, Build: 7458, Revision: 1 },
-	            Version: { Major: 24, Minor: 0, Build: 0, Revision: 1 },
-	            CurrentVersion: { Major: 24, Minor: 0, Build: 0, Revision: 1
+	            Version: { Major: 24, Minor: 0, Build: 0, Revision: 8910 },
+	            CurrentVersion: { Major: 24, Minor: 0, Build: 0, Revision: 8910
                 }
             },
             ScreenWidth: 0
