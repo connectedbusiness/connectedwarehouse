@@ -72,7 +72,7 @@ ul[class^='boxitem'] { min-height: 108px; }
 .iscroll-shippingaddress { height: 508px; max-height: 508px; }
 .progress-fullscreen { height: 100vh; }
 .progress-bodyscreen { height: 100vh; }
-.url-body,  .connection-body { /*height: calc(100vh - 175px);*/ height: calc(100vh - 105px); }
+.url-body,  .connection-body { /*height: calc(100vh - 175px);*/ height: calc(100vh - 166px); }
 
   
       /*#region FeatureBody*/
