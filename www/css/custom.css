@@ -226,6 +226,13 @@ li[class^='list-col'] { display: inline-block; }
 #numClear { color: white; }
 #numEnter { border-radius: 2px; font-size: 50px; }
 .numericpad, .container-remaining, .slideDownReady { width: 100%; position: absolute; -webkit-transform: translateY(100vh); z-index: 1; top: 0px; }
+/*NUMPAD*/
+#binManagerSlider.slider.container-remaining {top: 0vh !important;}
+/*#binManagerSlider.slider.container-remaining {top: 147.5vh !important;}*/
+/*SIMILAR STOCK*/
+#itemLookupSection.container.slideDownReady {top: 0vh;}
+/*#itemLookupSection.container.slideDownReady {top: 47vh;}*/
+
 .numericpad-button-group { margin: 0; padding: 0; list-style: none; font-size: 0; background-color: #dfdfe0;height: calc(100vh - 255px); }
 .numericpad-button-group li { text-align: center; }
 .numericpad-button-group:first-child li:first-child > button { margin-top: 2px; }
@@ -566,7 +573,8 @@ footer#boxFooter { bottom: 0; position: inherit; }
 .toast-close-button { font-size: 40px !important; }
 span#Spndes { font-weight: 400; color: white; padding: 0 15px; font-size: 19px; display: inline-block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; line-height: 100px; }
 
-
+/*Settings changes*/
+#containerSettingsSection .slider section {width: 33.3%}
 
 /*-----keyframes----*/
   
