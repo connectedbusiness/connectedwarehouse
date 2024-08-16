@@ -462,6 +462,7 @@ define([
 		    var self = this;
 		    var view = new NumericPadView();
 		    this.$('#numericPadContainer').html(view.render());
+              //this.$('#numericPadContainer').html('');
 
 		    this.$('#numClear').addClass('section-close');
 		    this.$('#numNegative').removeAttr("style");
