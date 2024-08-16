@@ -25,10 +25,10 @@ define([
         events: {            
         },
 
-       buttonEnter_tap: function (e) {
-         var qty = this.$('#textboxQuantity').val();            
-         NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
-          if (NumericPadCriteria.NumericPadValue == 0) NumericPadCriteria.NumericPadValue = 1;
+         buttonEnter_tap: function (e) {
+            var qty = this.$('#textboxQuantity').val();            
+            NumericPadCriteria.NumericPadValue = parseFloat(qty.replace(',', ''));
+            if (NumericPadCriteria.NumericPadValue == 0) NumericPadCriteria.NumericPadValue = 1;
 
             this.trigger('quantitychange', NumericPadCriteria);
             if (NumericPadCriteria.IsCloseNumericPad) {
@@ -38,13 +38,16 @@ define([
             NumericPadCriteria.IsCloseNumericPad = true;
         },
 
-        
+
         buttonClear_tap: function (e) {
             this.isFirstNumericPadInput = true;
             this.$('#textboxQuantity').val(0);
         },
 
         buttonCloseNumericPad_tap: function (e) {
+
+
+           
             this.isFirstNumericPadInput = true;
             this.trigger('closenumericpad', this);
             $('.numericpad').removeClass('slideInUp').addClass('slideOutDown');
