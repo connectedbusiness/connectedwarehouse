@@ -2269,7 +2269,7 @@ define([
         ShowNumericPad: function (qty) {
             $('#textboxQuantity').val(qty);
             $('#pickHeader').hide();
-            $('#buttonComplete').focus();
+           // $('#buttonComplete').focus();
             $('.numericpad').addClass('slideInUp').removeClass('slideOutDown');
         },
 
